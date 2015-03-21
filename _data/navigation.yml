@@ -1,0 +1,30 @@
+# Site navigation links
+
+- title: 科学
+  url: /science/
+  excerpt: "星际移民的科学"
+
+
+- title: 故事
+  url: /stories/
+  excerpt: "星际移民的故事"
+
+
+- title: 历史
+  url: /history/
+  excerpt: "星际移民的历史"
+
+
+- title: TIL
+  url: /til/
+  excerpt: "每日新知"  
+
+- title: 关于
+  url: /about/
+  excerpt: "关于页面示例"
+
+
+- title: Fork on GitHub
+  url: https://github.com/emptymalei/planets-jekyll
+  excerpt: "GitHub 上的源文件"
+
