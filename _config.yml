@@ -32,22 +32,19 @@ cover_image: front-cover.jpg
 
 
 
-
-
-
 # Site owner
 owner:
   name: "NeuronStar"  # 网站名称设置
   email:   # 默认 email 设置
   twitter:   # 保留了原来的设置，但是这部分在所有中文的“作者名片”模板中失效了。
-  google:
+  google: 
     ad-client:
     ad-slot: 
   bio: ""
   avatar: logo-120x120.png # 160x160 px image for author byline
   weibo:   # 这是微博账号，星际移民中心 只是个例子
 disqus-shortname: xxxxxx  # 这是你的 disqus 评论框的代码，如果使用英文模板请填写
-duoshuo-shortname: planets-jekyll # 请填写。这是你的 duoshuo 代码，中文模板请填写
+duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
 
 
 

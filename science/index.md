@@ -1,10 +1,7 @@
 ---
 layout: archive
-title: 星际移民的科学
+title: 科学
 ---
-
-
-
 
 
 

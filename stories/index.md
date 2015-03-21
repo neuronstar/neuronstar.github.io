@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: 星际移民的故事
+title: 故事
 ---
 
 

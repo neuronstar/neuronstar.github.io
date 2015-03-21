@@ -4,4 +4,4 @@ title: "关于"
 share: false
 ---
 
-《{{site.title}}》是一个基于 skinny bones 修改来的 jekyll 主题。
+《{{site.title}}》是章鱼喵和 ErbB4 以及二者的共同体一起维护的，包括物理和神经科学，脑洞，段子，以及各种无趣有趣的文章。
