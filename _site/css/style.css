@@ -4,6 +4,11 @@
 	margin-right: auto !important;
 }
 
+.body {
+    font-family: "Hiragino Sans GB", "Microsoft YaHei",
+             "WenQuanYi Micro Hei", sans-serif;
+         }
+
 .article-cover {
     max-width: 100%;
     margin-top: 0;

@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
+    
+
     <title>Neuron Star</title>
     <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.4.0</generator>
-		<icon>/apple-touch-icon-precomposed.png</icon>
+		<icon>http://neuronstar.github.io/apple-touch-icon-precomposed.png</icon>
     <subtitle></subtitle>
-    <link href="/atom.xml" rel="self"/>
-    <link href="/" rel="alternate" type="text/html"/>
-    <updated>2015-03-21T16:41:37-06:00</updated>
-    <id>/</id>
+    <link href="http://neuronstar.github.io/atom.xml" rel="self"/>
+    <link href="http://neuronstar.github.io/" rel="alternate" type="text/html"/>
+    <updated>2015-03-22T13:56:43-06:00</updated>
+    <id>http://neuronstar.github.io/</id>
     <author>
 			<name>NeuronStar</name>
-			<uri>/</uri>
+			<uri>http://neuronstar.github.io/</uri>
 			
 		</author>
 
     
     <entry>
-        <title>火星的日落</title>
-        <link href="/stories/martian-sunset-phobos/"/>
-        <updated>2014-10-18T00:00:00-06:00</updated>
-        <id>/stories/martian-sunset-phobos</id>
+        <title>测试</title>
+        <link href="http://neuronstar.github.io/science/test/"/>
+        <updated>2015-03-22T00:00:00-06:00</updated>
+        <id>http://neuronstar.github.io/science/test</id>
         <author>
 					<name>NeuronStar</name>
-					<uri>/</uri>
+					<uri>http://neuronstar.github.io/</uri>
+					
+				</author>
+        <content type="html">
+        	
+        	&lt;h2 id=&quot;section&quot;&gt;测试标题&lt;/h2&gt;
+
+        </content>
+    </entry>
+    
+    <entry>
+        <title>Test ErbB4</title>
+        <link href="http://neuronstar.github.io/stories/test/"/>
+        <updated>2015-03-22T00:00:00-06:00</updated>
+        <id>http://neuronstar.github.io/stories/test</id>
+        <author>
+					<name>NeuronStar</name>
+					<uri>http://neuronstar.github.io/</uri>
+					
+				</author>
+        <content type="html">
+        	
+        	&lt;h2 id=&quot;section&quot;&gt;测试标题&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;待续&lt;/strong&gt;&lt;/p&gt;
+
+        </content>
+    </entry>
+    
+    <entry>
+        <title>火星的日落</title>
+        <link href="http://neuronstar.github.io/stories/martian-sunset-phobos/"/>
+        <updated>2014-10-18T00:00:00-06:00</updated>
+        <id>http://neuronstar.github.io/stories/martian-sunset-phobos</id>
+        <author>
+					<name>NeuronStar</name>
+					<uri>http://neuronstar.github.io/</uri>
 					
 				</author>
         <content type="html">
@@ -38,7 +75,7 @@
   &lt;figcaption&gt;
 火星蓝色的日落，火卫一 Phobos 正经过太阳前面。Credit: NASA/JPL-Caltech/Cornell/Texas A&amp;amp;M
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/mars/blue_sun_phobos.jpg&quot; alt=&quot;蓝色日落&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.github.io/images/mars/blue_sun_phobos.jpg&quot; alt=&quot;蓝色日落&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;除了照片，还有一段古老的视频。&lt;/p&gt;
@@ -51,7 +88,7 @@
   &lt;figcaption&gt;
 更大的角度来看日落。&lt;a href=&quot;https://en.wikipedia.org/wiki/File:MarsSunset.jpg&quot;&gt;File:MarsSunset.jpg&lt;/a&gt;
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/mars/998px-MarsSunset.jpg&quot; alt=&quot;蓝色日落&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.github.io/images/mars/998px-MarsSunset.jpg&quot; alt=&quot;蓝色日落&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;由于火星大气中颗粒的作用，火星的日落会出现不同的颜色，例如上面的蓝色。不同的天气状况会出现不同的日落，除了蓝太阳，也会有红色的日落。&lt;/p&gt;
@@ -64,7 +101,7 @@
   &lt;figcaption&gt;
 黄昏中的旅游景点开发站。&lt;a href=&quot;http://www.arcadiastreet.com/cgvistas/spacexp/se_mars_2500b.htm&quot;&gt;Walter Myers&lt;/a&gt;
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/mars/mars_outpost_mesa_1280.jpg&quot; alt=&quot;蓝色日落&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.github.io/images/mars/mars_outpost_mesa_1280.jpg&quot; alt=&quot;蓝色日落&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 
@@ -72,116 +109,18 @@
     </entry>
     
     <entry>
-        <title>在火星上如何通过星空辨别方向</title>
-        <link href="/science/mars-north/"/>
+        <title>Today I Learned</title>
+        <link href="http://neuronstar.github.io/til/til/"/>
         <updated>2014-10-16T00:00:00-06:00</updated>
-        <id>/science/mars-north</id>
+        <id>http://neuronstar.github.io/til/til</id>
         <author>
 					<name>NeuronStar</name>
-					<uri>/</uri>
+					<uri>http://neuronstar.github.io/</uri>
 					
 				</author>
         <content type="html">
         	
-        	&lt;p&gt;首先要说明白的是，星空上用来辨别北方的位置并不是一成不变的（因为岁差），例如地球上在古希腊时期北极星是小熊座 beta 星又称北极二或帝星，而在将来的公元 16000 年，地球上的“北极星”就是织女星了。&lt;/p&gt;
-
-&lt;p&gt;同样的事情在火星也是成立的。不过作为一个示例，我们可以讨论地球上公元 2014 年，也就是火历二十四年的情况。那时候火星上并没有一个像当时地球上北极星这样的亮星来作为指极星。但是只需要找到天津四和仙王座阿尔法，它们连线中点（图中橙色的圆点）始终指向北。&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;figcaption&gt;
-找到天津四和仙王座阿尔法，它们连线中点（图中橙色的圆点）始终指向北。图片制作使用了 &lt;a href=&quot;http://www.stellarium.org/&quot; target=&quot;_blank&quot;&gt;Stellerium&lt;/a&gt;.
-&lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/mars-northern-star.png&quot; alt=&quot;火星上寻找北极的方法&quot; /&gt;&lt;/p&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;作为一个有趣的补充知识，在大约公元九千年，在地球上找北方的方法，就跟上面一样了！&lt;/p&gt;
-
-        </content>
-    </entry>
-    
-    <entry>
-        <title>太阳系内行星的符号</title>
-        <link href="/til/astrology-symbols/"/>
-        <updated>2014-10-16T00:00:00-06:00</updated>
-        <id>/til/astrology-symbols</id>
-        <author>
-					<name>NeuronStar</name>
-					<uri>/</uri>
-					
-				</author>
-        <content type="html">
         	
-        	&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;行星名称&lt;/th&gt;
-      &lt;th&gt;符号&lt;/th&gt;
-      &lt;th&gt;Unicode&lt;/th&gt;
-      &lt;th&gt;图形&lt;/th&gt;
-      &lt;th&gt;符号的来源&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;水星&lt;/td&gt;
-      &lt;td&gt;☿&lt;/td&gt;
-      &lt;td&gt;U+263F&lt;/td&gt;
-      &lt;td&gt;Mercury&lt;/td&gt;
-      &lt;td&gt;旅行者和商人的保护神墨丘利的插有双翅的头盔和他的神杖&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;金星&lt;/td&gt;
-      &lt;td&gt;♀&lt;/td&gt;
-      &lt;td&gt;U+2640&lt;/td&gt;
-      &lt;td&gt;Venus&lt;/td&gt;
-      &lt;td&gt;爱和美的女神维纳斯手中的镜子&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;地球&lt;/td&gt;
-      &lt;td&gt;⊕&lt;/td&gt;
-      &lt;td&gt;U+2295&lt;/td&gt;
-      &lt;td&gt;Earth&lt;/td&gt;
-      &lt;td&gt;带有赤道和一条经线的球体&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;火星&lt;/td&gt;
-      &lt;td&gt;♂&lt;/td&gt;
-      &lt;td&gt;U+2642&lt;/td&gt;
-      &lt;td&gt;Mars&lt;/td&gt;
-      &lt;td&gt;战神玛尔斯的盾牌和长矛&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;木星&lt;/td&gt;
-      &lt;td&gt;♃&lt;/td&gt;
-      &lt;td&gt;U+2643&lt;/td&gt;
-      &lt;td&gt;Jupiter&lt;/td&gt;
-      &lt;td&gt;万神之王朱庇特的闪电或他的神鹰&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;土星&lt;/td&gt;
-      &lt;td&gt;♄&lt;/td&gt;
-      &lt;td&gt;U+2644&lt;/td&gt;
-      &lt;td&gt;Saturn&lt;/td&gt;
-      &lt;td&gt;农神萨图尔努斯的镰刀&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;天王星&lt;/td&gt;
-      &lt;td&gt;♅&lt;/td&gt;
-      &lt;td&gt;U+2645&lt;/td&gt;
-      &lt;td&gt;Uranus&lt;/td&gt;
-      &lt;td&gt;天王星发现者弗里德里希·威廉·赫歇尔姓氏开头的字母H&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;海王星&lt;/td&gt;
-      &lt;td&gt;♆&lt;/td&gt;
-      &lt;td&gt;U+2646&lt;/td&gt;
-      &lt;td&gt;Neptune&lt;/td&gt;
-      &lt;td&gt;海神尼普东的三叉戟&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;来自维基百科：&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%A4%A9%E6%96%87%E7%AC%A6%E8%99%9F#.E8.A1.8C.E6.98.9F.E7.AC.A6.E5.8F.B7&quot;&gt;行星符号&lt;/a&gt;&lt;/p&gt;
 
         </content>
     </entry>
