@@ -2,12 +2,12 @@
 published: true
 layout: article
 title: 回声定位
-modified: {}
+modified: 2015-03-22
 author: neuronstar
-toc: false
+toc: true
 comments: true
 categories: science
-summary: 回声定位是动物界一种很特殊的定位方式，这篇文章
+summary: 回声定位是动物界一种很特殊的定位方式，这篇文章介绍了回声定位的一些生理和物理机制。
 ---
 
 ## 回声定位的原理
