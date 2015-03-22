@@ -7,28 +7,31 @@ author: neuronstar
 toc: false
 comments: true
 categories: science
-summary: 再捉弄我让你好看
+summary: 回声定位是动物界一种很特殊的定位方式，这篇文章
 ---
 
 ## 回声定位的原理
 
 回声定位是一种特殊的听觉形式，即动物发出超声波，超声波碰到障碍物后反弹，动物通过分析反弹的超声波的频率、波幅，来判断障碍物的距离、速度、类型、大小。这一技能被动物用于导航、捕食、探索环境。
-![图片1.PNG](/_posts/science/图片1.PNG)
+
+![]({{site.url}}/images/posts/echo/echo1.jpg)
 
 $$EL=SL+TS-2TL$$
 
 
 
 通常来说，人类能够听到的声音频率范围是20Hz-20,000Hz，超过20,000Hz的声波即超声波，是人类听觉系统（耳蜗）不能感知的刺激。但是，很多动物能听到超声波。其中的典范就是齿鲸（包括喙鲸和海豚）和蝙蝠，它们能利用超声波进行定位，即回声定位。
-![图片2.PNG](/_posts/science/图片2.PNG)
-![图片3.jpg](/_posts/science/图片3.jpg)
+
+![]({{site.url}}/images/posts/echo/echo2.jpg)
+
+![]({{site.url}}/images/posts/echo/echo3.jpg)
 
 ## 海豚与蝙蝠
 
 ### 海豚的发声器官和接受器官
 海豚通过挤压空气快速穿过鼻腔内的两对脂肪片而发出超声波（下图的绿色弧线），声音通过头部的脂肪传播。海豚通过下颌的脂肪接收返回的超声波（下图的红色弧线）。
 
-【插入这张图片 http://commons.wikimedia.org/wiki/File:Delfinekko.gif 】
+![](http://commons.wikimedia.org/wiki/File:Delfinekko.gif)
 （ Image Credit: [Malene Thyssen](http://commons.wikimedia.org/wiki/User:Malene) ）
 
 
@@ -41,19 +44,22 @@ $$EL=SL+TS-2TL$$
 ## 海豚和蝙蝠的捕食过程
 
 海豚和蝙蝠的捕食过程可以分为三个阶段：搜索、趋近、捕食。在这三个阶段中，海豚和蝙蝠发出的声音频率不变，而信号间隔逐渐变短，是为了得到更精确的关于猎物的信息，最后阶段信号间隔为几毫秒，为“蜂鸣”信号（buzz）。
-![图片5.PNG](/_posts/science/图片5.PNG)
+
+![]({{site.url}}/images/posts/echo/echo5.jpg)
 
 
 
 ## 捕食者-猎物的互动和进化
 
 在齿鲸中，有一对有趣的捕食者-猎物的例子，那就是虎鲸和海豚，他们都能够接受超声波信号，因此，以哺乳动物为食的虎鲸为了避免被海豚“听”到，在接近海豚时会关闭回声定位系统；而海豚在捕食鱼类时，为了避免被虎鲸“听”到而暴露自己，进化出了高于虎鲸听力上限的超声波范围。这就是predator和prey斗智斗勇的生存游戏。
-![图片6.jpg](/_posts/science/图片6.jpg)
+![]({{site.url}}/images/posts/echo/echo6.jpg)
 
 
 ## 人类的回声定位
 
-有趣的是，最近的研究发现，回声定位不止存在于齿鲸和蝙蝠中，有的盲人也可以利用回声判断行进过程中的障碍物。【插入视频】
+有趣的是，最近的研究发现，回声定位不止存在于齿鲸和蝙蝠中，有的盲人也可以利用回声判断行进过程中的障碍物。
+
+<embed height="400" src="https://www.youtube.com/embed/r9mvRRwu5Gw" type="application/x-shockwave-flash" width="700"></embed>
 
 
 
@@ -70,9 +76,15 @@ $$v_s = \lambda f,$$
 
 由于海水中声速接近空气中声速的五倍，同样频率的声波，在海水中的波长大约是空气中波长的五倍。上面提到的海豚和蝙蝠超声定位虽然工作在相似的频率上，但是在空气中的蝙蝠可以探测到的猎物的尺度大约是海水中海豚探测精度的五倍。也就是说，虽然他们需要的精度不同，但是由于声速在两个环境中的差异，蝙蝠并不需要发出比海豚频率更高很多的声波。
 
-![图片7.PNG](/_posts/science/图片7.PNG)
+<figure markdown="1">
+<figcaption>
+图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。[^biosonar]
+</figcaption>
+![]({{site.url}}/images/posts/echo/echo7.jpg)
+</figure>
 
-【caption】图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。[^biosonar]
+
+
 
 
 
