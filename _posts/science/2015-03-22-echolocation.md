@@ -14,7 +14,7 @@ summary: 回声定位是动物界一种很特殊的定位方式，这篇文章
 
 回声定位是一种特殊的听觉形式，即动物发出超声波，超声波碰到障碍物后反弹，动物通过分析反弹的超声波的频率、波幅，来判断障碍物的距离、速度、类型、大小。这一技能被动物用于导航、捕食、探索环境。
 
-![]({{site.url}}/images/posts/echo/echo1.jpg)
+![]({{site.url}}/images/posts/echo/echo1.png)
 
 $$EL=SL+TS-2TL$$
 
@@ -22,7 +22,7 @@ $$EL=SL+TS-2TL$$
 
 通常来说，人类能够听到的声音频率范围是20Hz-20,000Hz，超过20,000Hz的声波即超声波，是人类听觉系统（耳蜗）不能感知的刺激。但是，很多动物能听到超声波。其中的典范就是齿鲸（包括喙鲸和海豚）和蝙蝠，它们能利用超声波进行定位，即回声定位。
 
-![]({{site.url}}/images/posts/echo/echo2.jpg)
+![]({{site.url}}/images/posts/echo/echo2.png)
 
 ![]({{site.url}}/images/posts/echo/echo3.jpg)
 
@@ -45,7 +45,7 @@ $$EL=SL+TS-2TL$$
 
 海豚和蝙蝠的捕食过程可以分为三个阶段：搜索、趋近、捕食。在这三个阶段中，海豚和蝙蝠发出的声音频率不变，而信号间隔逐渐变短，是为了得到更精确的关于猎物的信息，最后阶段信号间隔为几毫秒，为“蜂鸣”信号（buzz）。
 
-![]({{site.url}}/images/posts/echo/echo5.jpg)
+![]({{site.url}}/images/posts/echo/echo5.png)
 
 
 
@@ -59,7 +59,8 @@ $$EL=SL+TS-2TL$$
 
 有趣的是，最近的研究发现，回声定位不止存在于齿鲸和蝙蝠中，有的盲人也可以利用回声判断行进过程中的障碍物。
 
-<embed height="400" src="https://www.youtube.com/embed/r9mvRRwu5Gw" type="application/x-shockwave-flash" width="700"></embed>
+
+<iframe width="960" height="720" src="https://www.youtube.com/embed/r9mvRRwu5Gw" frameborder="0" allowfullscreen></iframe>
 
 
 
@@ -80,7 +81,7 @@ $$v_s = \lambda f,$$
 <figcaption>
 图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。[^biosonar]
 </figcaption>
-![]({{site.url}}/images/posts/echo/echo7.jpg)
+![]({{site.url}}/images/posts/echo/echo7.png)
 </figure>
 
 
