@@ -84,7 +84,7 @@ $$v_s = \lambda f,$$
 
 <figure markdown="1">
 <figcaption>
-图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。[^biosonar]
+图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。Madsen PT, Surlykke A. 2013 Vol. 28 no. 5, 276-283. [Functional convergence in bat and toothed whale biosonars](http://physiologyonline.physiology.org/content/28/5/276.long).
 </figcaption>
 ![]({{site.url}}/images/posts/echo/echo7.png)
 </figure>
@@ -94,4 +94,3 @@ $$v_s = \lambda f,$$
 
 
 
-[^biosonar]: Madsen PT, Surlykke A. 2013 Vol. 28 no. 5, 276-283. [Functional convergence in bat and toothed whale biosonars](http://physiologyonline.physiology.org/content/28/5/276.long).
