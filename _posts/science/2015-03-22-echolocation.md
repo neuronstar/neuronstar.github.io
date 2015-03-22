@@ -31,14 +31,19 @@ $$EL=SL+TS-2TL$$
 ### 海豚的发声器官和接受器官
 海豚通过挤压空气快速穿过鼻腔内的两对脂肪片而发出超声波（下图的绿色弧线），声音通过头部的脂肪传播。海豚通过下颌的脂肪接收返回的超声波（下图的红色弧线）。
 
-![](http://commons.wikimedia.org/wiki/File:Delfinekko.gif)
-（ Image Credit: [Malene Thyssen](http://commons.wikimedia.org/wiki/User:Malene) ）
+<figure markdown="1">
+<figcaption>
+Image Credit: [Malene Thyssen](http://commons.wikimedia.org/wiki/User:Malene)
+</figcaption>
+![](http://upload.wikimedia.org/wikipedia/commons/8/82/Delfinekko.gif)
+</figure>
 
 
 ### 蝙蝠的发声器官和接受器官
 
-蝙蝠通过喉头、鼻腔发出超声波，也可以![图片4.jpg](/_posts/science/图片4.jpg)
-通过翅膀发出微弱的超声波。返回的超声波通过外耳廓进入蝙蝠的听觉系统。
+蝙蝠通过喉头、鼻腔发出超声波，也可以通过翅膀发出微弱的超声波。返回的超声波通过外耳廓进入蝙蝠的听觉系统。
+
+
 
 
 ## 海豚和蝙蝠的捕食过程
