@@ -49,6 +49,19 @@ duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文
 
 prose:
   media: 'images/posts'
+  metadata:
+    _posts:
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Science"
+              value: "science"
+            - name: "Neural Science"
+              value: "neuralscience"
+
 
 
 
