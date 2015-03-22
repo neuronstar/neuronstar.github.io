@@ -30,7 +30,7 @@ title:
 
 
 
-
+## 科学
 
 <div class="tiles">
 {% for post in site.categories.science limit:5 %}
@@ -40,7 +40,7 @@ title:
 
 <a href="./science/">查看所有科学（共 {{ site.categories.science.size }} 篇）</a>
 
-## 近期故事
+## 故事
 
 <div class="tiles">
 
@@ -58,20 +58,4 @@ title:
 暂无故事类文章
 		{% endif %}
 
-
-## 近期历史
-
-<div class="tiles">
-{% for post in site.categories.history limit:5 %}
-	{% include post-list-cn.html %}
-{% endfor %}
-</div><!-- /.tiles -->
-
-
-
-{% if site.categories.history.size %}
-<a href="./history/">查看所有故事（共 {{ site.categories.history.size }} 篇）</a>
-		{% else %}
-暂无历史类文章
-		{% endif %}
 
