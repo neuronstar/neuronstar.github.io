@@ -162,3 +162,9 @@ blockquote p {
 }
 
 #main .inner-wrap {width: 95% !important;}
+
+figure img {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
