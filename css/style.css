@@ -152,3 +152,11 @@ blockquote p {
     text-transform: lowercase;
 }
 
+
+.page-content>p:first-child {
+    font-size: 18px !important;
+  font-size: 1.125rem !important;
+  line-height: 1.55556 !important;
+  margin-bottom: 24px !important;
+  margin-bottom: 1.5rem !important;
+}
