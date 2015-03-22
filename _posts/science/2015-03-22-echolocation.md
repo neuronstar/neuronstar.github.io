@@ -20,7 +20,7 @@ $$EL=SL+TS-2TL$$
 
 
 
-通常来说，人类能够听到的声音频率范围是20Hz-20,000Hz，超过20,000Hz的声波即超声波，是人类听觉系统（耳蜗）不能感知的刺激。但是，很多动物能听到超声波。其中的典范就是齿鲸（包括喙鲸和海豚）和蝙蝠，它们能利用超声波进行定位，即回声定位。
+通常来说，人类能够听到的声音频率范围是 20Hz-20,000Hz，超过 20,000Hz 的声波即超声波，是人类听觉系统（耳蜗）不能感知的刺激。但是，很多动物能听到超声波。其中的典范就是齿鲸（包括喙鲸和海豚）和蝙蝠，它们能利用超声波进行定位，即回声定位。
 
 ![]({{site.url}}/images/posts/echo/echo2.png)
 
@@ -33,7 +33,7 @@ $$EL=SL+TS-2TL$$
 
 <figure markdown="1">
 <figcaption>
-Image Credit: [Malene Thyssen](http://commons.wikimedia.org/wiki/User:Malene)
+Image Credit: <a href="http://commons.wikimedia.org/wiki/User:Malene" target="_blank">Malene Thyssen</a>
 </figcaption>
 ![](http://upload.wikimedia.org/wikipedia/commons/8/82/Delfinekko.gif)
 </figure>
@@ -56,7 +56,8 @@ Image Credit: [Malene Thyssen](http://commons.wikimedia.org/wiki/User:Malene)
 
 ## 捕食者-猎物的互动和进化
 
-在齿鲸中，有一对有趣的捕食者-猎物的例子，那就是虎鲸和海豚，他们都能够接受超声波信号，因此，以哺乳动物为食的虎鲸为了避免被海豚“听”到，在接近海豚时会关闭回声定位系统；而海豚在捕食鱼类时，为了避免被虎鲸“听”到而暴露自己，进化出了高于虎鲸听力上限的超声波范围。这就是predator和prey斗智斗勇的生存游戏。
+在齿鲸中，有一对有趣的捕食者-猎物的例子，那就是虎鲸和海豚，他们都能够接受超声波信号，因此，以哺乳动物为食的虎鲸为了避免被海豚“听”到，在接近海豚时会关闭回声定位系统；而海豚在捕食鱼类时，为了避免被虎鲸“听”到而暴露自己，进化出了高于虎鲸听力上限的超声波范围。这就是 predator 和 prey 斗智斗勇的生存游戏。
+
 ![]({{site.url}}/images/posts/echo/echo6.jpg)
 
 
@@ -84,7 +85,7 @@ $$v_s = \lambda f,$$
 
 <figure markdown="1">
 <figcaption>
-图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。Madsen PT, Surlykke A. 2013 Vol. 28 no. 5, 276-283. [Functional convergence in bat and toothed whale biosonars](http://physiologyonline.physiology.org/content/28/5/276.long).
+图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。Madsen PT, Surlykke A. 2013 Vol. 28 no. 5, 276-283. <a href="http://physiologyonline.physiology.org/content/28/5/276.long" target="_blank">Functional convergence in bat and toothed whale biosonars</a>.
 </figcaption>
 ![]({{site.url}}/images/posts/echo/echo7.png)
 </figure>
