@@ -47,7 +47,8 @@ disqus-shortname: xxxxxx  # 这是你的 disqus 评论框的代码，如果使�
 duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
 
 
-
+prose:
+  media: 'images/posts'
 
 
 
