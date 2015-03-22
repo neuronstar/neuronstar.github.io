@@ -1,5 +1,29 @@
 # 写科学写故事
 
+
+1. 去 [prose.io](http://prose.io) 写作。由于 [prose.io](http://prose.io) 偶尔不稳定，最好在本地写好粘贴上去。
+2. 语法是  kramdown。参考[这个页面](http://kramdown.gettalong.org/)。除了常用的语法，可能 `quote` 和 `footnote` 也比较常用。
+3. 作者：OctoMiao，ErbB4，neuronstar
+
+
+关于  metadata：每个文章需要包含（prose 中不需要上面和下面的横杠）。
+
+```
+layout: article
+title: "文章题目"
+modified: 2014-10-18
+author: OctoMiao
+toc: false
+comments: true
+categories: stories
+summary: 显示在首页的一个简介
+```
+
+categories 目前包括 science, stories, til
+
+
+-----
+
 [skinny-bones](https://github.com/mmistakes/skinny-bones-jekyll) 修改的主题，沿用原作者的 MIT License. 
 
 GitHub + [prose.io](http://prose.io) 可以像普通的带有数据库的博客（如 Wordpress）等一样实现在线编辑在线发布。
