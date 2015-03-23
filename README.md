@@ -2,6 +2,7 @@
 
 
 1. 去 [prose.io](http://prose.io) 写作。由于 [prose.io](http://prose.io) 偶尔不稳定，最好在本地写好粘贴上去。
+2. 在  [prose.io](http://prose.io)  上上传图片的时候，在 Image URl 里面填写这个地址 `images/posts/xxx.png` 其中 `xxx.png` 是图片的文件名。这样的好处是所有的图片都在 `images/posts` 文件夹中。
 2. 语法是  kramdown。参考[这个页面](http://kramdown.gettalong.org/)。除了常用的语法，可能 `quote` 和 `footnote` 也比较常用。
 3. 作者：OctoMiao，ErbB4，neuronstar
 
