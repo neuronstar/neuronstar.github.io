@@ -2,19 +2,20 @@
 published: true
 layout: article
 title: 回声定位
-modified: 2015-03-22
+modified: {}
 author: neuronstar
 toc: true
 comments: true
 categories: science
-summary: 回声定位是动物界一种很特殊的定位方式，这篇文章介绍了回声定位的一些生理和物理机制。
+summary: 听觉对于动物来说非常重要，在黑暗的深海里和茫茫的暗夜里，有两种动物不约而同地进化出了利用超声波定位的能力：回声定位。他们就是齿鲸和蝙蝠。有趣的是，同样处于黑暗中的盲人，也能掌握这一技能。
 ---
 
 ## 回声定位的原理
 
 回声定位是一种特殊的听觉形式，即动物发出超声波，超声波碰到障碍物后反弹，动物通过分析反弹的超声波的频率、波幅，来判断障碍物的距离、速度、类型、大小。这一技能被动物用于导航、捕食、探索环境。
 
-![]({{site.url}}/images/posts/echo/echo1.png)
+![图片1.jpg](/_posts/science/图片1.jpg)
+
 
 $$EL=SL+TS-2TL$$
 
@@ -89,9 +90,3 @@ $$v_s = \lambda f,$$
 </figcaption>
 ![]({{site.url}}/images/posts/echo/echo7.png)
 </figure>
-
-
-
-
-
-
