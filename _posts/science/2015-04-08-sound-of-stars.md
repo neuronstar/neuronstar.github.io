@@ -52,7 +52,7 @@ summary: 倾听恒星的声音
 
 <figure markdown="1">
 <figcaption>
-恒星可以产生复杂的振动，这是不同的振动模式的叠加。[Public Domain](https://en.wikipedia.org/wiki/File:Helioseismology_pmode1.png)
+恒星可以产生复杂的振动，这是不同的振动模式的叠加。<a href="https://en.wikipedia.org/wiki/File:Helioseismology_pmode1.png" target="_blank">Public Domain</a>
 </figcaption>
 ![星震](https://upload.wikimedia.org/wikipedia/commons/e/ec/Helioseismology_pmode1.png)
 </figure>
@@ -83,5 +83,5 @@ summary: 倾听恒星的声音
 ## 参考
 
 
-[^1] 参考[维基百科：变星](http://zh.wikipedia.org/wiki/%E8%AE%8A%E6%98%9F)
-[^2] Adak, Amitava, Robinson, A.\,P.\,L., Singh, Prashant Kumar, Chatterjee, Gourab, Lad, Amit D., Pasley, John & Kumar, G. Ravindra (2015). Terahertz Acoustics in Hot Dense Laser Plasmas. Phys. Rev. Lett., 114, 115001.
+[^1]: 参考[维基百科：变星](http://zh.wikipedia.org/wiki/%E8%AE%8A%E6%98%9F)
+[^2]: Adak, Amitava, Robinson, A.\,P.\,L., Singh, Prashant Kumar, Chatterjee, Gourab, Lad, Amit D., Pasley, John & Kumar, G. Ravindra (2015). Terahertz Acoustics in Hot Dense Laser Plasmas. Phys. Rev. Lett., 114, 115001.
