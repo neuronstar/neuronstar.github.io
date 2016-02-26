@@ -55,8 +55,8 @@ owner:
   bio: ""
   avatar: logo-120x120.png  # 160x160 px image for author byline
   weibo:   # 这是微博账号，星际移民中心 只是个例子
-  disqus-shortname: # 这是你的 disqus 评论框的代码，如果使用英文模板请填写
-  duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
+disqus-shortname: # 这是你的 disqus 评论框的代码，如果使用英文模板请填写
+duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
 
 
 prose:
