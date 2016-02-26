@@ -25,7 +25,7 @@ categories 目前包括 science, stories, til
 
 -----
 
-[skinny-bones](https://github.com/mmistakes/skinny-bones-jekyll) 修改的主题，沿用原作者的 MIT License. 
+[skinny-bones](https://github.com/mmistakes/skinny-bones-jekyll) 修改的主题，沿用原作者的 MIT License.
 
 GitHub + [prose.io](http://prose.io) 可以像普通的带有数据库的博客（如 Wordpress）等一样实现在线编辑在线发布。
 
@@ -61,36 +61,11 @@ GitHub + [prose.io](http://prose.io) 可以像普通的带有数据库的博客�
 
 
 > 如果你不了解 jekyll，简略说来：
-> 
+>
 > 1. 所有的文章都在 `_posts` 目录下面。posts 的命名按照 jekyll 的要求，需要以日期格式开头。如果不这样命名，不会自动索引，但是依然会自动生成 html 页面，这时候需要手动索引。**我在目录中保留了几篇样稿，这样可以模仿格式，请在正式发布站点时删除。**
-> 
+>
 > 2. `science`，`til`，`stories`，`history`，`club`，`about`，这些都是可以删除或者更改的文件目录。这些文件夹的名称是 post 的 category 名称，里面的 index.md 是索引页面，可以自己更改，我个人习惯在根目录建立这样的文件夹。也可以参考其他用法。
-> 
+>
 > 3. `_posts` 目录中 posts 中的作者的代码需要与 `_data/authors.yml` 中的一致。例如在 `_posts` 目录中写了一篇名为 `2014-10-18-martian-sunset-phobos.md` 的新文章，其中 meta data 中设定作者为 `author: example` ，那么在 `_data/authors.yml` 中需要有 `example` 这个作者。
-> 
+>
 > 4. 另外，所有的 html 文件会默认全部原封不动进入到 GitHub 生成的站点中。
-
-
-
-
-
-
-
------
-
-# Skinny Bones Jekyll Starter
-
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
-
-I'm currently using a variation of it on my personal website [Made Mistakes](http://mademistakes.com) with some modifications. To learn more about how to use the theme and install it check out the [Skinny Bones demo](http://mmistakes.github.io/skinny-bones-jekyll/) (*work in progress*).
-
-![screenshot of Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/images/skinny-bones-theme-feature.jpg)
-
----
-
-## Notable Features
-
-* Stylesheet built using Sass. *Requires Jekyll 2.x*
-* Data files for easier customization of the site navigation/footer and for supporting multiple authors.
-* Optional Disqus comments, table of contents, social sharing links, and Google AdSense ads.
-* And more.

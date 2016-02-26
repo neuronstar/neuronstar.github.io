@@ -6,24 +6,37 @@ description: ""
 version: "α" # 这是版本号，可以留空。
 logo: logo-120x120.png # 120x120 px 的 logo 文件
 teaser: # 400x250 px default teaser image used in image archive grid
-locale: zh-cn # 默认设置成中文了，如果都是英文内容可以改为英文。
-url: http://neuronstar.github.io # 你的网站的 url 
+locale: en
+url: http://neuronstar.github.io # 你的网站的 url
 baseurl:  # baseurl 设置请参阅 jekyll 的文档
 
 # Jekyll configuration
 
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 permalink: /:categories/:title/
-markdown: kramdown # 我选了 kramdown，与默认的 Markdown 稍有不同，但是支持更多的语法。请参阅 kramdown 官方语法
-highlighter: pygments
+kramdown:
+  toc_levels: 1..2
+highlighter: rouge
 gems:
   - jekyll-sitemap
-
+  - jekyll-gist
 
 share: false
 
+# Octopress configuration
+
+# Default extensions
+post_ext: md
+page_ext: md
+
+# Found in _templates/
+post_layout: article
+page_layout: article
+
+# Format titles with titlecase?
+titlecase: true
 
 
 # New Settings
@@ -31,20 +44,19 @@ share: false
 cover_image: cover.jpg
 
 
-
 # Site owner
 owner:
   name: "NeuronStar"  # 网站名称设置
   email:   # 默认 email 设置
   twitter:   # 保留了原来的设置，但是这部分在所有中文的“作者名片”模板中失效了。
-  google: 
+  google:
     ad-client:
-    ad-slot: 
+    ad-slot:
   bio: ""
-  avatar: logo-120x120.png # 160x160 px image for author byline
+  avatar: logo-120x120.png  # 160x160 px image for author byline
   weibo:   # 这是微博账号，星际移民中心 只是个例子
-disqus-shortname: xxxxxx  # 这是你的 disqus 评论框的代码，如果使用英文模板请填写
-duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
+  disqus-shortname: # 这是你的 disqus 评论框的代码，如果使用英文模板请填写
+  duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
 
 
 prose:
@@ -68,14 +80,4 @@ prose:
 
 
 
-
 exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
-
-
-
-
-
-
-
-
-

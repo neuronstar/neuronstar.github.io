@@ -1,12 +1,12 @@
 ---
 layout: archive
 permalink: /
-title: 
+title:
 ---
 
 
 <div class="front-cover" style="background:url(./images/{{ site.cover_image }}) no-repeat fixed center;background-size:cover;overflow:hidden;">
-    
+
     <section>
         <div class="container" style="padding-top:1em;">
             <h1 style="text-align:center;color:#fff;font-weight:600;" id="site-title-front">{{ site.title }}</h1>
@@ -57,5 +57,3 @@ title:
 		{% else %}
 暂无故事类文章
 		{% endif %}
-
-
