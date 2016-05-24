@@ -1,17 +1,16 @@
 # Site navigation links
 
-- title: 科学
-  url: /science/
-  excerpt: "科学"
+- title: Home
+  url: /
 
-- title: 故事
-  url: /stories/
-  excerpt: "故事"
-
-- title: TIL
-  url: /til/
-  excerpt: "每日新知"
-
-- title: 关于
+- title: About
   url: /about/
-  excerpt: "关于"
+
+- title: Articles
+  url: /articles
+
+- title: Resources
+  url: /resources
+
+- title: Map of Neuroscience
+  url: http://neuronstar.xyz/comp-neurosci-map

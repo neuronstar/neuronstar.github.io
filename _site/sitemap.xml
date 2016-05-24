@@ -1,89 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  
-  <url>
-    <loc>http://neuronstar.github.io/science/test/</loc>
-    
-    <lastmod>2015-03-22T00:00:00-06:00</lastmod>
-    
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/stories/test/</loc>
-    
-    <lastmod>2015-03-22T00:00:00-06:00</lastmod>
-    
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/stories/martian-sunset-phobos/</loc>
-    
-    <lastmod>2014-10-18T00:00:00-06:00</lastmod>
-    
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/til/til/</loc>
-    
-    <lastmod>2014-10-16T00:00:00-06:00</lastmod>
-    
-    <priority>0.8</priority>
-  </url>
-  
-  
-  <url>
-    <loc>http://neuronstar.github.io/club/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/about/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/subscribe/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/til/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/science/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>http://neuronstar.github.io/stories/</loc>
-    <lastmod>2015-03-22T13:56:43-06:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  
-  
+<url>
+<loc>http://localhost:4000/sciencecn/bayesian/</loc>
+<lastmod>2015-05-10T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/sciencecn/echolocation/</loc>
+<lastmod>2015-03-22T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/sciencecn/ann-ode/</loc>
+<lastmod>2015-03-22T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/til/til/</loc>
+<lastmod>2014-10-16T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/resources/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/articles/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tags/</loc>
+</url>
 </urlset>

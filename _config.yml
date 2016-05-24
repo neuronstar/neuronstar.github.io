@@ -1,83 +1,73 @@
 # Site wide configuration
 
-title: Neuron Star
-subtitle: "故事和科学"
-description: ""
-version: "α" # 这是版本号，可以留空。
-logo: logo-120x120.png # 120x120 px 的 logo 文件
-teaser: # 400x250 px default teaser image used in image archive grid
-locale: en
-url: http://neuronstar.github.io # 你的网站的 url
-baseurl:  # baseurl 设置请参阅 jekyll 的文档
+title: NEURONSTAR
+locale: en_US
+description: Neuroscience and Complex Systems
+logo: logo.png
+search: false
+url: http://localhost:4000
+#url: http://neuronstar.xyz
 
 # Jekyll configuration
 
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
-permalink: /:categories/:title/
-kramdown:
-  toc_levels: 1..2
-highlighter: rouge
 gems:
   - jekyll-sitemap
   - jekyll-gist
 
-share: false
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
 
-# Octopress configuration
+mathjax: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Octopress
 
 # Default extensions
 post_ext: md
 page_ext: md
 
 # Found in _templates/
-post_layout: article
-page_layout: article
+post_layout: post
+page_layout: page
 
 # Format titles with titlecase?
 titlecase: true
 
 
-# New Settings
-
-cover_image: cover.jpg
-
-
 # Site owner
 owner:
-  name: "NeuronStar"  # 网站名称设置
-  email:   # 默认 email 设置
-  twitter:   # 保留了原来的设置，但是这部分在所有中文的“作者名片”模板中失效了。
+  name: HLLM
+  avatar: bio-photo.jpg
+  email:
+  web: # owner's website
+  disqus-shortname: neuronstar
+  twitter: #username
+  facebook: #username
+  github: neuronstar #username
+  stackexchange: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo:  #userid
   google:
+    plus: #username
+    analytics: UA-61051776-1
+    verify:
     ad-client:
     ad-slot:
-  bio: ""
-  avatar: logo-120x120.png  # 160x160 px image for author byline
-  weibo:   # 这是微博账号，星际移民中心 只是个例子
-disqus-shortname: # 这是你的 disqus 评论框的代码，如果使用英文模板请填写
-duoshuo-shortname: neuronstar # 请填写。这是你的 duoshuo 代码，中文模板请填写
-
-
-prose:
-  media: '/images/posts'
-  metadata:
-    _posts:
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Science"
-              value: "science"
-            - name: "Neural Science"
-              value: "neuralscience"
-            - name: "Mars"
-              value: "mars"
-            - name: "Artificial Neural Network"
-              value: "ann"
-
-
-
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+  bing-verify:
