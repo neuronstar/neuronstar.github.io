@@ -1,60 +1,83 @@
-example:
-    name: First Name
-    display_name: DisplayName # 这是真的显示的名字
-    gravatar:  # 国内网络环境请勿使用，因为已经被墙了
-    avatar: interimm.png # 这是你的头像的文件名。头像在 `images/authors` 目录中。无需填写目录，只需填写文件名称。
-    email: example@company.com   
-    web: http://example.com
-    weibo: http://www.weibo.com/iiaofficial # 微博链接
-    bio: "这是一段介绍，显示在作者名片中"
-    douban: # 豆瓣链接
-    twitter: 
-    github: 
+# Authors
+
+OctoMiao:
+    name: OctoMiao
+    display_name: OctoMiao
+    gravatar:
+    avatar: octomiao.jpg
+    email:
+    web: http://openmetric.org
+    weibo: http://www.weibo.com/1510425807
+    bio: "<b>Interplanetary Immigration Center</b><br><b>Keywords</b>：Physics, Neutrino, Mathematica"
+    douban:
+    twitter:
+    github: https://github.com/emptymalei
+    facebook:
+    researchgate: https://www.researchgate.net/profile/Lei_MA
+
+billy_rick:
+  name: Billy Rick
+  web: http://thewhip.com
+  email: billy@rick.com
+  bio: "What do you want, jewels? I am a very extravagant man."
+  avatar: bio-photo-2.jpg
+  twitter: extravagantman
+  google:
+    plus: BillyRick
+
+cornelius_fiddlebone:
+  name: Cornelius Fiddlebone
+  email: cornelius@thewhip.com
+  bio: "I ordered what?"
+  avatar: bio-photo.jpg
+  twitter: rhymeswithsackit
+  google:
+    plus: CorneliusFiddlebone
 OctoMiao:
     name: OctoMiao
     display_name: 章鱼喵
-    gravatar: 
+    gravatar:
     avatar: octomiao.jpg
-    email: 
+    email:
     web: http://openmetric.org
     weibo: http://www.weibo.com/1510425807
     bio: "正在学习计算的物理学生"
-    douban: 
-    twitter: 
+    douban:
+    twitter:
     github:
 ErbB4:
     name: ErbB4
     display_name: ErbB4
-    gravatar: 
+    gravatar:
     avatar: erbb4.jpg
     email: miab736621299@gmail.com
-    web: 
+    web:
     weibo: http://www.weibo.com/u/1789618360
     bio: "正在学习神经科学的前心理学生"
     douban: http://www.douban.com/people/81194074/
-    twitter: 
-    github:  
+    twitter:
+    github:
 neuronstar:
     name: neuronstar
     display_name: NeuronStar
-    gravatar: 
+    gravatar:
     avatar: ns.png
-    email: 
-    web: 
-    weibo: 
+    email:
+    web:
+    weibo:
     bio: "Neuron Star"
-    douban: 
-    twitter: 
-    github:  
+    douban:
+    twitter:
+    github:
 example:
     name: First Name
     display_name: DisplayName # 这是真的显示的名字
     gravatar:  # 国内网络环境请勿使用，因为已经被墙了
     avatar: interimm.png # 这是你的头像的文件名。头像在 `images/authors` 目录中。无需填写目录，只需填写文件名称。
-    email: example@company.com   
+    email: example@company.com
     web: http://example.com
     weibo: http://www.weibo.com/iiaofficial # 微博链接
     bio: "这是一段介绍，显示在作者名片中"
     douban: # 豆瓣链接
-    twitter: 
+    twitter:
     github: 

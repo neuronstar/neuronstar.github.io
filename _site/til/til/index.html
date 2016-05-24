@@ -1,243 +1,237 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Today I Learned • Neuron Star</title>
-    <meta name="description" content="
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Today I Learned &#8211; NEURONSTAR</title>
+<meta name="description" content="
 ">
-    <meta name="keywords" content="">
-    
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Today I Learned">
+<meta name="twitter:description" content="
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Today I Learned">
+<meta property="og:description" content="
+">
+<meta property="og:url" content="http://localhost:4000/til/til/">
+<meta property="og:site_name" content="NEURONSTAR">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/til/til/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
       
-    	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Today I Learned">
-	<meta name="twitter:description" content="
-">
-	
-	
-	
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="http://neuronstar.github.io/images/logo-120x120.png">
-	
-	<!-- Open Graph -->
-	<meta property="og:locale" content="zh-cn">
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Today I Learned">
-	<meta property="og:description" content="
-">
-	<meta property="og:url" content="http://neuronstar.github.io/til/til/">
-	<meta property="og:site_name" content="Neuron Star">
-    
+		    
+		    <li><a href="http://localhost:4000/" >Home</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/articles" >Articles</a></li>
+		  
+		    
+		    <li><a href="http://localhost:4000/resources" >Resources</a></li>
+		  
+		    
+		    <li><a href="http://neuronstar.xyz/comp-neurosci-map" target="_blank">Map of Neuroscience</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
 
-    <link rel="canonical" href="http://neuronstar.github.io/til/til/">
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
 
-    <link href="http://neuronstar.github.io/atom.xml" type="application/atom+xml" rel="alternate" title="Neuron Star Atom Feed">
-    <link href="http://neuronstar.github.io/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
-
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
-
-    <style>
-    .sliding-menu-content {
-      top: 0;
-      right: 0;
-      text-align: center;
-      visibility: hidden;
-      height: 100%;
-      width: 100%;
-      -webkit-transform: translateX(100%);
-      -moz-transform: translateX(100%);
-      -ms-transform: translateX(100%);
-      -o-transform: translateX(100%);
-      transform: translateX(100%);
-    }
-    </style>
-
-    <link rel="stylesheet" href="http://neuronstar.github.io/css/main.css">
-    <link rel="stylesheet" href="http://neuronstar.github.io/css/style.css">
-    <!-- HTML5 Shiv and Media Query Support for IE -->
-    <!--[if lt IE 9]>
-      <script src="http://neuronstar.github.io/js/vendor/html5shiv.min.js"></script>
-      <script src="http://neuronstar.github.io/js/vendor/respond.min.js"></script>
-    <![endif]-->
-
-        <!--多说js加载开始，一个页面只需要加载一次 -->
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:"neuronstar"};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = 'http://static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-    </script>
-    <!--多说js加载结束，一个页面只需要加载一次 -->
-
-  </head>
-
-  <body>
-    <header id="masthead">
-  <div class="inner-wrap">
-    <a href="http://neuronstar.github.io/" class="site-title">Neuron Star <sup id="site-version" style="text-transform:lowercase;font-size:60%;">[α]</sup> </a>
-    <nav role="navigation" class="menu top-menu">
-        <ul class="menu-item">
-	<li class="home"><a href="/">Neuron Star</a></li>
-	
-    
-        
-    
-    <li><a href="http://neuronstar.github.io/science/" >科学</a></li>
-  
-    
-        
-    
-    <li><a href="http://neuronstar.github.io/stories/" >故事</a></li>
-  
-    
-        
-    
-    <li><a href="http://neuronstar.github.io/til/" >TIL</a></li>
-  
-    
-        
-    
-    <li><a href="http://neuronstar.github.io/about/" >关于</a></li>
-  
-</ul>
-    </nav>
-  </div><!-- /.inner-wrap -->
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="NEURONSTAR"><img src="http://localhost:4000/images/logo.png" width="200" height="200" alt="NEURONSTAR logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">NEURONSTAR</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Neuroscience and Complex Systems</h2>
+	</div>
 </header><!-- /.masthead -->
-    <nav role="navigation" class="js-menu sliding-menu-content">
-	<ul class="menu-item">
-		<li>
-      
-        
-    
-			
-			<a href="http://neuronstar.github.io/science/" class="title">科学</a>
-			<p class="excerpt">科学</p>
-		</li><li>
-      
-        
-    
-			
-			<a href="http://neuronstar.github.io/stories/" class="title">故事</a>
-			<p class="excerpt">故事</p>
-		</li><li>
-      
-        
-    
-			
-			<a href="http://neuronstar.github.io/til/" class="title">TIL</a>
-			<p class="excerpt">每日新知</p>
-		</li><li>
-      
-        
-    
-			
-			<a href="http://neuronstar.github.io/about/" class="title">关于</a>
-			<p class="excerpt">关于</p>
-		</li>
-	</ul>
-</nav>
-<button type="button" class="js-menu-trigger sliding-menu-button menulines-button x2" role="button" aria-label="Toggle Navigation">
-	<span class="menulines"></span>
-</button>
 
 <div class="js-menu-screen menu-screen"></div>
 
-    <div id="page-wrapper">
-      <!--[if lt IE 9]><div class="upgrade notice-danger"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
 
-      <div id="main" role="main">			
-	<article class="wrap" itemscope itemtype="http://schema.org/Article">
-		
-		<nav class="breadcrumbs">
-  <a href="http://neuronstar.github.io">首页</a> <span class="divider">/</span> <a href="http://neuronstar.github.io/til/">Til</a> <span class="divider">/</span>
-</nav><!-- /.breadcrumbs -->
-		<div class="page-title">
-			<h1>Today I Learned</h1>
-		</div>
-		<div class="inner-wrap">
-			<nav class="toc"></nav><!-- /.toc -->
-			<div id="content" class="page-content" itemprop="articleBody">
-				
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">Today I Learned</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        
+        
+          <img src="http://localhost:4000/images/authors/ns.png" class="bio-photo" alt="neuronstar bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">neuronstar</span></span>
+        <span class="entry-date date published"><time datetime="2014-10-16T00:00:00-06:00"><i class="fa fa-calendar-o"></i> October 16, 2014</time></span>
+        <span class="entry-date date modified"><time datetime="2015-03-21"><i class="fa fa-pencil"></i> March 21, 2015</time></span>
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        
+      </footer>
+      <div class="entry-content">
+        
 
-				<hr />
-				<footer class="page-footer">
-					
-  
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'neuronstar'; // required: replace example with your forum shortname
 
-<div class="author-image">
-	
-		<img src="http://neuronstar.github.io/images/authors/" alt="">
-		
-</div><!-- ./author-image -->
-<div class="author-content">
-	<h3 class="author-name" >作者： 「<span itemprop="author" style="opacity:0.3;"><i class="fa fa-link"></i></span> <span itemprop="author" style="opacity:0.3;"><i class="fa fa-weibo"></i></span>」</h3>
-	<p class="author-bio"></p>
-</div><!-- ./author-content -->
-					<div class="inline-btn">
-	<a class="btn-social weibo" href="http://service.weibo.com/share/share.php?title=Today%20I%20Learned | @&amp;url=http://neuronstar.github.io/til/til/" target="_blank"><i class="fa fa-weibo" aria-hidden="true"></i> 分享到微博</a>
-	<a class="btn-social douban" href="http://www.douban.com/share/service?bm=&amp;image=http://neuronstar.github.io/images/&amp;href=http://neuronstar.github.io/til/til/&amp;updated=&amp;name=" target="_blank"><i class="fa fa-heart-o" aria-hidden="true"></i> 分享到豆瓣</a>
-	<a class="btn-social facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://neuronstar.github.io/til/til/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>
-</div><!-- /.share-this -->
-					<div class="page-meta">
-	<p>最近更新 <time datetime="2015-03-21T00:00:00Z" itemprop="dateModified">2015-03-21</time>
-</div><!-- /.page-meta -->
-				</footer><!-- /.footer -->
-				<aside>
-					<hr />
-<!-- Duoshuo Comment BEGIN -->
-    <div id="comments">
-        <div class="ds-thread" data-thread-key="/til/til"  data-title="Today I Learned - Neuron Star"></div>
-    </div>
-<!-- Duoshuo Comment END -->
-				</aside>
-			</div><!-- /.content -->
-		</div><!-- /.inner-wrap -->
-		
-	</article><!-- ./wrap -->
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+      
+        <a href="http://localhost:4000/sciencecn/ann-ode/" class="btn" title="人工神经网络方法解方程">Next</a>
+      
+    </nav><!-- /.pagination -->
+  </article>
 </div><!-- /#main -->
 
-      <footer role="contentinfo" id="site-footer">
-	<nav role="navigation" class="menu bottom-menu">
-		<ul class="menu-item">
-		
-      
-        
-      
-			<li><a href="http://neuronstar.github.io/subscribe/" >订阅</a></li>
-		
-      
-        
-        
-			<li><a href="http://github.com/neuronstar" target="_blank">GitHub</a></li>
-		
-		</ul>
-	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2015 <a href="http://neuronstar.github.io">Neuron Star</a> |  由 <a href="http://jekyllrb.com">Jekyll</a> + <a href="https://github.com/emptymalei/planets-jekyll">planets</a> 驱动</p>
-</footer>
-    </div>
-
-    <script src="http://neuronstar.github.io/js/vendor/jquery-1.9.1.min.js"></script>
-    <script src="http://neuronstar.github.io/js/main.js"></script>
-    
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
     
 
-  </body>
+<span>&copy; 2016 <a href="" style="text-decoration: underline;" target="_blank">HLLM</a>. Powered by <a href="http://jekyllrb.com" style="text-decoration: underline;" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" style="text-decoration: underline;" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://github.com/neuronstar" title="HLLM on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
+</div><!-- /.social-icons -->
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </footer>
+</div><!-- /.footer-wrapper -->
 
-  ga('create', 'UA-61051776-1', 'auto');
-  ga('send', 'pageview');
-
+<script type="text/javascript">
+  var BASE_URL = 'http://localhost:4000';
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-61051776-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
 </html>
