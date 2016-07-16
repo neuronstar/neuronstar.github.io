@@ -1,3 +1,3 @@
 [submodule "spiking-neuron-models"]
-	path = spiking-neuron-models
+	path = _spiking-neuron-models
 	url = https://github.com/neuronstar/spiking-neuron-models
