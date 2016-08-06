@@ -15,7 +15,8 @@ search_omit: true
 ## Spiking Neuron Models Reading Club
 
 <ul class="post-list">
-{% for post in site.spiking-neuron-models %}
+{% assign snm = site.spiking-neuron-models | sort: 'title' %}
+{% for post in snm %}
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.author | date_to_xmlschema }}"> by &nbsp; {{ post.author }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}</span>{% endif %}</a></article></li>
 {% endfor %}
 </ul>

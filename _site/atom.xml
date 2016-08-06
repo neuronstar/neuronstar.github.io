@@ -3,27 +3,27 @@
 
     <title>NEURONSTAR</title>
     <generator uri="https://github.com/jekyll/jekyll">Jekyll v3.1.2</generator>
-		<icon>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/apple-touch-icon-precomposed.png</icon>
+		<icon>http://neuronstar.cc/apple-touch-icon-precomposed.png</icon>
     <subtitle>Neuroscience and Complex Systems</subtitle>
-    <link href="/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/atom.xml" rel="self"/>
-    <link href="/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/" rel="alternate" type="text/html"/>
-    <updated>2016-07-16T16:19:51-06:00</updated>
-    <id>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/</id>
+    <link href="http://neuronstar.cc/atom.xml" rel="self"/>
+    <link href="http://neuronstar.cc/" rel="alternate" type="text/html"/>
+    <updated>2016-08-05T20:31:04-06:00</updated>
+    <id>http://neuronstar.cc/</id>
     <author>
 			<name>HLLM</name>
-			<uri>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/</uri>
+			<uri>http://neuronstar.cc/</uri>
 			
 		</author>
 
     
     <entry>
         <title>贝叶斯统计、罕见疾病和抽奖问题</title>
-        <link href="/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/sciencecn/bayesian/"/>
+        <link href="http://neuronstar.cc/sciencecn/bayesian/"/>
         <updated>2015-05-10T00:00:00-06:00</updated>
-        <id>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/sciencecn/bayesian</id>
+        <id>http://neuronstar.cc/sciencecn/bayesian</id>
         <author>
 					<name>HLLM</name>
-					<uri>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/</uri>
+					<uri>http://neuronstar.cc/</uri>
 					
 				</author>
         <content type="html">
@@ -38,7 +38,7 @@
   &lt;figcaption&gt;
 Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加上事件 B，是所有带有颜色的区域，但是交叠部分被数了两次。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/bayesian/venn-diagram-AB.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/bayesian/venn-diagram-AB.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;我们定义 $P(A,B) = P(A\cap B)$ （joint probability）。这样有两种比较有趣的特殊情况：&lt;/p&gt;
@@ -144,7 +144,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
   &lt;figcaption&gt;
 神经科学中的一种 raster plot：横轴是时间，纵轴是第几次实验。例如纵轴是 1，我们按照横轴读过去，发现在某些时刻，这个神经元会放电，换到纵轴是 2，也就是第二次重复实验，发现跟第一次并不完全吻合。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/bayesian/raster_baselineandstim.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/bayesian/raster_baselineandstim.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;由于这种内在的随机性，在理论上描述的时候，需要使用概率论。而我们又常常关心在给定刺激的时候放电的概率 $P(\mathrm{spike}\vert \mathrm{stimulus})$，或者在放电了存在刺激的概率 $P(\mathrm{stimulus}\vert \mathrm{spike})$。&lt;/p&gt;
@@ -174,12 +174,12 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
     
     <entry>
         <title>回声定位</title>
-        <link href="/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/sciencecn/echolocation/"/>
+        <link href="http://neuronstar.cc/sciencecn/echolocation/"/>
         <updated>2015-03-22T00:00:00-06:00</updated>
-        <id>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/sciencecn/echolocation</id>
+        <id>http://neuronstar.cc/sciencecn/echolocation</id>
         <author>
 					<name>HLLM</name>
-					<uri>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/</uri>
+					<uri>http://neuronstar.cc/</uri>
 					
 				</author>
         <content type="html">
@@ -188,15 +188,15 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
 
 &lt;p&gt;回声定位是一种特殊的听觉形式，即动物发出超声波，超声波碰到障碍物后反弹，动物通过分析反弹的超声波的频率、波幅，来判断障碍物的距离、速度、类型、大小。这一技能被动物用于导航、捕食、探索环境。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/echo/echo1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/echo/echo1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;EL=SL+TS-2TL&lt;/script&gt;
 
 &lt;p&gt;通常来说，人类能够听到的声音频率范围是 20Hz-20,000Hz，超过 20,000Hz 的声波即超声波，是人类听觉系统（耳蜗）不能感知的刺激。但是，很多动物能听到超声波。其中的典范就是齿鲸（包括喙鲸和海豚）和蝙蝠，它们能利用超声波进行定位，即回声定位。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/echo/echo2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/echo/echo2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/echo/echo3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/echo/echo3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;海豚与蝙蝠&lt;/h2&gt;
 
@@ -218,13 +218,13 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
 
 &lt;p&gt;海豚和蝙蝠的捕食过程可以分为三个阶段：搜索、趋近、捕食。在这三个阶段中，海豚和蝙蝠发出的声音频率不变，而信号间隔逐渐变短，是为了得到更精确的关于猎物的信息，最后阶段当他们非常接近猎物时，信号间隔降低为几毫秒，为“蜂鸣”信号（buzz）。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/echo/echo5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/echo/echo5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-5&quot;&gt;捕食者-猎物的互动和进化&lt;/h2&gt;
 
 &lt;p&gt;在齿鲸中，有一对有趣的捕食者-猎物的例子，那就是虎鲸和海豚，他们都能够接受超声波信号，因此，以哺乳动物为食的虎鲸为了避免被海豚“听”到，在接近海豚时会关闭回声定位系统；而海豚在捕食鱼类时，为了避免被虎鲸“听”到而暴露自己，进化出了高于虎鲸听力上限的超声波范围。这就是 predator 和 prey 斗智斗勇的生存游戏。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/echo/echo6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/echo/echo6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-6&quot;&gt;人类的回声定位&lt;/h2&gt;
 
@@ -248,7 +248,7 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;figcaption&gt;
 图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。Madsen PT, Surlykke A. 2013 Vol. 28 no. 5, 276-283. &lt;a href=&quot;http://physiologyonline.physiology.org/content/28/5/276.long&quot; target=&quot;_blank&quot;&gt;Functional convergence in bat and toothed whale biosonars&lt;/a&gt;.
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/echo/echo7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/echo/echo7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
         </content>
@@ -256,12 +256,12 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
     
     <entry>
         <title>人工神经网络方法解方程</title>
-        <link href="/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/sciencecn/ann-ode/"/>
+        <link href="http://neuronstar.cc/sciencecn/ann-ode/"/>
         <updated>2015-03-22T00:00:00-06:00</updated>
-        <id>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/sciencecn/ann-ode</id>
+        <id>http://neuronstar.cc/sciencecn/ann-ode</id>
         <author>
 					<name>HLLM</name>
-					<uri>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/</uri>
+					<uri>http://neuronstar.cc/</uri>
 					
 				</author>
         <content type="html">
@@ -296,7 +296,7 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;figcaption&gt;
 阶梯函数图像，可以挑选出某些参数值。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/annode/Dirac_distribution_CDF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/annode/Dirac_distribution_CDF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;然而数值上来讲，这个函数有个非常大的缺点，就是导数不连续。尤其是对于我们想要解一个微分方程来说，用来参数化的函数里面包含导数不连续的部分，那是非常不方便的。&lt;/p&gt;
@@ -311,7 +311,7 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;figcaption&gt;
 sigmoid 函数，也具有挑选出某些参数值的功能。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/images/posts/annode/Logistic-curve.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://neuronstar.cc/images/posts/annode/Logistic-curve.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;这个函数有个非常大的优势，就是如果我们把要求解的函数利用这个参数化，所有的导数全是可以解析求解的，对于数值计算是一个福音。&lt;/p&gt;
@@ -415,12 +415,12 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
     
     <entry>
         <title>Today I Learned</title>
-        <link href="/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/til/til/"/>
+        <link href="http://neuronstar.cc/til/til/"/>
         <updated>2014-10-16T00:00:00-06:00</updated>
-        <id>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/til/til</id>
+        <id>http://neuronstar.cc/til/til</id>
         <author>
 					<name>HLLM</name>
-					<uri>/Users/leima/GitHub/neuronstar/neuronstar.github.io/_site/</uri>
+					<uri>http://neuronstar.cc/</uri>
 					
 				</author>
         <content type="html">

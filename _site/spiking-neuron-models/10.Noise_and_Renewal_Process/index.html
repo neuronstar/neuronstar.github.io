@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>05.Synapse and receptor &#8211; NEURONSTAR</title>
-<meta name="description" content="Synapse and receptor
+<title>10.Information Coding &#8211; NEURONSTAR</title>
+<meta name="description" content="Information coding
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="05.Synapse and receptor">
-<meta name="twitter:description" content="Synapse and receptor
+<meta name="twitter:title" content="10.Information Coding">
+<meta name="twitter:description" content="Information coding
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="05.Synapse and receptor">
-<meta property="og:description" content="Synapse and receptor
+<meta property="og:title" content="10.Information Coding">
+<meta property="og:description" content="Information coding
 
 ">
-<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/05.Synapse_and_Receptors/">
+<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/10.Noise_and_Renewal_Process/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/05.Synapse_and_Receptors/">
+<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/10.Noise_and_Renewal_Process/">
 <link href="http://neuronstar.cc/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -190,7 +190,7 @@ MathJax.Hub.Config({
           
         </ul>
         
-          <h1 class="entry-title">05.Synapse and receptor</h1>
+          <h1 class="entry-title">10.Information Coding</h1>
         
       </header>
       <footer class="entry-meta">
@@ -199,7 +199,7 @@ MathJax.Hub.Config({
           <img src="http://neuronstar.cc/images/authors/erbb4.jpg" class="bio-photo" alt="ErbB4 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">ErbB4</span></span>
-        <span class="entry-date date published"><time datetime="2016-03-28T00:00:00-06:00"><i class="fa fa-calendar-o"></i> March 28, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-06-25T00:00:00-06:00"><i class="fa fa-calendar-o"></i> June 25, 2016</time></span>
         
         
         <span class="social-share-twitter">
@@ -211,46 +211,54 @@ MathJax.Hub.Config({
         
       </footer>
       <div class="entry-content">
-        <h2 id="synapse-and-receptor">Synapse and receptor</h2>
+        <h2 id="information-coding">Information coding</h2>
 
-<p>What is left from last section:  calcium-activated potassium channels,
-low-threshold and high-threshold calcium-activated potassium channels,  are responsible for post-inhibitory-rebound and adaptation respectively.</p>
+<h3 id="time-to-first-spike">time to first spike</h3>
 
-<h3 id="calcium-dynamics">Calcium dynamics</h3>
+<p>In a $\mathrm{SRM_0}$ model, N presynaptic neurons target on <strong>the</strong> postsynaptic neuron. At $t^\mathrm{pre}$, n presynaptic spikes arrive.
+$u_i(t)=n<em>w</em>\epsilon(t-t^\mathrm{pre})$
+$u_i(t)$ is membran potential, $w$ is the constant value of all synaptic weights.
+When $u_i(t)$ cross threshold $\theta$, a spike is generated.
+So the time difference (time to fist spike) codes the strength of inputs.</p>
 
-<p>Calcium concentration varies in different parts of neuron: soma, dendrite and spines, enabling neurotransmitter release, action potential generation and synapse stabilization.</p>
+<h3 id="phase-coding">phase coding</h3>
 
-<script type="math/tex; mode=display">\mathrm{\frac{d[Ca^{2+}]_i}{dt}}=\mathrm{-\tau_{Ca}^{-1}[Ca^{2+}]_i+\phi_{Ca}I_{Ca}}</script>
+<p>Reference is necessary: periodic background signal
+Phase codes constant input strength?</p>
 
-<h3 id="synapse">Synapse</h3>
-<p>Synapses could be classified as inhibitory synapses (mainly using GABA as neurotransmitter) and excitatory synapses (adopting glutamate as neurotransmitter).
-The activation of post-synaptic element is realized by binding of neurotransmitter and receptor, ion channel opening and post-synaptic current (or potential) generation, or other intracellular cascade. The amount of current pass through a specific synapse could be described as a function of synaptic conductance $\mathrm{g_{syn}}$ and driving potential.
-<script type="math/tex">\mathrm{I_{syn}}(t)=\mathrm{g_{syn}}(t)(u-\mathrm{E_{syn})}</script>
-The conductance of synapse is an exponential decay function:
-<script type="math/tex">\mathrm{g_{syn}}(t)=\sum_f\bar{g}_\mathrm{syn}e^{-(t-t^f)/\tau}\Theta(t-t^f).</script></p>
+<h3 id="correlation-coding">correlation coding</h3>
 
-<p>for inhibitory synapse, which has two types of current components:
-<script type="math/tex">\mathrm{g_{syn}}(t)=\sum_f(\bar{g}_\mathrm{fast}e^{-(t-t^f)/\tau_\mathrm{fast})}+\bar{g}_\mathrm{slow}e^{-(t-t^f)/\tau_\mathrm{slow})})\Theta(t-t^f).</script>
-for excitatory synapse, which adapts two types of receptors: NMDA (slow) and AMPA (fast):
-<script type="math/tex">\mathrm{g_{AMPS}}(t)=\bar{g}_\mathrm{AMPA} N [e^{-(t-t^f)/\tau_\mathrm{decay}}-e^{-(t-t^f)/\tau_\mathrm{rise}}]\Theta(t-t^f).</script></p>
+<p>sharing same inputs or connected.</p>
 
-<p><script type="math/tex">\mathrm{g_{NMDA}}(t)=\bar{g}_\mathrm{NMDA} N [e^{-(t-t^f)/\tau_\mathrm{decay}}-e^{-(t-t^f)/\tau_\mathrm{rise}}]g_\mathrm{\infty}\Theta(t-t^f),</script> with $g_{\infty} = (1+e^{\alpha u}[\mathrm{Mg}^{2+}]_o/\beta)^{-1}.$</p>
+<h2 id="noise-in-neuron-activities">noise in neuron activities</h2>
 
-<p>###Receptors
-See this reference for differences between AMPA and NMDA receptor.   http://www.sumanasinc.com/webcontent/animations/content/receptors.html</p>
+<p>facts:
+in vivo recording revealed noise phenomena in in-tact neuron
+fast moving stimuli: no noise
+slowly moving stimuli: changing</p>
 
-<h3 id="spatial-structure-of-dendritic-tree">Spatial structure of dendritic tree</h3>
-<p>Cable equations based on Kirchhoff’s law. See Green’s function solving the stationary solution of cable equations in next section.</p>
+<h3 id="noise-sources">noise sources</h3>
+
+<ol>
+  <li>thermal noise</li>
+  <li>number of channels detected</li>
+  <li>multi-inputs from background</li>
+</ol>
+
+<h2 id="statistics-of-spike-trains">Statistics of spike trains</h2>
+
+<p>To reflect noisy neuron activity, input-dependent renewal process is required.
+ </p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://neuronstar.cc/spiking-neuron-models/04.The_Zoo_of_ion_channels/" class="btn" title="04.The Zoo of ion channels">Previous</a>
+        <a href="http://neuronstar.cc/spiking-neuron-models/09.From_detailed_models_to_formal_spiking_neurons/" class="btn" title="09.Reduction of the Hodgkin-Huxley model type II">Previous</a>
       
       
-        <a href="http://neuronstar.cc/spiking-neuron-models/06.Cable_Equation_and_Its_Solutions/" class="btn" title="06.Cable Equation and Its Solutions">Next</a>
+        <a href="http://neuronstar.cc/spiking-neuron-models/11.Stationary_Renewal_Theory/" class="btn" title="11.Renewal Theory">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

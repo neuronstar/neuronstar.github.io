@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>05.Synapse and receptor &#8211; NEURONSTAR</title>
-<meta name="description" content="Synapse and receptor
+<title>09.Escape Noise &#8211; NEURONSTAR</title>
+<meta name="description" content="Escape noise
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="05.Synapse and receptor">
-<meta name="twitter:description" content="Synapse and receptor
+<meta name="twitter:title" content="09.Escape Noise">
+<meta name="twitter:description" content="Escape noise
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="05.Synapse and receptor">
-<meta property="og:description" content="Synapse and receptor
+<meta property="og:title" content="09.Escape Noise">
+<meta property="og:description" content="Escape noise
 
 ">
-<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/05.Synapse_and_Receptors/">
+<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/12.Escape_Noise/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/05.Synapse_and_Receptors/">
+<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/12.Escape_Noise/">
 <link href="http://neuronstar.cc/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -190,20 +190,20 @@ MathJax.Hub.Config({
           
         </ul>
         
-          <h1 class="entry-title">05.Synapse and receptor</h1>
+          <h1 class="entry-title">09.Escape Noise</h1>
         
       </header>
       <footer class="entry-meta">
         
         
-          <img src="http://neuronstar.cc/images/authors/erbb4.jpg" class="bio-photo" alt="ErbB4 bio photo"></a>
+          <img src="http://neuronstar.cc/images/authors/harryhare.jpg" class="bio-photo" alt="harryhare bio photo"></a>
         
-        <span class="author vcard">By <span class="fn">ErbB4</span></span>
-        <span class="entry-date date published"><time datetime="2016-03-28T00:00:00-06:00"><i class="fa fa-calendar-o"></i> March 28, 2016</time></span>
+        <span class="author vcard">By <span class="fn">harryhare</span></span>
+        <span class="entry-date date published"><time datetime="2016-07-29T00:00:00-06:00"><i class="fa fa-calendar-o"></i> July 29, 2016</time></span>
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/ErbB4" title="Author's Github"><i class="fa fa-github-square"></i> Author GitHub</a>
+          <a href="https://github.com/harryhare" title="Author's Github"><i class="fa fa-github-square"></i> Author GitHub</a>
         </span>
         
         
@@ -211,46 +211,97 @@ MathJax.Hub.Config({
         
       </footer>
       <div class="entry-content">
-        <h2 id="synapse-and-receptor">Synapse and receptor</h2>
+        <h1 id="escape-noise">Escape noise</h1>
 
-<p>What is left from last section:  calcium-activated potassium channels,
-low-threshold and high-threshold calcium-activated potassium channels,  are responsible for post-inhibitory-rebound and adaptation respectively.</p>
+<p>Two ways to introduce noise in formal spiking neuron models:</p>
 
-<h3 id="calcium-dynamics">Calcium dynamics</h3>
+<ul>
+  <li>noisy threshold(escape model or hazard model)</li>
+  <li>noisy integration(stochastic spike arrival model or diffusion model)</li>
+</ul>
 
-<p>Calcium concentration varies in different parts of neuron: soma, dendrite and spines, enabling neurotransmitter release, action potential generation and synapse stabilization.</p>
+<p>In the escape model,
+the neuron may fire when $u&lt;\vartheta$
+the neuron may stay quiescent when $u&gt;\vartheta$</p>
 
-<script type="math/tex; mode=display">\mathrm{\frac{d[Ca^{2+}]_i}{dt}}=\mathrm{-\tau_{Ca}^{-1}[Ca^{2+}]_i+\phi_{Ca}I_{Ca}}</script>
+<h2 id="escape-rate-and-hazard-function">Escape rate and hazard function</h2>
 
-<h3 id="synapse">Synapse</h3>
-<p>Synapses could be classified as inhibitory synapses (mainly using GABA as neurotransmitter) and excitatory synapses (adopting glutamate as neurotransmitter).
-The activation of post-synaptic element is realized by binding of neurotransmitter and receptor, ion channel opening and post-synaptic current (or potential) generation, or other intracellular cascade. The amount of current pass through a specific synapse could be described as a function of synaptic conductance $\mathrm{g_{syn}}$ and driving potential.
-<script type="math/tex">\mathrm{I_{syn}}(t)=\mathrm{g_{syn}}(t)(u-\mathrm{E_{syn})}</script>
-The conductance of synapse is an exponential decay function:
-<script type="math/tex">\mathrm{g_{syn}}(t)=\sum_f\bar{g}_\mathrm{syn}e^{-(t-t^f)/\tau}\Theta(t-t^f).</script></p>
+<p>In the escape model,
+spikes can occur at any time with a probability density,</p>
 
-<p>for inhibitory synapse, which has two types of current components:
-<script type="math/tex">\mathrm{g_{syn}}(t)=\sum_f(\bar{g}_\mathrm{fast}e^{-(t-t^f)/\tau_\mathrm{fast})}+\bar{g}_\mathrm{slow}e^{-(t-t^f)/\tau_\mathrm{slow})})\Theta(t-t^f).</script>
-for excitatory synapse, which adapts two types of receptors: NMDA (slow) and AMPA (fast):
-<script type="math/tex">\mathrm{g_{AMPS}}(t)=\bar{g}_\mathrm{AMPA} N [e^{-(t-t^f)/\tau_\mathrm{decay}}-e^{-(t-t^f)/\tau_\mathrm{rise}}]\Theta(t-t^f).</script></p>
+<script type="math/tex; mode=display">\rho=f(u-\vartheta)</script>
 
-<p><script type="math/tex">\mathrm{g_{NMDA}}(t)=\bar{g}_\mathrm{NMDA} N [e^{-(t-t^f)/\tau_\mathrm{decay}}-e^{-(t-t^f)/\tau_\mathrm{rise}}]g_\mathrm{\infty}\Theta(t-t^f),</script> with $g_{\infty} = (1+e^{\alpha u}[\mathrm{Mg}^{2+}]_o/\beta)^{-1}.$</p>
+<p>Since $u$ is a function of time,$\rho$ is also time dependent,</p>
 
-<p>###Receptors
-See this reference for differences between AMPA and NMDA receptor.   http://www.sumanasinc.com/webcontent/animations/content/receptors.html</p>
+<script type="math/tex; mode=display">\rho_{I}(t|\hat{t})=f[u(t|\hat{t})-\vartheta]</script>
 
-<h3 id="spatial-structure-of-dendritic-tree">Spatial structure of dendritic tree</h3>
-<p>Cable equations based on Kirchhoff’s law. See Green’s function solving the stationary solution of cable equations in next section.</p>
+<p>Required condition of function $f$,
+when $u\rightarrow-\infty$, $f\rightarrow0$</p>
+
+<h3 id="example">Example</h3>
+
+<script type="math/tex; mode=display">% <![CDATA[
+f(u-\vartheta)=\begin{cases}
+0 & for &u<\vartheta\\
+\Delta^{-1}& for &u\ge\vartheta
+\end{cases} %]]></script>
+
+<script type="math/tex; mode=display">f(u-\vartheta)=\frac{1}{\tau_0}</script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+f(u-\vartheta)=\beta[u-\vartheta]_{+}=\big\{\begin{array}{lcc}
+0 &for&u<\vartheta\\
+\beta(u-\vartheta)&for&u\ge\vartheta
+\end{array} %]]></script>
+
+<script type="math/tex; mode=display">f(u-\vartheta)=\frac{1}{2\Delta}[1+erf(\frac{u-\vartheta}{\sqrt{2}\sigma})]</script>
+
+<script type="math/tex; mode=display">erf(x)=\frac{2}{\sqrt{\pi}}\int_{0}^{x}\exp(-y^2)dy</script>
+
+<h2 id="interval-distribution-and-mean-fire-rate">Interval distribution and mean fire rate</h2>
+
+<p>the expect value of interval distribution = $\frac{1}{mean\space fire\space rate}$ = mean period</p>
+
+<p>use $\rho$ we can get interval distribution,</p>
+
+<script type="math/tex; mode=display">P_{I}(t|\hat{t})=\rho\space  \exp[-\int_{\hat{t}}^{t}\rho dt]</script>
+
+<script type="math/tex; mode=display">\rho=f[u(t|\hat{t})-\vartheta]</script>
+
+<p>use  $SRM_{0}$,</p>
+
+<script type="math/tex; mode=display">u(t|\hat{t})=\eta(t-\hat{t})+h(t)</script>
+
+<script type="math/tex; mode=display">h(t)=\int_{0}^{\infty}\kappa(s)I(t-s)ds</script>
+
+<p>use non-leaky integrate-and-fire,</p>
+
+<script type="math/tex; mode=display">u(t|\hat{t})=u_r+\frac{1}{C}\int_{\hat{t}}^{t}I(t')dt'</script>
+
+<p>use leaky integrate-and-fire,</p>
+
+<script type="math/tex; mode=display">u(t|\hat{t})=RI_0[1-e^{(-t-\hat{t})/\tau_m}]</script>
+
+<p>use $SRM_0$ with periodic input,we get periodic response,</p>
+
+<script type="math/tex; mode=display">h(t)=h_0+h_1cos(\Omega t+\varphi_1)</script>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\eta(s)=\begin{cases}
+-\infty & for & s<\Delta^{abs}\\
+-\eta_0 \exp{\big(-\frac{s-\Delta^{abs}}{\tau}\big)} & for & s>\Delta^{abs}
+\end{cases} %]]></script>
+
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://neuronstar.cc/spiking-neuron-models/04.The_Zoo_of_ion_channels/" class="btn" title="04.The Zoo of ion channels">Previous</a>
+        <a href="http://neuronstar.cc/spiking-neuron-models/14.slow-noise/" class="btn" title="14.Noise in Refractory Kernel and Diffusive Noise">Previous</a>
       
       
-        <a href="http://neuronstar.cc/spiking-neuron-models/06.Cable_Equation_and_Its_Solutions/" class="btn" title="06.Cable Equation and Its Solutions">Next</a>
+        <a href="http://neuronstar.cc/spiking-neuron-models/15.Diffusive_Noise_and_The_subthreshold_Regime/" class="btn" title="15.Diffusive Noise and The Subthreshold Regime">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
