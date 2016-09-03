@@ -21,7 +21,7 @@
 
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://neuronstar.cc/images/logo.png">
+<meta name="twitter:image" content="/images/logo.png">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
@@ -30,15 +30,15 @@
 <meta property="og:description" content="概率论的核心的概念应该是概率了。基于我们对于逻辑事件的理解，下面的式子成立，
 
 ">
-<meta property="og:url" content="http://neuronstar.cc/sciencecn/bayesian/">
+<meta property="og:url" content="/sciencecn/bayesian/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://neuronstar.cc/sciencecn/bayesian/">
-<link href="http://neuronstar.cc/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
+<link rel="canonical" href="/sciencecn/bayesian/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -46,7 +46,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://neuronstar.cc/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <!-- Webfonts -->
 <script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
 
@@ -54,17 +54,22 @@
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-  <script src="http://neuronstar.cc/assets/js/vendor/html5shiv.min.js"></script>
-  <script src="http://neuronstar.cc/assets/js/vendor/respond.min.js"></script>
+  <script src="/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="http://neuronstar.cc/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
 <script type="text/x-mathjax-config">
@@ -124,17 +129,17 @@ MathJax.Hub.Config({
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="http://neuronstar.cc/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="http://neuronstar.cc/favicon.png">
+<link rel="shortcut icon" href="/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="http://neuronstar.cc/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://neuronstar.cc/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://neuronstar.cc/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://neuronstar.cc/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
 
 </head>
 
@@ -145,16 +150,16 @@ MathJax.Hub.Config({
 	    <ul>
       
 		    
-		    <li><a href="http://neuronstar.cc/" >Home</a></li>
+		    <li><a href="/" >Home</a></li>
 		  
 		    
-		    <li><a href="http://neuronstar.cc/about/" >About</a></li>
+		    <li><a href="/about/" >About</a></li>
 		  
 		    
-		    <li><a href="http://neuronstar.cc/articles" >Articles</a></li>
+		    <li><a href="/articles" >Articles</a></li>
 		  
 		    
-		    <li><a href="http://neuronstar.cc/resources" >Resources</a></li>
+		    <li><a href="/resources" >Resources</a></li>
 		  
 		    
 		    <li><a href="http://neuronstar.cc/comp-neurosci-map" target="_blank">Map of Neuroscience</a></li>
@@ -171,9 +176,9 @@ MathJax.Hub.Config({
 <header class="masthead">
 	<div class="wrap">
       
-  		<a href="http://neuronstar.cc/" class="site-logo" rel="home" title="NEURONSTAR"><img src="http://neuronstar.cc/images/logo.png" width="200" height="200" alt="NEURONSTAR logo" class="animated fadeInDown"></a>
+  		<a href="/" class="site-logo" rel="home" title="NEURONSTAR"><img src="/images/logo.png" width="200" height="200" alt="NEURONSTAR logo" class="animated fadeInDown"></a>
       
-      <h1 class="site-title animated fadeIn"><a href="http://neuronstar.cc/">NEURONSTAR</a></h1>
+      <h1 class="site-title animated fadeIn"><a href="/">NEURONSTAR</a></h1>
 		<h2 class="site-description animated fadeIn" itemprop="description">Neuroscience and Complex Systems</h2>
 	</div>
 </header><!-- /.masthead -->
@@ -196,7 +201,7 @@ MathJax.Hub.Config({
       <footer class="entry-meta">
         
         
-          <img src="http://neuronstar.cc/images/authors/ns.png" class="bio-photo" alt="neuronstar bio photo"></a>
+          <img src="/images/authors/ns.png" class="bio-photo" alt="neuronstar bio photo"></a>
         
         <span class="author vcard">By <span class="fn">neuronstar</span></span>
         <span class="entry-date date published"><time datetime="2015-05-10T00:00:00-06:00"><i class="fa fa-calendar-o"></i> May 10, 2015</time></span>
@@ -216,7 +221,7 @@ MathJax.Hub.Config({
   <figcaption>
 Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加上事件 B，是所有带有颜色的区域，但是交叠部分被数了两次。
 </figcaption>
-  <p><img src="http://neuronstar.cc/images/posts/bayesian/venn-diagram-AB.png" alt="" /></p>
+  <p><img src="/images/posts/bayesian/venn-diagram-AB.png" alt="" /></p>
 </figure>
 
 <p>我们定义 $P(A,B) = P(A\cap B)$ （joint probability）。这样有两种比较有趣的特殊情况：</p>
@@ -322,7 +327,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
   <figcaption>
 神经科学中的一种 raster plot：横轴是时间，纵轴是第几次实验。例如纵轴是 1，我们按照横轴读过去，发现在某些时刻，这个神经元会放电，换到纵轴是 2，也就是第二次重复实验，发现跟第一次并不完全吻合。
 </figcaption>
-  <p><img src="http://neuronstar.cc/images/posts/bayesian/raster_baselineandstim.png" alt="" /></p>
+  <p><img src="/images/posts/bayesian/raster_baselineandstim.png" alt="" /></p>
 </figure>
 
 <p>由于这种内在的随机性，在理论上描述的时候，需要使用概率论。而我们又常常关心在给定刺激的时候放电的概率 $P(\mathrm{spike}\vert \mathrm{stimulus})$，或者在放电了存在刺激的概率 $P(\mathrm{stimulus}\vert \mathrm{spike})$。</p>
@@ -377,7 +382,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://neuronstar.cc/sciencecn/echolocation/" class="btn" title="回声定位">Previous</a>
+        <a href="/sciencecn/echolocation/" class="btn" title="回声定位">Previous</a>
       
       
     </nav><!-- /.pagination -->
@@ -401,19 +406,19 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
 	
   
 	
-  <a href="http://neuronstar.cc/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
+  <a href="/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
 </div><!-- /.social-icons -->
 
   </footer>
 </div><!-- /.footer-wrapper -->
 
 <script type="text/javascript">
-  var BASE_URL = 'http://neuronstar.cc';
+  var BASE_URL = '';
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="http://neuronstar.cc/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="http://neuronstar.cc/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
 
 
 <!-- Asynchronous Google Analytics snippet -->

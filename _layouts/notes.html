@@ -47,6 +47,7 @@
         {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
       </footer>
       <div class="entry-content">
+        {% if page.references %}<div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References:</span> <p>{{ page.references }}</span></p></div>{% else %}{% endif %}
         {{ content }}
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
