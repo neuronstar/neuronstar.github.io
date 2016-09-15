@@ -1,12 +1,12 @@
 ---
-layout: page
 title: ABOUT
-excerpt: ""
-modified: 2016-03-24
+layout: page
+excerpt: ''
+modified: 2016-03-24 00:00:00 Z
 image:
-  feature:
-  credit:
-  creditlink:
+  feature: 
+  credit: 
+  creditlink: 
 ---
 
 <div align="center">

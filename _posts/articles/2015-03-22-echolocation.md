@@ -1,16 +1,15 @@
 ---
+title: 回声定位
+date: 2015-03-22 00:00:00 Z
+categories:
+- sciencecn
 layout: article
-title: "回声定位"
-date: 2015-03-22
-modified: 2015-03-22
+modified: 2015-03-22 00:00:00 Z
 author: neuronstar
 toc: true
 comments: true
-categories: sciencecn
 summary: 听觉对于动物来说非常重要，在黑暗的深海里和茫茫的暗夜里，有两种动物不约而同地进化出了利用超声波定位的能力：回声定位。他们就是齿鲸和蝙蝠。有趣的是，同样处于黑暗中的盲人，也能掌握这一技能。
-published: true
 ---
-
 
 ## 回声定位的原理
 

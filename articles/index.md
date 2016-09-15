@@ -1,7 +1,7 @@
 ---
-layout: page
 title: List of Articles
-excerpt: "Article lists of neurons and network"
+layout: page
+excerpt: Article lists of neurons and network
 search_omit: true
 ---
 

@@ -1,12 +1,8 @@
 ---
 layout: page
-title:
-excerpt: "Neuroscience and Complex Systems"
+excerpt: Neuroscience and Complex Systems
 search_omit: true
 ---
-
-
-
 
 <div align="center" style="border-style:solid;">
 <h1 align="center">PROJECTS</h1>

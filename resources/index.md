@@ -1,6 +1,7 @@
 ---
-layout: page
 title: Resouces of Neuroscience and Complex System
-excerpt: "Neuroscience and Complex System resources"
+layout: page
+excerpt: Neuroscience and Complex System resources
 search_omit: true
 ---
+

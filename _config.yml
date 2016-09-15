@@ -1,85 +1,86 @@
-# Site wide configuration
-
+---
 title: NEURONSTAR
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  spiking-neuron-models:
+    title: Spiking Neuron Models
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 locale: en_US
 description: Neuroscience and Complex Systems
 logo: logo.png
 search: false
-#url: http://localhost:4000
-url: http://neuronstar.cc # this on should be uncommented when online
-
-#url: /Users/leima/GitHub/neuronstar/neuronstar.github.io/_site
-#baseurl: /Users/leima/GitHub/neuronstar/neuronstar.github.io
-
-# Jekyll configuration
-
-permalink:   /:categories/:title/
-markdown:    kramdown
+url: http://neuronstar.cc
+permalink: "/:categories/:title/"
+markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
 gems:
-  - jekyll-sitemap
-  - jekyll-gist
-
+- jekyll-sitemap
+- jekyll-gist
 kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..2
   enable_coderay: false
-
 mathjax: true
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
-
-
-# Jekyll Collections
-
-collections:
-  spiking-neuron-models:
-    output: true
-
-
-
-
-# Octopress
-
-# Default extensions
+include:
+- ".htaccess"
+exclude:
+- lib
+- config.rb
+- Capfile
+- config
+- log
+- Rakefile
+- Rakefile.rb
+- tmp
+- less
+- "*.sublime-project"
+- "*.sublime-workspace"
+- test
+- spec
+- Gruntfile.js
+- package.json
+- node_modules
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- vendor
 post_ext: md
 page_ext: md
-
-# Found in _templates/
 post_layout: post
 page_layout: page
-
-# Format titles with titlecase?
 titlecase: true
-
-
-# Site owner
 owner:
   name: HLLM
   avatar: bio-photo.jpg
-  email:
-  web: # owner's website
+  email: 
+  web: 
   disqus-shortname: neuronstar
-  twitter: #username
-  facebook: #username
-  github: neuronstar #username
-  stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
-  instagram: #username
-  flickr: #username
-  tumblr: #username
-  pinterest: #username
-  weibo:  #userid
+  twitter: 
+  facebook: 
+  github: neuronstar
+  stackexchange: 
+  linkedin: 
+  instagram: 
+  flickr: 
+  tumblr: 
+  pinterest: 
+  weibo: 
   google:
-    plus: #username
+    plus: 
     analytics: UA-61051776-1
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
