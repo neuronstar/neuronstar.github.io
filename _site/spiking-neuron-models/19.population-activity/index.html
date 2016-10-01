@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>18.SRM with Escape Noise &#8211; NEURONSTAR</title>
-<meta name="description" content="SRM with Escape Noise
+<title>19.Population Activity &#8211; NEURONSTAR</title>
+<meta name="description" content="Review of Several Concepts
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="18.SRM with Escape Noise">
-<meta name="twitter:description" content="SRM with Escape Noise
+<meta name="twitter:title" content="19.Population Activity">
+<meta name="twitter:description" content="Review of Several Concepts
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="18.SRM with Escape Noise">
-<meta property="og:description" content="SRM with Escape Noise
+<meta property="og:title" content="19.Population Activity">
+<meta property="og:description" content="Review of Several Concepts
 
 ">
-<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/18.population-srm-with-escape-noise/">
+<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/19.population-activity/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/18.population-srm-with-escape-noise/">
+<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/19.population-activity/">
 <link href="http://neuronstar.cc/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -195,7 +195,7 @@ MathJax.Hub.Config({
           
         </ul>
         
-          <h1 class="entry-title">18.SRM with Escape Noise</h1>
+          <h1 class="entry-title">19.Population Activity</h1>
         
       </header>
       <footer class="entry-meta">
@@ -204,7 +204,7 @@ MathJax.Hub.Config({
           <img src="http://neuronstar.cc/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">By <span class="fn">OctoMiao</span></span>
-        <span class="entry-date date published"><time datetime="2016-09-23T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 23, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-09-30T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 30, 2016</time></span>
         
         
         <span class="social-share-twitter">
@@ -216,59 +216,120 @@ MathJax.Hub.Config({
         
       </footer>
       <div class="entry-content">
-        <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Section 6.2.2</span></p></div>
-        <h2 id="srm-with-escape-noise">SRM with Escape Noise</h2>
+        <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Section 6.3</span></p></div>
+        <h2 id="review-of-several-concepts">Review of Several Concepts</h2>
 
-<script type="math/tex; mode=display">\begin{equation}
-u(t) = \eta(t-\hat t) + h_{\mathrm{PSP}}(t\lvert \hat t).
-\end{equation}</script>
+<h3 id="population-activity-at">Population activity $A(t)$</h3>
 
 <ol>
-  <li>Define a parameter $r=t-\hat t$.</li>
-  <li>Define density for $r$, i.e., fraction of neurons with parameter $[r_0,r_0+\Delta r]$ is given by
-$$\int_{r_0}^{r_0+\Delta r} q(r’,t)dr’.</li>
-  <li>Continuity equation: <script type="math/tex">\partial_t q(r,t) = -\partial_r J_{\mathrm{refr}}(r,t)</script>.</li>
-  <li>$J_{\mathrm{refr}}=q(r,t)\partial_t r=q(r,t)$ is the continuous flux.</li>
-  <li>Hazard function <script type="math/tex">\rho(t\vert t-r) =f(\eta(r)+h_{\mathrm{PSP}}(t\vert t-r))</script> tells us about the firing rate of a neuron.</li>
-  <li>Loss per unit time <script type="math/tex">J_{\mathrm{loss}}=- \rho(t\vert t-r)q(r,t)</script>.</li>
-  <li>At time $t$, total number of neurons that fire, which is also called population activity <script type="math/tex">A(t)=\int_0^\infty (-J_{\mathrm{loss}})dr</script>.</li>
+  <li>
+    <p>From equations</p>
+
+    <script type="math/tex; mode=display">\begin{equation}\partial_t p(u,t)= \cdots + A(t)\delta(u-u_r)\end{equation}</script>
+
+    <p>We integrate over a range of potential</p>
+
+    <script type="math/tex; mode=display">\begin{equation} \partial_t \int_{u_1}^{u_2} p(u,t) = \cdots + A(t), \end{equation}</script>
+
+    <p>provided that $u_r$ is within $[u_1,u_2]$.</p>
+
+    <p>So it’s some kind of flux. It works as a source term of faction of neurons at $u=u_r$, which is identical to fraction of neurons that spiked per unit time.</p>
+  </li>
+  <li>
+    <p>In fact, we have</p>
+
+    <script type="math/tex; mode=display">\begin{equation}
+A(t)  = J(\theta,t)
+\end{equation}</script>
+  </li>
 </ol>
 
-<p>The change in the fraction of neurons with parameter $r$ depends on</p>
+<h3 id="spike-interval-distribution-pitvert-hat-t">Spike interval distribution $P_I(t\vert \hat t)$</h3>
 
-<ol>
-  <li>continuous flow passing by $r$,</li>
-  <li>the loss flux derivative,</li>
-  <li>the population activity,</li>
-</ol>
-
-<p>so that we obtain</p>
+<p>$P_I(t\vert \hat t)$ is the probability density of firing, i.e.,</p>
 
 <script type="math/tex; mode=display">\begin{equation}
-\partial_t q(r,t) = -\partial_r q(r,t) - \rho(r\vert t-r) q(r,t) + A(t) delta(r)
+\int_{t_1}^{t_2} P_I(t\vert \hat t) dt
 \end{equation}</script>
 
-<p>Population activity is the quantity we would love to obtain. By rewriting the previous equation</p>
+<p>calculates the probability of finding spikes during time interval $[t_1,t_2]$.</p>
+
+<p>Meanwhile we have this survival probability</p>
 
 <script type="math/tex; mode=display">\begin{equation}
-A(t)= \int_{-\infty}^t P_I(t\vert \hat t) A(\hat t)d\hat t,
+S_I(t\vert \hat t) = 1 - \int_{\hat t}^t P_I(s\vert \hat t) ds
+\end{equation}</script>
+
+<p>or identically</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+P_I(t\vert \hat t) = \partial_t S_I(t\vert \hat t)
+\end{equation}</script>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>What we need for a complete description of network activities is to calculate $A(t+\Delta t)$ given $A(t)$ as well as the external input at $t$.</p>
+
+<p>Using whatever we have up to this point, the procedure should be</p>
+
+<ol>
+  <li>
+    <p>Apply $A(t)$ and $I^{\mathrm{ext}}(t)$ to equation (6.8). Within a small time interval $\Delta t$, we obtain the PSP potential, i.e.,</p>
+
+    <script type="math/tex; mode=display">h_{\mathrm{PSP}}(t + \Delta t\vert \hat t) = J_0 \int_0^\infty \epsilon(t - \hat t, s) A(t - s) ds + \int_0^\infty \kappa(t-\hat t,s) I^{\mathrm{ext}}(t-s) ds</script>
+
+    <p><strong>My thought is, calculating next step is impossible, since we have an integral to infinity? I do not really get it.</strong></p>
+  </li>
+  <li>
+    <p>The ultimate reason is that we have insufficient equations compared to the unknown quantities.
+Unknown: $A(t)$, $h_{\mathrm{PSP}}$, but we have only one equation.</p>
+
+    <p>Question: What about other equation? Eqn (6.21), one equation, two variables. Same fate.</p>
+  </li>
+</ol>
+
+<p>So we need another equation. What we get is</p>
+
+<script type="math/tex; mode=display">A(t) = \int_{-\infty}^t P_I(t\vert \hat t) A(\hat t) d\hat t.</script>
+
+<p>Oh wait, new function $P_I(t\vert \hat t)$ has been introduced to the function. How is that going to help? $P_I$ actually can be determined by $h$.</p>
+
+<p>Eq. 6.78, 6.79, 6.80</p>
+
+<h3 id="with-absolute-refractoriness">With Absolute refractoriness</h3>
+
+<p><strong>Wilson-Cowan</strong> integral form</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+A(t) = f[h(t)]\left( 1 - \int_{t-\Delta^{\mathrm{abs}}}^t A(t') dt' \right),
 \end{equation}</script>
 
 <p>where</p>
 
+<ul>
+  <li>$f[h(t)]$ rate of firing for a neuron that is not refractory,</li>
+  <li>given the togal input potential $h(t)$.</li>
+</ul>
+
+<p>Constant input potential $h(t)=h_0$,</p>
+
 <script type="math/tex; mode=display">\begin{equation}
-P_I(t\vert \hat t)= \rho(t\vert \hat t) \exp \left( - \int_{\hat t}^t \rho(t'\vert \hat t) dt' \right)
+A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
 \end{equation}</script>
+
+<p>To solve the population activity for homogeneous, isotropic and stationary network, all we need is the property of single neuron.</p>
+
+<h3 id="time-coarse-graining">Time Coarse-Graining</h3>
+
+<p>Remove the integral.</p>
 
         
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://neuronstar.cc/spiking-neuron-models/17.homogeneous-network/" class="btn" title="17.Homogeneous Network">Previous</a>
+        <a href="http://neuronstar.cc/spiking-neuron-models/18.population-srm-with-escape-noise/" class="btn" title="18.SRM with Escape Noise">Previous</a>
       
-      
-        <a href="http://neuronstar.cc/spiking-neuron-models/19.population-activity/" class="btn" title="19.Population Activity">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
