@@ -61,6 +61,9 @@ page_ext: md
 post_layout: post
 page_layout: page
 titlecase: true
+
+comments: true
+
 owner:
   name: HLLM
   avatar: bio-photo.jpg
