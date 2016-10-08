@@ -5,11 +5,13 @@ excerpt: Article lists of neurons and network
 search_omit: true
 ---
 
-## Quick Links
+## Categories
 {:.no_toc}
 
 * Categories
 {:toc}
+
+
 
 
 ## Spiking Neuron Models Reading Club
@@ -20,7 +22,6 @@ search_omit: true
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.author | date_to_xmlschema }}"> by &nbsp; {{ post.author }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}</span>{% endif %}</a></article></li>
 {% endfor %}
 </ul>
-
 
 
 
@@ -42,6 +43,7 @@ search_omit: true
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}</span>{% endif %}</a></article></li>
 {% endfor %}
 </ul>
+
 
 
 
