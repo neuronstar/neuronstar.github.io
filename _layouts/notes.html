@@ -26,6 +26,20 @@
         {% endif %}
       </header>
       <footer class="entry-meta">
+        <hr>
+        {% if page.references %}
+        <span style=""><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
+          <a style="padding-left:1.1em;"> {{ page.references }}</a>
+        </span>
+        {% else %}
+        <span><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
+          <a style="padding-left:1.1em;"> None </a>
+        {% endif %}
+        <hr>
+
+
+
+
         {% if page.author %}
           {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
         {% endif %}
@@ -39,15 +53,27 @@
         {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i> {{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
         {% if author.github %}
         <span class="social-share-twitter">
-          <a href="{{ author.github }}" title="Author's Github"><i class="fa fa-github-square"></i> Author's GitHub</a>
+          <a href="{{ author.github }}" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
+        </span>
+        {% endif %}
+        {% if site.data.collectionsource.spiking-neuron-models_source_link %}
+        <span class="social-share-twitter">
+          <a href="{{ site.data.collectionsource.spiking-neuron-models_source_link }}/edit/master/{{page.relative_path |  replace:'_spiking-neuron-models/',''}}" title="Author's Github"><i class="fa fa-pencil"></i>  Edit</a>
         </span>
         {% endif %}
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
         {% if page.share %}{% include social-share.html %}{% endif %}
         {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
+
+
+
+
+
+
+
       </footer>
       <div class="entry-content">
-        {% if page.references %}<div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>{{ page.references }}</span></p></div>{% else %}{% endif %}
+        <!-- {% if page.references %}<div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>{{ page.references }}</span></p></div>{% else %}{% endif %} -->
         {{ content }}
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->

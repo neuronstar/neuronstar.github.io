@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>05.Synapse and receptor &#8211; NEURONSTAR</title>
-<meta name="description" content="Synapse and receptor
+<title>20.basics-of-renewal-theory &#8211; NEURONSTAR</title>
+<meta name="description" content="What does the renewal process describe?
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="05.Synapse and receptor">
-<meta name="twitter:description" content="Synapse and receptor
+<meta name="twitter:title" content="20.basics-of-renewal-theory">
+<meta name="twitter:description" content="What does the renewal process describe?
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="05.Synapse and receptor">
-<meta property="og:description" content="Synapse and receptor
+<meta property="og:title" content="20.basics-of-renewal-theory">
+<meta property="og:description" content="What does the renewal process describe?
 
 ">
-<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/05.Synapse_and_Receptors/">
+<meta property="og:url" content="http://neuronstar.cc/spiking-neuron-models/20.basics-of-renewal-theory/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/05.Synapse_and_Receptors/">
+<link rel="canonical" href="http://neuronstar.cc/spiking-neuron-models/20.basics-of-renewal-theory/">
 <link href="http://neuronstar.cc/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -195,14 +195,15 @@ MathJax.Hub.Config({
           
         </ul>
         
-          <h1 class="entry-title">05.Synapse and receptor</h1>
+          <h1 class="entry-title">20.basics-of-renewal-theory</h1>
         
       </header>
       <footer class="entry-meta">
         <hr>
         
-        <span><i class="fa fa-map-signs"></i> <a href="http://neuronstar.cc/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
-          <a style="padding-left:1.1em;"> None </a>
+        <span style=""><i class="fa fa-map-signs"></i> <a href="http://neuronstar.cc/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
+          <a style="padding-left:1.1em;"> no references</a>
+        </span>
         
         <hr>
 
@@ -214,7 +215,7 @@ MathJax.Hub.Config({
           <img src="http://neuronstar.cc/images/authors/erbb4.jpg" class="bio-photo" alt="ErbB4 bio photo"></a>
         
         <span class="author vcard">By <span class="fn">ErbB4</span></span>
-        <span class="entry-date date published"><time datetime="2016-03-28T00:00:00+00:00"><i class="fa fa-calendar-o"></i> March 28, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-10-08T00:00:00+00:00"><i class="fa fa-calendar-o"></i> October 08, 2016</time></span>
         
         
         <span class="social-share-twitter">
@@ -223,7 +224,7 @@ MathJax.Hub.Config({
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/05.Synapse_and_Receptors.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit</a>
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/20.basics-of-renewal-theory.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -238,47 +239,76 @@ MathJax.Hub.Config({
 
       </footer>
       <div class="entry-content">
-        <!--  -->
-        <h2 id="synapse-and-receptor">Synapse and receptor</h2>
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>no references</span></p></div> -->
+        <h1 id="what-does-the-renewal-process-describe">What does the renewal process describe?</h1>
 
-<p>What is left from last section:  calcium-activated potassium channels,
-low-threshold and high-threshold calcium-activated potassium channels,  are responsible for post-inhibitory-rebound and adaptation respectively.</p>
+<p>Replacement of component.</p>
 
-<h3 id="calcium-dynamics">Calcium dynamics</h3>
+<h2 id="failure-time">failure time</h2>
 
-<p>Calcium concentration varies in different parts of neuron: soma, dendrite and spines, enabling neurotransmitter release, action potential generation and synapse stabilization.</p>
+<p>A population of components, the failure time of each component is characterized by a non-negative random variable X. The failure time is in fact the <em>age</em> of the component, defining when the failure occurs.</p>
 
-<script type="math/tex; mode=display">\mathrm{\frac{d[Ca^{2+}]_i}{dt}}=\mathrm{-\tau_{Ca}^{-1}[Ca^{2+}]_i+\phi_{Ca}I_{Ca}}</script>
+<p>The distribution of X could be either discrete or continuous.
+Discrete: X~{0,h,2h,3h,…}
+Continuous: the probability is determined by a probability density function (pdf) over the range of (0,$\infty$).</p>
 
-<h3 id="synapse">Synapse</h3>
+<h2 id="probability-density-function-of-x">probability density function of X</h2>
 
-<p>Synapses could be classified as inhibitory synapses (mainly using GABA as neurotransmitter) and excitatory synapses (adopting glutamate as neurotransmitter).</p>
+<script type="math/tex; mode=display">% <![CDATA[
+f(x)=\lim_{\Delta x \to 0_+} \frac{\mathrm{prob}(x<X<x+\Delta x)}{\Delta x} %]]></script>
 
-<p>The activation of post-synaptic element is realized by binding of neurotransmitter and receptor, ion channel opening and post-synaptic current (or potential) generation, or other intracellular cascade. The amount of current pass through a specific synapse could be described as a function of synaptic conductance $\mathrm{g_{syn}}$ and driving potential.</p>
+<p>with</p>
 
-<script type="math/tex; mode=display">\mathrm{I_{syn}}(t)=\mathrm{g_{syn}}(t)(u-\mathrm{E_{syn})}</script>
+<script type="math/tex; mode=display">\int_0^{\infty} f(x) dx =1.</script>
 
-<p>The conductance of synapse is an exponential decay function:</p>
+<p>And the failure times are independent.</p>
 
-<script type="math/tex; mode=display">\mathrm{g_{syn}}(t)=\sum_f\bar{g}_\mathrm{syn}e^{-(t-t^f)/\tau}\Theta(t-t^f).</script>
+<h2 id="other-functions">Other functions</h2>
 
-<p>for inhibitory synapse, which has two types of current components:</p>
+<p>cumulative distribution function $F(x)$:</p>
 
-<script type="math/tex; mode=display">\mathrm{g_{syn}}(t)=\sum_f(\bar{g}_\mathrm{fast}e^{-(t-t^f)/\tau_\mathrm{fast})}+\bar{g}_\mathrm{slow}e^{-(t-t^f)/\tau_\mathrm{slow})})\Theta(t-t^f).</script>
+<script type="math/tex; mode=display">% <![CDATA[
+F(x) = \mathrm{prob}(X<=x)
+       = \int_-^x f(u) du. %]]></script>
 
-<p>for excitatory synapse, which adapts two types of receptors: NMDA (slow) and AMPA (fast):</p>
+<p>and $f(x)=F’(x)$</p>
 
-<script type="math/tex; mode=display">\mathrm{g_{AMPS}}(t)=\bar{g}_\mathrm{AMPA} N [e^{-(t-t^f)/\tau_\mathrm{decay}}-e^{-(t-t^f)/\tau_\mathrm{rise}}]\Theta(t-t^f).</script>
+<p>survivor function $\mathscr{F}(x)$:
+<script type="math/tex">\mathscr{F}(x)= \mathrm{prob(X>x)}\\
+                = 1-F(x)\\
+                = \int_x^{\infty} f(u) du</script></p>
 
-<p><script type="math/tex">\mathrm{g_{NMDA}}(t)=\bar{g}_\mathrm{NMDA} N [e^{-(t-t^f)/\tau_\mathrm{decay}}-e^{-(t-t^f)/\tau_\mathrm{rise}}]g_\mathrm{\infty}\Theta(t-t^f),</script> with $g_{\infty} = (1+e^{\alpha u}[\mathrm{Mg}^{2+}]_o/\beta)^{-1}.$</p>
+<p>$f(x)=-\mathscr{F}’(x)$</p>
 
-<h3 id="receptors">Receptors</h3>
+<p>hazard function: $\phi (x)$ the probability of almost immediate lailure of a component at age $x$.</p>
 
-<p>See this reference for differences between AMPA and NMDA receptor.   http://www.sumanasinc.com/webcontent/animations/content/receptors.html</p>
+<script type="math/tex; mode=display">\mathrm{prob} (A|B) = \frac{\mathrm{prob}(A \mathrm{and} B)}{\mathrm{prob} (B)}</script>
 
-<h3 id="spatial-structure-of-dendritic-tree">Spatial structure of dendritic tree</h3>
+<p>so,
+<script type="math/tex">% <![CDATA[
+\phi (x) = \lim_{\Delta x\to 0+} \frac{\mathrm{prob(x<X<=x+\Delta x)}}{\Delta x} \frac{1}{\mathrm{prob(x<X)}}\\
+           = \frac{f(x)}{\mathscr{F}(x)} %]]></script></p>
 
-<p>Cable equations based on Kirchhoff’s law. See Green’s function solving the stationary solution of cable equations in next section.</p>
+<h1 id="discrete-time-life-table-events">Discrete time: Life table events</h1>
+
+<p>A life table consists of a list of the number of individuals, usually from an initial group of 1000 individuals so that the numbers are effectively proportions, who survive to a given age in a given population.</p>
+
+<p>Important parameters:</p>
+
+<p>$\mathscr{l}_x$: surviving to age $x$</p>
+
+<p>$d_x$: dying between age x and x+1</p>
+
+<p>$d_x = \mathscr{x}-\mathscr{x+1}$</p>
+
+<p>$q_x$: those surviving to age $x$ who die before reaching age $x+1$
+$q_x = d_x/\mathscr{l}_x$</p>
+
+<h1 id="neural-spike-train">neural spike train</h1>
+
+<p>In the presence of noise, the spike train generation is a stochastic point process, not deterministic. Hence the probability of generating the next event (spike), depends only on the “age” $t−\hat t$ of the system, i.e., the time that has passed since the last event (last spike).</p>
+
+<p>The central assumption of renewal theory is that the state does not depend on earlier events .</p>
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -310,10 +340,8 @@ low-threshold and high-threshold calcium-activated potassium channels,  are resp
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://neuronstar.cc/spiking-neuron-models/04.The_Zoo_of_ion_channels/" class="btn" title="04.The Zoo of ion channels">Previous</a>
+        <a href="http://neuronstar.cc/spiking-neuron-models/19.population-activity/" class="btn" title="19.Population Activity">Previous</a>
       
-      
-        <a href="http://neuronstar.cc/spiking-neuron-models/06.Cable_Equation_and_Its_Solutions/" class="btn" title="06.Cable Equation and Its Solutions">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

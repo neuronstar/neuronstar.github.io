@@ -199,6 +199,17 @@ MathJax.Hub.Config({
         
       </header>
       <footer class="entry-meta">
+        <hr>
+        
+        <span style=""><i class="fa fa-map-signs"></i> <a href="http://neuronstar.cc/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
+          <a style="padding-left:1.1em;"> Section 6.2.2</a>
+        </span>
+        
+        <hr>
+
+
+
+
         
         
           <img src="http://neuronstar.cc/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
@@ -208,15 +219,27 @@ MathJax.Hub.Config({
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/emptymalei" title="Author's Github"><i class="fa fa-github-square"></i> Author's GitHub</a>
+          <a href="https://github.com/emptymalei" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
         </span>
         
         
+        <span class="social-share-twitter">
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/18.population-srm-with-escape-noise.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit</a>
+        </span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
         
         
+
+
+
+
+
+
+
       </footer>
       <div class="entry-content">
-        <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Section 6.2.2</span></p></div>
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Section 6.2.2</span></p></div> -->
         <h2 id="srm-with-escape-noise">SRM with Escape Noise</h2>
 
 <script type="math/tex; mode=display">\begin{equation}
@@ -259,6 +282,31 @@ A(t)= \int_{-\infty}^t P_I(t\vert \hat t) A(\hat t)d\hat t,
 <script type="math/tex; mode=display">\begin{equation}
 P_I(t\vert \hat t)= \rho(t\vert \hat t) \exp \left( - \int_{\hat t}^t \rho(t'\vert \hat t) dt' \right)
 \end{equation}</script>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'neuronstar'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
         
       </div><!-- /.entry-content -->

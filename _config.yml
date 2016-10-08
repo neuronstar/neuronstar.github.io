@@ -8,6 +8,7 @@ collections:
   spiking-neuron-models:
     title: Spiking Neuron Models
     output: true
+    source_link: https://github.com/neuronstar/spiking-neuron-models
   uploads:
     title: Uploads
     output: true
@@ -67,23 +68,23 @@ comments: true
 owner:
   name: HLLM
   avatar: bio-photo.jpg
-  email: 
-  web: 
+  email:
+  web:
   disqus-shortname: neuronstar
-  twitter: 
-  facebook: 
+  twitter:
+  facebook:
   github: neuronstar
-  stackexchange: 
-  linkedin: 
-  instagram: 
-  flickr: 
-  tumblr: 
-  pinterest: 
-  weibo: 
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
+  pinterest:
+  weibo:
   google:
-    plus: 
+    plus:
     analytics: UA-61051776-1
-    verify: 
-    ad-client: 
-    ad-slot: 
-  bing-verify: 
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:

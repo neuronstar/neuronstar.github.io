@@ -35,6 +35,9 @@
 <loc>http://neuronstar.cc/spiking-neuron-models/03.Equilibrium_Potential_and_Hodgkin-Huxley_Model/</loc>
 </url>
 <url>
+<loc>http://neuronstar.cc/spiking-neuron-models/00.Spiking_Neuron_Models_Club/</loc>
+</url>
+<url>
 <loc>http://neuronstar.cc/spiking-neuron-models/01.Single_neuron_model/</loc>
 </url>
 <url>
@@ -87,5 +90,8 @@
 </url>
 <url>
 <loc>http://neuronstar.cc/spiking-neuron-models/19.population-activity/</loc>
+</url>
+<url>
+<loc>http://neuronstar.cc/spiking-neuron-models/20.basics-of-renewal-theory/</loc>
 </url>
 </urlset>
