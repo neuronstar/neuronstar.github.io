@@ -28,15 +28,23 @@
       <footer class="entry-meta">
         <hr>
         {% if page.references %}
-        <span style=""><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
+        <span style=""><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
           <a style="padding-left:1.1em;"> {{ page.references }}</a>
         </span>
         {% else %}
+        
         <span><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References <i class="fa fa-link" aria-hidden="true"></i></a>:<br>
           <a style="padding-left:1.1em;"> None </a>
         </span>
         {% endif %}
-        <hr>
+
+
+        <span style="border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding-top:1em;margin-bottom:1em;">
+          Chat with others about spiking neuron models.
+          <div style="text-align:center;">
+      <button class="js-gitter-toggle-chat-button btn" style="margin-top:1em;"><i class="fa fa-comments" aria-hidden="true"></i> Toggle Chat</button>
+    </div>
+      </span>
 
 
 
@@ -59,12 +67,13 @@
         {% endif %}
         {% if site.data.collectionsource.spiking-neuron-models_source_link %}
         <span class="social-share-twitter">
-          <a href="{{ site.data.collectionsource.spiking-neuron-models_source_link }}/edit/master/{{page.relative_path |  replace:'_spiking-neuron-models/',''}}" title="Author's Github"><i class="fa fa-pencil"></i>  Edit</a>
+          <a href="{{ site.data.collectionsource.spiking-neuron-models_source_link }}/edit/master/{{page.relative_path |  replace:'_spiking-neuron-models/',''}}" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         {% endif %}
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
         {% if page.share %}{% include social-share.html %}{% endif %}
         {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
+
 
 
 
@@ -100,6 +109,7 @@
 </div><!-- /.footer-wrapper -->
 
 {% include scripts.html %}
+{% include gitter.html %}
 
 </body>
 </html>
