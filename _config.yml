@@ -16,7 +16,7 @@ locale: en_US
 description: Neuroscience and Complex Systems
 logo: logo.png
 search: false
-url: http://neuronstar.cc
+#url: http://neuronstar.cc
 permalink: "/:categories/:title/"
 markdown: kramdown
 highlighter: rouge

@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>19.Population Activity &#8211; NEURONSTAR</title>
-<meta name="description" content="Review of Several Concepts
+<title>21.asynchronous-firing &#8211; NEURONSTAR</title>
+<meta name="description" content="Review of Concepts
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="19.Population Activity">
-<meta name="twitter:description" content="Review of Several Concepts
+<meta name="twitter:title" content="21.asynchronous-firing">
+<meta name="twitter:description" content="Review of Concepts
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="19.Population Activity">
-<meta property="og:description" content="Review of Several Concepts
+<meta property="og:title" content="21.asynchronous-firing">
+<meta property="og:description" content="Review of Concepts
 
 ">
-<meta property="og:url" content="/spiking-neuron-models/19.population-activity/">
+<meta property="og:url" content="/spiking-neuron-models/21.asynchronous-firing/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="/spiking-neuron-models/19.population-activity/">
+<link rel="canonical" href="/spiking-neuron-models/21.asynchronous-firing/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -199,14 +199,14 @@ MathJax.Hub.Config({
           
         </ul>
         
-          <h1 class="entry-title">19.Population Activity</h1>
+          <h1 class="entry-title">21.asynchronous-firing</h1>
         
       </header>
       <footer class="entry-meta">
         <hr>
         
         <span style=""><i class="fa fa-map-signs"></i> <a href="/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
-          <a style="padding-left:1.1em;"> Spiking Neuron Models, Section 6.3</a>
+          <a style="padding-left:1.1em;"> Spiking Neuron Models, Section 6.4</a>
         </span>
         
 
@@ -226,7 +226,7 @@ MathJax.Hub.Config({
           <img src="/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">By <span class="fn">OctoMiao</span></span>
-        <span class="entry-date date published"><time datetime="2016-09-30T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 30, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-10-14T00:00:00+00:00"><i class="fa fa-calendar-o"></i> October 14, 2016</time></span>
         
         
         <span class="social-share-twitter">
@@ -235,7 +235,7 @@ MathJax.Hub.Config({
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/19.population-activity.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/21.asynchronous-firing.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -251,112 +251,205 @@ MathJax.Hub.Config({
 
       </footer>
       <div class="entry-content">
-        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Section 6.3</span></p></div> -->
-        <h2 id="review-of-several-concepts">Review of Several Concepts</h2>
-
-<h3 id="population-activity-at">Population activity $A(t)$</h3>
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Section 6.4</span></p></div> -->
+        <h2 id="review-of-concepts">Review of Concepts</h2>
 
 <ol>
+  <li>Population activity $A(t)$: fraction of neurons fired per unit time at time $t$.</li>
+  <li>Interval distribution $P_I(t-\hat t\vert t)$: given external input $I$, the</li>
   <li>
-    <p>From equations</p>
-
-    <script type="math/tex; mode=display">\begin{equation}\partial_t p(u,t)= \cdots + A(t)\delta(u-u_r)\end{equation}</script>
-
-    <p>We integrate over a range of potential</p>
-
-    <script type="math/tex; mode=display">\begin{equation} \partial_t \int_{u_1}^{u_2} p(u,t) = \cdots + A(t), \end{equation}</script>
-
-    <p>provided that $u_r$ is within $[u_1,u_2]$.</p>
-
-    <p>So it’s some kind of flux. It works as a source term of faction of neurons at $u=u_r$, which is identical to fraction of neurons that spiked per unit time.</p>
-  </li>
-  <li>
-    <p>In fact, we have</p>
+    <p>Mean firing rate $\nu$: reciprocal of mean firing interval $\langle T\rangle$</p>
 
     <script type="math/tex; mode=display">\begin{equation}
-A(t)  = J(\theta,t)
-\end{equation}</script>
+ \nu = \frac{1}{\langle T \rangle} = \int s P(s) ds,
+ \end{equation}</script>
+
+    <p>where $s$ is the interval between firing.</p>
   </li>
 </ol>
 
-<h3 id="spike-interval-distribution-pitvert-hat-t">Spike interval distribution $P_I(t\vert \hat t)$</h3>
+<h2 id="asynchronous-firing">Asynchronous Firing</h2>
 
-<p>$P_I(t\vert \hat t)$ is the probability density of firing, i.e.,</p>
+<p><strong>Asynchronous firing</strong> is a state when the population activity $A(t)=A_0$ is a constant of time. In this section we deal with homogeneous network and constant external input.</p>
+
+<blockquote>
+  <p>Whether it is possible to have equilibrium if we apply variant external input is still up for discussion.</p>
+</blockquote>
+
+<p>Equilibrium means that we need only the parameter $s=t-\hat t$ to describe each neuron. Hence we simplify the probabilities</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+P_I(t-\hat t\vert \hat t) &= P_0(s), \\
+S_I(t-\hat t\vert \hat t) &= S_0(s).
+\end{align} %]]></script>
+
+<div class="notes--extra">
+
+  <p>This corresponds to <strong>equilibrium state</strong> of the whole system. In statistical physics, we have the concept of <strong>equal priori probability</strong> <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. The question is, does it hold for neural networks?</p>
+
+  <p>The first question, though, is how to describe a microstate of a neural network. To simplify the idea, we discuss equilibrium systems. We could easily deny the idea of using spiking states, since it obviously gives much less information we should have.</p>
+
+  <p>My idea is to use the time lapsed after the spike $s = t-\hat t$. If we can know exactly the $s$ of each neuron for an equilibrium state or asynchronous firing, we can determine the firing of the system probabilistically or on average.</p>
+
+  <p>Here is an example. Suppose we have 4 neurons in a network, and the system reaches equilibrium.</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>Neuron Number</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>$s^{(1)}$</td>
+        <td>0.1</td>
+        <td>0.7</td>
+        <td>0.4</td>
+        <td>0.2</td>
+      </tr>
+      <tr>
+        <td>$s^{(2)}$</td>
+        <td>0.5</td>
+        <td>0.8</td>
+        <td>0.3</td>
+        <td>0.4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The indices ${}^{(i)}$’s are the encoding of ensembles. Do they have equal probability?</p>
+
+  <p>NO! This is why we have the interval distribution!</p>
+
+  <p>This either means we do not have equal priori probability principle or I didn’t find the correct way to describe all the accessible states of the system.</p>
+
+  <p>However, another notion that bothers me is that in statistical physics, we have Avogadro number of particles so that the fluctuations $1/\sqrt{N}$ is small. What about neural networks? How do we justify the analogy of equilibrium state/ensemble?</p>
+</div>
+
+<h3 id="is-a0-the-same-as-mean-firing-rate">Is $A_0$ the same as mean firing rate?</h3>
+
+<p>Naively, we would expect that $A_0$ equals the mean firing rate since we have only one time scale for the whole system which is the mean firing interval and $A_0$ has dimension $1/[T]$. Here is a handwaving argument.</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+&\text{Total number of neurons} \cdot A_0 \cdot \Delta t \\
+\equiv & \text{Number of neurons firing during time interval $\Delta t$}  \\
+\equiv & \text{Total number of neurons} \cdot \frac{\Delta t}{\text{Mean firing interval of each neuron} }
+\end{align} %]]></script>
+
+<p>The last step is an educated guess. We are pretty sure about this forumla because we can take the limit that $\Delta t=\text{Mean firing interval}$ and all neurons have constant firing interval.</p>
+
+<p>To prove this conjecture, we need to investigate the equations for $A_0$. We consider the normalization equation</p>
+
+<script type="math/tex; mode=display">\int_{-\infty}^t A_0 S_0(t-\hat t) d\hat t = 1.</script>
+
+<p>Change integration variable from $\hat t$ to $s$, which are related through $\hat t=t-s$,</p>
+
+<script type="math/tex; mode=display">\int_{-\infty}^t A_0 S_0(t-\hat t) d\hat t = \int_0^{\infty}A_0 S_0(s)ds.</script>
+
+<p>We integrate by parts</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+&\int_0^{\infty}A_0 S_0(s)ds \\
+=& A_0 \int_0^\infty d(S_0 \cdot s) - A_0 \int_0^\infty s d S_0 \\
+=& A_0 \cdot s\cdot S_0(s)\vert_0^\infty - A_0 \int_0^\infty s \frac{dS_0}{ds} ds\\
+=& A_0 \int_0^\infty s P_0(s) ds
+\end{align} %]]></script>
+
+<p>In the last step, we used</p>
 
 <script type="math/tex; mode=display">\begin{equation}
-\int_{t_1}^{t_2} P_I(t\vert \hat t) dt
+\frac{dS_0(s)}{ds} = - P_0(s).
 \end{equation}</script>
 
-<p>calculates the probability of finding spikes during time interval $[t_1,t_2]$.</p>
-
-<p>Meanwhile we have this survival probability</p>
+<p>The term $\int_0^\infty s P_0(s) ds$ is exactly the definition of mean interspike interval $\langle T\rangle$. So we have proved</p>
 
 <script type="math/tex; mode=display">\begin{equation}
-S_I(t\vert \hat t) = 1 - \int_{\hat t}^t P_I(s\vert \hat t) ds
+A_0 \langle T\rangle = 1.
 \end{equation}</script>
 
-<p>or identically</p>
+<p>Numerically, they show that the averaged fluctuations $\langle \lvert \bar A(t) - A_0 \rvert^2 \rangle$ decrease as the number of neurons increase. Fig. 6.9.</p>
+
+<h3 id="gain-function-and-fixed-points">Gain function and fixed points</h3>
+
+<p>Gain function: $1/\langle T \rangle$ as a function of input current.</p>
 
 <script type="math/tex; mode=display">\begin{equation}
-P_I(t\vert \hat t) = \partial_t S_I(t\vert \hat t)
-\end{equation}</script>
-
-<h2 id="motivation">Motivation</h2>
-
-<p>What we need for a complete description of network activities is to calculate $A(t+\Delta t)$ given $A(t)$ as well as the external input at $t$.</p>
-
-<p>Using whatever we have up to this point, the procedure should be</p>
-
-<ol>
-  <li>
-    <p>Apply $A(t)$ and $I^{\mathrm{ext}}(t)$ to equation (6.8). Within a small time interval $\Delta t$, we obtain the PSP potential, i.e.,</p>
-
-    <script type="math/tex; mode=display">h_{\mathrm{PSP}}(t + \Delta t\vert \hat t) = J_0 \int_0^\infty \epsilon(t - \hat t, s) A(t - s) ds + \int_0^\infty \kappa(t-\hat t,s) I^{\mathrm{ext}}(t-s) ds</script>
-
-    <p><strong>My thought is, calculating next step is impossible, since we have an integral to infinity? I do not really get it.</strong></p>
-  </li>
-  <li>
-    <p>The ultimate reason is that we have insufficient equations compared to the unknown quantities.
-Unknown: $A(t)$, $h_{\mathrm{PSP}}$, but we have only one equation.</p>
-
-    <p>Question: What about other equation? Eqn (6.21), one equation, two variables. Same fate.</p>
-  </li>
-</ol>
-
-<p>So we need another equation. What we get is</p>
-
-<script type="math/tex; mode=display">A(t) = \int_{-\infty}^t P_I(t\vert \hat t) A(\hat t) d\hat t.</script>
-
-<p>Oh wait, new function $P_I(t\vert \hat t)$ has been introduced to the function. How is that going to help? $P_I$ actually can be determined by $h$.</p>
-
-<p>Eq. 6.78, 6.79, 6.80</p>
-
-<h3 id="with-absolute-refractoriness">With Absolute refractoriness</h3>
-
-<p><strong>Wilson-Cowan</strong> integral form</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-A(t) = f[h(t)]\left( 1 - \int_{t-\Delta^{\mathrm{abs}}}^t A(t') dt' \right),
+A_0 = g(I_0),
 \end{equation}</script>
 
 <p>where</p>
 
-<ul>
-  <li>$f[h(t)]$ rate of firing for a neuron that is not refractory,</li>
-  <li>given the togal input potential $h(t)$.</li>
-</ul>
+<script type="math/tex; mode=display">I_0 = I^{\mathrm{ext}}_0 + I^{\mathrm{int}}_0.</script>
 
-<p>Constant input potential $h(t)=h_0$,</p>
+<p>The subscript $0$ indicates that we are talking about stationary cases. If we apply SRM0 model,</p>
 
 <script type="math/tex; mode=display">\begin{equation}
-A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
+h(t) = J_0 A_0 \int_0^\infty \epsilon_0(s) ds + I^{\mathrm{ext}}_0 \int_0^\infty \kappa_0 (s)ds
 \end{equation}</script>
 
-<p>To solve the population activity for homogeneous, isotropic and stationary network, all we need is the property of single neuron.</p>
+<p>becomes time independent.</p>
 
-<h3 id="time-coarse-graining">Time Coarse-Graining</h3>
+<p>Since $\int_0^\infty \epsilon_0(s) ds$ is time independent, we can redefine a new quantitity</p>
 
-<p>Remove the integral.</p>
+<script type="math/tex; mode=display">J_0^{(1)} \equiv J_0 \int_0^\infty \epsilon_0(s) ds.</script>
+
+<p>Meanwhile, our observation tells us that $\int_0^\infty \kappa_0 (s)ds$ is a effective resistance.</p>
+
+<p>Thus we obtain</p>
+
+<script type="math/tex; mode=display">h = J_0^{(1)} A_0 + I^{\mathrm{ext}}_0 R.</script>
+
+<p>To obtain the current, we devided the equation by $R$,</p>
+
+<script type="math/tex; mode=display">I_0 = J_0^{(2)} A_0 + I^{\mathrm{ext}}_0,</script>
+
+<p>where</p>
+
+<script type="math/tex; mode=display">J_0^{(2)}  = J_0^{(1)} /R.</script>
+
+<p>For convinience we call just drop all these superscripts and name $J_0^{(2)}$ as $J_0$, i.e.,</p>
+
+<script type="math/tex; mode=display">I_0 = J_0 A_0 + I^{\mathrm{ext}}_0.</script>
+
+<p>The <strong>gain function</strong> becomes</p>
+
+<script type="math/tex; mode=display">A_0 = g(J_0 A_0 + I^{\mathrm{ext}}_0).</script>
+
+<p>This equation seems to be complicated. A graphical method is provided in the textbook. An easy way to understand this method is to rewrite the equation into two,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+A_0 = & g(I_0) \\
+A_0 =& \frac{I_0 - I^{\mathrm{ext}}_0 }{J_0},
+\end{align} %]]></script>
+
+<p>which is equivalently</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+\frac{I_0 - I^{\mathrm{ext}}_0 }{J_0} =g(I_0) 
+\label{eq-graphical-solution-illustration}
+\end{equation}</script>
+
+<p>If we plot $A_0$ as a function of $I_0$, the solution to the system of equations should be where the LHS = RHS in Eq.(\ref{eq-graphical-solution-illustration}). More explicitly, we plot out LHS and RHS as a function of $I_0$ and the intersection is the solution.</p>
+
+<h2 id="references-and-notes">References and Notes</h2>
+
+<ol>
+  <li><a href="http://wpage.unina.it/mdaquino/PhD_thesis/main/node9.html">Weiss Theory of Ferromagnetism</a></li>
+</ol>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>For some explaination of this concept, please read <a href="http://farside.ph.utexas.edu/teaching/sm1/lectures/node25.html">The principle of equal a priori probabilities</a> and <a href="http://farside.ph.utexas.edu/teaching/sm1/lectures/node29.html">Probability calculations</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -388,10 +481,8 @@ A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="/spiking-neuron-models/18.population-srm-with-escape-noise/" class="btn" title="18.SRM with Escape Noise">Previous</a>
+        <a href="/spiking-neuron-models/20.basics-of-renewal-theory/" class="btn" title="20.basics-of-renewal-theory">Previous</a>
       
-      
-        <a href="/spiking-neuron-models/20.basics-of-renewal-theory/" class="btn" title="20.basics-of-renewal-theory">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
