@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>19.Population Activity &#8211; NEURONSTAR</title>
-<meta name="description" content="Review of Several Concepts
+<title>22.interacting populations and continuum models &#8211; NEURONSTAR</title>
+<meta name="description" content="interacting populations
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="19.Population Activity">
-<meta name="twitter:description" content="Review of Several Concepts
+<meta name="twitter:title" content="22.interacting populations and continuum models">
+<meta name="twitter:description" content="interacting populations
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="19.Population Activity">
-<meta property="og:description" content="Review of Several Concepts
+<meta property="og:title" content="22.interacting populations and continuum models">
+<meta property="og:description" content="interacting populations
 
 ">
-<meta property="og:url" content="/spiking-neuron-models/19.population-activity/">
+<meta property="og:url" content="/spiking-neuron-models/22.interacting-populations-and-continuum-models/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="/spiking-neuron-models/19.population-activity/">
+<link rel="canonical" href="/spiking-neuron-models/22.interacting-populations-and-continuum-models/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -199,14 +199,14 @@ MathJax.Hub.Config({
           
         </ul>
         
-          <h1 class="entry-title">19.Population Activity</h1>
+          <h1 class="entry-title">22.interacting populations and continuum models</h1>
         
       </header>
       <footer class="entry-meta">
         <hr>
         
         <span style=""><i class="fa fa-map-signs"></i> <a href="/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
-          <a style="padding-left:1.1em;"> Spiking Neuron Models, Section 6.3</a>
+          <a style="padding-left:1.1em;"> Spiking Neuron Models, Section 6.5</a>
         </span>
         
 
@@ -223,19 +223,19 @@ MathJax.Hub.Config({
 
         
         
-          <img src="/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
+          <img src="/images/authors/erbb4.jpg" class="bio-photo" alt="ErbB4 bio photo"></a>
         
-        <span class="author vcard">By <span class="fn">OctoMiao</span></span>
-        <span class="entry-date date published"><time datetime="2016-09-30T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 30, 2016</time></span>
+        <span class="author vcard">By <span class="fn">ErbB4</span></span>
+        <span class="entry-date date published"><time datetime="2016-10-29T00:00:00+00:00"><i class="fa fa-calendar-o"></i> October 29, 2016</time></span>
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/emptymalei" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
+          <a href="https://github.com/ErbB4" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
         </span>
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/19.population-activity.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/22.interacting-populations-and-continuum-models.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -251,112 +251,55 @@ MathJax.Hub.Config({
 
       </footer>
       <div class="entry-content">
-        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Section 6.3</span></p></div> -->
-        <h2 id="review-of-several-concepts">Review of Several Concepts</h2>
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Section 6.5</span></p></div> -->
+        <h2 id="interacting-populations">interacting populations</h2>
 
-<h3 id="population-activity-at">Population activity $A(t)$</h3>
+<p>Every heterogeneous network could be viewed as a combination of different homogeneous network, or the interaction among different populations. The simplest case is the balanced random network: with excitatory and inhibitory neurons.</p>
 
-<ol>
-  <li>
-    <p>From equations</p>
+<p>Let’s look at a fully connected network with excitatory and inhibitory neurons. Excitatory neurons belong to population $n$ and inhibitory neurons belong to population $m$.</p>
 
-    <script type="math/tex; mode=display">\begin{equation}\partial_t p(u,t)= \cdots + A(t)\delta(u-u_r)\end{equation}</script>
+<p>So the activity of population $n$ or population $m$ is:</p>
 
-    <p>We integrate over a range of potential</p>
+<script type="math/tex; mode=display">A_n(t)=\frac{1}{N_n}\sum_{j\in \Gamma_n}\sum\delta(t-t_j^{(f)})</script>
 
-    <script type="math/tex; mode=display">\begin{equation} \partial_t \int_{u_1}^{u_2} p(u,t) = \cdots + A(t), \end{equation}</script>
+<p>So for each single neuron in population $m$, which receives the inputs from all neurons in population $n$, the membrane potential is changing accordingly:</p>
 
-    <p>provided that $u_r$ is within $[u_1,u_2]$.</p>
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+h_i(t|\hat{t_i}) & = \sum_j\sum_fw_{ij}\eta(t-\hat{t_i},t-t_j^{(f)})\\
+	               & = \sum_mJ_{nm}\int_0^{\infty}\eta(t-\hat{t_i},s)\sum_{j\in \Gamma_m}\sum_f\frac{\delta(t-t_j^{f}-s)}{N_m}\\
+                 & = \sum_mJ_{nm}\int_0^{\infty}\eta(t-\hat{t},s)A_m(t-s)ds
 
-    <p>So it’s some kind of flux. It works as a source term of faction of neurons at $u=u_r$, which is identical to fraction of neurons that spiked per unit time.</p>
-  </li>
-  <li>
-    <p>In fact, we have</p>
+\end{align} %]]></script>
 
-    <script type="math/tex; mode=display">\begin{equation}
-A(t)  = J(\theta,t)
-\end{equation}</script>
-  </li>
-</ol>
+<p>That is just an example population with SRM0 neuron model. For a general population, the population activity evolution could be rewrite as:</p>
 
-<h3 id="spike-interval-distribution-pitvert-hat-t">Spike interval distribution $P_I(t\vert \hat t)$</h3>
+<script type="math/tex; mode=display">A_n(t) = \int_{-\infty}^t P_n(t|\hat{t})A_n(\hat{t})d\hat{t}</script>
 
-<p>$P_I(t\vert \hat t)$ is the probability density of firing, i.e.,</p>
+<p>$P$ is the interval distribution, it could also be viewed as a kernel for population activity, which is determined by the post-synaptic potential (PSP).</p>
 
-<script type="math/tex; mode=display">\begin{equation}
-\int_{t_1}^{t_2} P_I(t\vert \hat t) dt
-\end{equation}</script>
+<h2 id="stationary-states-and-gain-function-of-interacting-populations">Stationary states and gain function of interacting populations</h2>
 
-<p>calculates the probability of finding spikes during time interval $[t_1,t_2]$.</p>
+<p>When the network reaches stationary state, the activity is stable, so the inputs from one sub-population ($N$ for example) to another sub-population is more or less constant.</p>
 
-<p>Meanwhile we have this survival probability</p>
+<p>So the inputs could be viewed as $I_m$ (to population $M$), and the activity of this population is:
+<script type="math/tex">A_m=g_m(I_m),</script></p>
 
-<script type="math/tex; mode=display">\begin{equation}
-S_I(t\vert \hat t) = 1 - \int_{\hat t}^t P_I(s\vert \hat t) ds
-\end{equation}</script>
+<p>with</p>
 
-<p>or identically</p>
+<script type="math/tex; mode=display">I_m = \sum_nJ_{mn}A_n,</script>
 
-<script type="math/tex; mode=display">\begin{equation}
-P_I(t\vert \hat t) = \partial_t S_I(t\vert \hat t)
-\end{equation}</script>
+<p>we have</p>
 
-<h2 id="motivation">Motivation</h2>
+<script type="math/tex; mode=display">A_m = g_m(\sum_n J_{mn}A_n)</script>
 
-<p>What we need for a complete description of network activities is to calculate $A(t+\Delta t)$ given $A(t)$ as well as the external input at $t$.</p>
+<h2 id="spatial-continuum-network">spatial continuum network</h2>
 
-<p>Using whatever we have up to this point, the procedure should be</p>
+<p>Features: the auditory cortex is a good example, with neurons organized along an axis with continuously changing preferred frequency.</p>
 
-<ol>
-  <li>
-    <p>Apply $A(t)$ and $I^{\mathrm{ext}}(t)$ to equation (6.8). Within a small time interval $\Delta t$, we obtain the PSP potential, i.e.,</p>
+<p>So the principle of analyzing this network is \emph{binning} the cortex with a binsize $d$. Each sub-population could be labeled according to its spatial location. For instance, population $N$ is the neurons between $[nd,(n+1)d]$, and in each bin, the neuron number is $N_n=\rho d$, where $\rho$ is the spatial density.</p>
 
-    <script type="math/tex; mode=display">h_{\mathrm{PSP}}(t + \Delta t\vert \hat t) = J_0 \int_0^\infty \epsilon(t - \hat t, s) A(t - s) ds + \int_0^\infty \kappa(t-\hat t,s) I^{\mathrm{ext}}(t-s) ds</script>
-
-    <p><strong>My thought is, calculating next step is impossible, since we have an integral to infinity? I do not really get it.</strong></p>
-  </li>
-  <li>
-    <p>The ultimate reason is that we have insufficient equations compared to the unknown quantities.
-Unknown: $A(t)$, $h_{\mathrm{PSP}}$, but we have only one equation.</p>
-
-    <p>Question: What about other equation? Eqn (6.21), one equation, two variables. Same fate.</p>
-  </li>
-</ol>
-
-<p>So we need another equation. What we get is</p>
-
-<script type="math/tex; mode=display">A(t) = \int_{-\infty}^t P_I(t\vert \hat t) A(\hat t) d\hat t.</script>
-
-<p>Oh wait, new function $P_I(t\vert \hat t)$ has been introduced to the function. How is that going to help? $P_I$ actually can be determined by $h$.</p>
-
-<p>Eq. 6.78, 6.79, 6.80</p>
-
-<h3 id="with-absolute-refractoriness">With Absolute refractoriness</h3>
-
-<p><strong>Wilson-Cowan</strong> integral form</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-A(t) = f[h(t)]\left( 1 - \int_{t-\Delta^{\mathrm{abs}}}^t A(t') dt' \right),
-\end{equation}</script>
-
-<p>where</p>
-
-<ul>
-  <li>$f[h(t)]$ rate of firing for a neuron that is not refractory,</li>
-  <li>given the togal input potential $h(t)$.</li>
-</ul>
-
-<p>Constant input potential $h(t)=h_0$,</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
-\end{equation}</script>
-
-<p>To solve the population activity for homogeneous, isotropic and stationary network, all we need is the property of single neuron.</p>
-
-<h3 id="time-coarse-graining">Time Coarse-Graining</h3>
-
-<p>Remove the integral.</p>
+<p>Then this network is a special case of interacting populations, with $d$ approaching zero.</p>
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -388,10 +331,10 @@ A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="/spiking-neuron-models/18.population-srm-with-escape-noise/" class="btn" title="18.SRM with Escape Noise">Previous</a>
+        <a href="/spiking-neuron-models/21.asynchronous-firing/" class="btn" title="21.Asynchronous Firing">Previous</a>
       
       
-        <a href="/spiking-neuron-models/20.basics-of-renewal-theory/" class="btn" title="20.Basics of Renewal Theory">Next</a>
+        <a href="/spiking-neuron-models/23.linearized-population-equation/" class="btn" title="23.Linearized Population Equation and Transients">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
