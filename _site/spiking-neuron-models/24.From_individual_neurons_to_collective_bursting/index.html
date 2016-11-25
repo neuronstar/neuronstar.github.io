@@ -1,0 +1,518 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>24. From individual neurons to collective bursting &#8211; NEURONSTAR</title>
+<meta name="description" content="This is a short introduction and rationale to my PhD subject on organized behaviors in neuronal networks, focusing on collective bursting in neuronal cultures.
+
+">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="24. From individual neurons to collective bursting">
+<meta name="twitter:description" content="This is a short introduction and rationale to my PhD subject on organized behaviors in neuronal networks, focusing on collective bursting in neuronal cultures.
+
+">
+
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/logo.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="24. From individual neurons to collective bursting">
+<meta property="og:description" content="This is a short introduction and rationale to my PhD subject on organized behaviors in neuronal networks, focusing on collective bursting in neuronal cultures.
+
+">
+<meta property="og:url" content="/spiking-neuron-models/24.From_individual_neurons_to_collective_bursting/">
+<meta property="og:site_name" content="NEURONSTAR">
+
+
+
+
+
+<link rel="canonical" href="/spiking-neuron-models/24.From_individual_neurons_to_collective_bursting/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<!-- Webfonts -->
+<script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js","cancel.js", "AMSmath.js", "AMSsymbols.js"] }});
+  </script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+    MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+      cancel: ["Extension","cancel"]
+      });
+   });
+   </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      processEscapes: true
+    }
+  });
+</script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      Macros: {
+        overlr: ['\\overset\\leftrightarrow{\#1}',1],
+        overl: ['\\overset\leftarrow{\#1}',1],
+        overr: ['\\overset\rightarrow{\#1}',1],
+        bra: ['\\left\\langle \#1\\right|',1],
+        ket: ['\\left| \#1\\right\\rangle',1],
+        braket: ['\\langle \#1 \\mid \#2 \\rangle',2],
+        avg: ['\\left< \#1 \\right>',1],
+        slashed: ['\\cancel{\#1}',1],
+        bold: ['\\boldsymbol{\#1}',1],
+        sech: ['\\operatorname{sech}{\#1}',1],
+        csch: ['\\operatorname{csch}{\#1}',1]
+      }
+    }
+  });
+  </script>
+<!-- MathJax -->
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body id="post">
+
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      
+		    
+		    <li><a href="/" >Home</a></li>
+		  
+		    
+		    <li><a href="/about/" >About</a></li>
+		  
+		    
+		    <li><a href="/club" >Reading Club</a></li>
+		  
+		    
+		    <li><a href="/articles" >Articles</a></li>
+		  
+		    
+		    <li><a href="/resources" >Resources</a></li>
+		  
+		    
+		    <li><a href="http://neuronstar.cc/comp-neurosci-map" target="_blank">Map of Neuroscience</a></li>
+		  
+		    
+		    <li><a href="https://zhuanlan.zhihu.com/neuronsketch" target="_blank">Sparks and Spikes</a></li>
+		  
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+<header class="masthead">
+	<div class="wrap">
+      
+  		<a href="/" class="site-logo" rel="home" title="NEURONSTAR"><img src="/images/logo.png" width="200" height="200" alt="NEURONSTAR logo" class="animated fadeInDown"></a>
+      
+      <h1 class="site-title animated fadeIn"><a href="/">NEURONSTAR</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">Neuroscience and Complex Systems</h2>
+	</div>
+</header><!-- /.masthead -->
+
+<div class="js-menu-screen menu-screen"></div>
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <ul class="entry-tags">
+          
+        </ul>
+        
+          <h1 class="entry-title">24. From individual neurons to collective bursting</h1>
+        
+      </header>
+      <footer class="entry-meta">
+        <hr>
+        
+        <span style=""><i class="fa fa-map-signs"></i> <a href="/spiking-neuron-models/00.Spiking_Neuron_Models_Club.html">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
+          <a style="padding-left:1.1em;"> Two dimensional neuron models; Integrate and Fire Models Part 1; Comparison Between Neuron Models; Homogeneous Network; Asynchronous Firing</a>
+        </span>
+        
+
+
+        <span style="padding-top:1em;margin-bottom:1em;">
+          Chat with others about spiking neuron models.
+
+      <button class="js-gitter-toggle-chat-button btn" style="margin-top:1em;"><i class="fa fa-comments" aria-hidden="true"></i> Toggle Chat</button>
+
+      </span>
+
+
+
+
+        
+        
+          <img src="/images/authors/ns-bio.png" class="bio-photo" alt="Tanguy Fardet bio photo"></a>
+        
+        <span class="author vcard">By <span class="fn">Tanguy Fardet</span></span>
+        <span class="entry-date date published"><time datetime="2016-11-16T00:00:00+00:00"><i class="fa fa-calendar-o"></i> November 16, 2016</time></span>
+        
+        
+        <span class="social-share-twitter">
+          <a href="https://github.com/Silmathoron" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
+        </span>
+        
+        
+        <span class="social-share-twitter">
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/24.From_individual_neurons_to_collective_bursting.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+        </span>
+        
+        <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
+        
+        
+
+
+
+
+
+
+
+
+      </footer>
+      <div class="entry-content">
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Two dimensional neuron models; Integrate and Fire Models Part 1; Comparison Between Neuron Models; Homogeneous Network; Asynchronous Firing</span></p></div> -->
+        <p>This is a short introduction and rationale to my <a href="http://www.msc.univ-paris-diderot.fr/spip.php?rubrique378&amp;lang=fr">PhD subject</a> on organized behaviors in neuronal networks, focusing on collective bursting in neuronal cultures.</p>
+
+<p><strong>Contents:</strong>
+  - Introduction to the aEIF model to describe the neuronal dynamics
+  - Network topology in cultures
+  - Synchronization in homogeneous networks
+  - The mean-field model</p>
+
+<h2 id="neuronal-dynamics-and-the-aeif-model">1. Neuronal dynamics and the aEIF model</h2>
+
+<h3 id="principle">Principle</h3>
+<p>As described in the previous sessions on neuronal models, we use simplified equations to describe the behavior of neurons.
+How far should we simplify them? For physicists, the best way is to keep the model 2D, so that you can always represent the evolution of the neuron’s state on a piece of paper, but make it discontinuous so that it can also have a chaotic behavior.</p>
+
+<p>For that reason, we will here use the adaptive Exponential Integrate-and-Fire model (a.k.a. aEIF or AdEx) [<a href="#brette2005">Brette2005</a>].
+In addition to being 2D, this model also recovers a large number of biologically relevant features compared to the IAF, the Izhikevitch, or GIF models.</p>
+
+<p>The model describes the behavior of a neuron using only two variables: the membrane potential $\tilde{V}$, and a slow current $\tilde{w}$, which conveys the capacity of the neuron to adapt, i.e. to modulate its excitability depending on the input it receives.</p>
+
+<h3 id="equations">Equations</h3>
+<p>The two variables are coupled through the following equations:</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+	\left\lbrace \begin{array}{l}
+		\tilde{C}_m \frac{d\tilde{V}}{d\tilde{t}} = - \tilde{g}_L(\tilde{V}-\tilde{E}_L) + \tilde{g}_L \tilde{\Delta}_T \exp\left(\frac{\tilde{V}-\tilde{V}_{th}}{\tilde{\Delta}_T}\right) - \tilde{w} + \tilde{I}_e + \tilde{I}_s\\
+		\tilde{\tau}_w \frac{d\tilde{w}}{d\tilde{t}} = \tilde{a} (\tilde{V} - \tilde{E}_L) - \tilde{w}
+	\end{array}\right.
+\end{equation}</script>
+
+<p>as in the integrate-and-fire model, the spike is terminated by a reset condition, which reads:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{equation}
+	\text{if } \tilde{V} > \tilde{V}_{peak} \quad \left\lbrace \begin{array}{r c l}
+		\tilde{V} &\leftarrow & \tilde{V}_r\\
+		\tilde{w} &\leftarrow & \tilde{w} + \tilde{b}
+	\end{array}\right.
+	\label{eq:AdEx_adim}
+\end{equation} %]]></script>
+
+<p>For simplicity, I will use dimensionless variables in the rest of the session. The equations will thus become:</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+	\left\lbrace \begin{array}{l}
+		\dot{V} = - (V-E_L) + e^{V} - w + I_e + I_s\\
+		\tau_w \dot{w} = a (V - E_L) - w
+	\end{array}\right.
+\end{equation}</script>
+
+<p>See <a href="#var_change">Appendices – Variable change</a> for details.</p>
+
+<h3 id="behavior">Behavior</h3>
+<p>This model is able to reproduce almost all behaviors observed in electrophysiological recordings, from fast-spiking to intrisically bursting or chattering neurons [<a href="#naud2008">Naud2008</a>].</p>
+
+<h2 id="neuronal-networks-in-cultures">2. Neuronal networks in cultures</h2>
+
+<p>Now that we have the neuronal model, let us have a look at the structure that will underly the system.<br />
+The neurons are coupled by synapses, so this structure can be represented simply by a directed network, described by an adjacency matrix <strong>A</strong>, where:
+<script type="math/tex">A_{ij} = s_{ij} \delta(i \rightarrow j)</script>
+i.e. the matrix entry is non-zero only of neuron $i$ extends an axon towards $j$, in which case it’s value represents the synaptic strength of the connection.</p>
+
+<p>In cultures, the connectivity is much simpler than in the brain, since the structure is planar (at least in the cultures we study).
+Though the network cannot be considered as fully homogeneous, as what was considered in previous sessions, some studies [<a href="#cohen2010">Cohen2010</a>] suggest that its heterogeneity is rather limited.</p>
+
+<p>Indeed, it seems that the in-degree connectivity can described by a Gaussian distribution $\mathcal{N}(\overline{k}, \sigma_k)$, with an average degree of the order of 100.</p>
+
+<p>For a given average connectivity $\overline{k}$, the Gaussian in-degree (GID) network has the advantage of allowing us to test the influence of heterogeneity by varying $\sigma_k$.</p>
+
+<h2 id="synchronization-in-homogeneous-networks">3. Synchronization in homogeneous networks</h2>
+
+<p>Let us try to understand simply how synchronization can occur in networks containing oscillators.</p>
+
+<h3 id="simulations-what-does-it-look-like">Simulations: what does it look like?</h3>
+<p><img src="../assets/tf_synchro_bursting/raster_bursting.png" width="460" alt="Raster for bursting GID network of 1000 neurons" />
+<img src="../assets/tf_synchro_bursting/time_evol_bursting.png" width="400" alt="Time evolution of voltage and adaptation current for a FID network of 1000 neurons" />
+<a name="fig:bursting"><strong>Figure 1:</strong></a> <em>Left: Raster for bursting GID network of 1000 neurons with $\overline{k} = 100$ and $\sigma_k = 20$. Right: Time evolution of voltage and adaptation current for a FID network of 1000 neurons with $k = 100$.</em></p>
+
+<h3 id="the-kuramoto-paradigm">The Kuramoto paradigm</h3>
+<p>One of the most well-known models for this is the Kuramoto model [<a href="#acebron2005">Acebron2005</a>].</p>
+
+<p>Let a complex oscillator follow any given trajectory in phase-space and let its phase along the trajectory be $\theta(t)$.</p>
+
+<p>In this model, all that we consider is the phase of the oscillator, and the oscillator will interact with the rest of the world only because of the phase delay that might exist between it and some other oscillator. This is denoted, for any oscillator $i$ among $N$, by the equation:</p>
+
+<script type="math/tex; mode=display">\dot{\theta}_i(t) = \omega_i + \frac{K}{N}\sum_{j=1}^N sin(\theta_j(t) - \theta_i(t))</script>
+
+<p>where $K$ is the non-normalized coupling constant.</p>
+
+<p>Many studies on the subject exist, so we will just look at how synchronization can occur on a simpler system, where one oscillator sees a large periodic stimulus (e.g. a population of synchronized oscillators). This exercise is detailed in [<a href="#strogatz1994">Strogatz1994</a>] section 4.5.</p>
+
+<p>The periodic stimulus has a period $\Omega$ and a phase $\Theta$, hence:</p>
+
+<script type="math/tex; mode=display">\dot{\theta}(t) = \omega + K sin(\Theta - \theta(t))</script>
+
+<p>looking at the phase difference $\varphi(t) = \Theta - \theta(t)$, and noting $\Delta\omega = \Omega - \omega$, we get:</p>
+
+<script type="math/tex; mode=display">\dot{\varphi}(t) = \Delta\omega - K sin(\varphi(t))</script>
+
+<p>Thus we can attain a permanent phase lock solution for $\dot{\varphi} = 0$ if $\Delta\omega \leq K$.</p>
+
+<h3 id="relaxation-oscillators">Relaxation oscillators</h3>
+<p>Though the Kuramoto model allows us to understand qualitatively many features of synchronization, it is quite different from what happens in neuronal assemblies, especially since these continuous phase models are:</p>
+
+<ul>
+  <li>characterized by rather slow synchronizations, whereas the discrete coupling and almost discontinuous dynamics of neurons leads to much faster synchronization phenomena,</li>
+  <li>not leading to zero phase-lag for finite coupling which is very different from the behavior observed in neuronal populations.</li>
+</ul>
+
+<p>As can be seen on Figure <a href="#fig:bursting">1</a>, when looking at the adaptation variable $w$, bursting neurons display a behaviour which is very similar to that of a relaxation oscillator.</p>
+
+<p>Contrary to the phase oscillator, the relaxation oscillator can have a discontinuous trajectory. This feature is what allows not only the fast transition from the asynchronous to the synchronous phase, but also the existence of a zero phase-lag state for finite couplings.</p>
+
+<h2 id="the-analytic-mean-field-model">4. The analytic mean-field model</h2>
+<p>Our model is based on the hypothesis that many neuronal cultures contain intrisically oscillating neurons (the majority of hte pyramidal neurons according to [<a href="#penn2016">Penn2016</a>]), and that the collective bursting behavior is observed even in the absence of inhibitory neurons.</p>
+
+<p>Therefore, we use the AdEx model to describe periodic spiking adaptive neurons and tried to understand how adaptation alone could explain the existence of the collective dynamics.</p>
+
+<p>To that end, we set the persistent current $I_e$ to a positive value (mimicking biological persistent sodium currents), so that the neurons spike periodically even in the absence of external input.</p>
+
+<p>The relaxation oscillations of $w$ can be understood as follows: the adaptation variable increases rapidly during the burst towards a peak value $w^∗$, then undergoes a quasi-exponential decrease until it reaches its minimum value $w_{min}$.<br />
+Since the increase of $w$ is simply due to the spike-driven adaptation linked to the $b$ increment after a spike, all that’s left to understand is what determines the minimal and maximal values for $w$.</p>
+
+<p><img src="../assets/tf_synchro_bursting/trajectory_ps.png" width="400" alt="Time evolution of voltage and adaptation current for a FID network of 1000 neurons" />
+<a name="fig:traj_ps"><strong>Figure 2:</strong></a> <em>Theoretical trajectory of a mean-field neuron in phase-space, describing the initiation and termination of a burst.</em></p>
+
+<p>Figure <a href="#fig:traj_ps">2</a> shows the origin of the phenomena: as the persistent current $I_e$ progressively drives the depolarisation of the membrane, $w$ decreases while $V$ increases. Once $w$ goes below the $V$-nullcline, the potential can diverge and the first spike occurs: the burst begins.</p>
+
+<p>During the burst, the neuron receives an average input from the other neurons, which drives a subsequent series of burst. This phenomenon comes to an end when $w$ reaches a threshold value given by the position at which the spike trajectory (red line + arrow) will intersect the $V$-nullcline (red cross), thus preventing the spike divergence to occur and leading to the termination of the burst.</p>
+
+<p>Using a detailed mean-field model, we could translate this condition to a dimensionless self-coherent equation:</p>
+
+<script type="math/tex; mode=display">\begin{equation}
+	w^* = w_{min} + b \left[ \overline{t_s}(w^*) - d \right] + \overline{k} Q_s.
+\end{equation}</script>
+
+<p>where $\overline{t_s}(w^*)$ is the average interspike during a burst, $d$ is the propagation delay of an action potential between the source and target neuron and $Q_s$ is the charge delivered by a spike on the post-synaptic neuron.</p>
+
+<p>As $\overline{t_s}(w)$ is an increasing function of $w$, we understand that the spike-driven adaptation, described by $b$, will have a significant importance on the properties of the collective dynamics.</p>
+
+<h2 id="references">References</h2>
+
+<p><a name="acebron2005"><strong>[Acebron2005]</strong></a> J. A. Acebron, L. L. Bonilla, C. J. P. Vicente, F. Ritort, and R. Spigler, <a href="https://www.researchgate.net/publication/46776356_The_Kuramoto_model_A_simple_paradigm_for_synchronization_phenomena">The Kuramoto model: A simple paradigm for synchronization phenomena</a></p>
+
+<p><a name="brette2005"><strong>[Brette2005]</strong></a> R. Brette and W. Gerstner, <a href="https://www.researchgate.net/publication/7729488_Adaptive_Exponential_Integrate-And-Fire_Model_As_An_Effective_Description_Of_Neuronal_Activity">Adaptive Exponential Integrate-and-Fire Model as an Effective Description of Neuronal Activity</a></p>
+
+<p><a name="cohen2010"><strong>[Cohen2010]</strong></a> O. Cohen, A. Keselman, E. Moses, M. R. Martínez, J. Soriano, and T. Tlusty, <a href="https://arxiv.org/abs/1007.5143v1">Quorum Percolation in Living Neural Networks</a></p>
+
+<p><a name="ladenbauer2013"><strong>[Ladenbauer2013]</strong></a> J. Ladenbauer, M. Augustin, L. Shiau, and K. Obermayer, <a href="https://arxiv.org/abs/1310.2430">Impact of adaptation currents on synchronization of coupled exponential integrate-and-fire neurons</a></p>
+
+<p><a name="naud2008"><strong>[Naud2008]</strong></a> R. Naud, N. Marcille, C. Clopath, and W. Gerstner, <a href="https://www.researchgate.net/publication/23476239_Firing_patterns_in_the_adaptive_exponential_integrate-and-fire_model">Firing patterns in the adaptive exponential integrate-and-fire model</a></p>
+
+<p><a name="penn2016"><strong>[Penn2016]</strong></a> Y. Penn, M. Segal, and E. Moses, <a href="http://www.pnas.org/content/113/12/3341">Network synchronization in hippocampal neurons</a></p>
+
+<p><a name="strogatz1994"><strong>[Strogatz1994]</strong></a> S. Strogatz, Nonlinear Dynamics and Chaos](http://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering)</p>
+
+<h2 id="appendices">Appendices</h2>
+
+<h3 id="a-namevarchangeavariable-changes-for-the-neuronal-model"><a name="var_change"></a>Variable changes for the neuronal model</h3>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{eqnarray*}
+	V = \frac{\tilde{V}-\tilde{V}_{th}}{\tilde{\Delta}_T}, & \quad E_L = \frac{\tilde{E}_L - \tilde{V}_{th}}{\tilde{\Delta}_T} \quad & \text{(general relation for voltages)}\\
+	w = \frac{w}{\tilde{g}_L \tilde{\Delta}_T}, & I = \frac{\tilde{I}}{\tilde{g}_L \tilde{\Delta}_T} & \text{(general relation for currents)}\\
+	t = \frac{\tilde{t}}{\tilde{\tau}_m}, & \tau_w = \frac{\tilde{\tau}_w}{\tilde{\tau}_m} & \text{(general relation for times)}\\
+	g_L = 1 & a = \frac{\tilde{a}}{\tilde{g}_L} & \text{(general relation for conductances)}
+\end{eqnarray*} %]]></script>
+
+        
+          <div id="disqus_thread"></div><!-- /#disqus_thread -->
+          
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'neuronstar'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+      
+        <a href="/spiking-neuron-models/23.linearized-population-equation/" class="btn" title="23.Linearized Population Equation and Transients">Previous</a>
+      
+      
+    </nav><!-- /.pagination -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper">
+  <footer role="contentinfo" class="entry-wrapper">
+    
+
+<span>&copy; 2016 <a href="" style="text-decoration: underline;" target="_blank">HLLM</a>. Powered by <a href="http://jekyllrb.com" style="text-decoration: underline;" rel="nofollow">Jekyll</a> using the <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" style="text-decoration: underline;" rel="nofollow">So Simple Theme</a>.</span>
+<div class="social-icons">
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://github.com/neuronstar" title="HLLM on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+	
+  
+	
+  <a href="/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
+</div><!-- /.social-icons -->
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+<script type="text/javascript">
+  var BASE_URL = '';
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ 'https://www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-61051776-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'neuronstar/spiking-neuron-models',
+    activationElement: false
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+</body>
+</html>

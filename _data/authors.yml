@@ -68,6 +68,20 @@ skyworlds:
     github: https://github.com/skyworlds
 
 
+Tanguy Fardet:
+    name: Tanguy Fardet
+    display_name: Tanguy Fardet
+    gravatar:
+    avatar: ns-bio.png
+    email:
+    web:
+    weibo:
+    bio: ""
+    douban:
+    twitter:
+    github: https://github.com/Silmathoron
+
+
 example:
     name: First Name
     display_name: DisplayName # 这是真的显示的名字
