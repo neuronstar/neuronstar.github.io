@@ -70,7 +70,7 @@
           <a href="{{ site.data.collectionsource.spiking-neuron-models_source_link }}/edit/master/{{page.relative_path |  replace:'_spiking-neuron-models/',''}}" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         {% endif %}
-        {% if (site.owner.disqus-shortname and page.comments) or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
+        {% if site.owner.disqus-shortname and page.comments or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
         {% if page.share %}{% include social-share.html %}{% endif %}
         {% if page.ads == true %}{% include ad-sidebar.html %}<!-- /.google-ads -->{% endif %}
 
@@ -85,7 +85,7 @@
       <div class="entry-content">
         <!-- {% if page.references %}<div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>{{ page.references }}</span></p></div>{% else %}{% endif %} -->
         {{ content }}
-        {% if (site.owner.disqus-shortname and page.comments) or site.comments %}
+        {% if site.owner.disqus-shortname and page.comments or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
           {% include disqus-comments.html %}
         {% endif %}

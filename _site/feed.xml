@@ -2,27 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">NEURONSTAR</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="/feed.xml" />
-<link rel="alternate" type="text/html" href="" />
-<updated>2016-12-10T01:30:46+00:00</updated>
-<id>/</id>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2017-02-04T04:35:51+00:00</updated>
+<id>http://localhost:4000/</id>
 <author>
   <name>HLLM</name>
-  <uri>/</uri>
+  <uri>http://localhost:4000/</uri>
   
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[贝叶斯统计、罕见疾病和抽奖问题]]></title>
-  <link rel="alternate" type="text/html" href="/sciencecn/bayesian/" />
-  <id>/sciencecn/bayesian</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/sciencecn/bayesian/" />
+  <id>http://localhost:4000/sciencecn/bayesian</id>
   <updated>2015-05-10 00:00:00 +0000T00:00:00-00:00</updated>
   <published>2015-05-10T00:00:00+00:00</published>
   
   <author>
     <name>neuronstar</name>
-    <uri></uri>
+    <uri>http://localhost:4000</uri>
     
   </author>
   <content type="html">
@@ -36,7 +36,7 @@
   &lt;figcaption&gt;
 Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加上事件 B，是所有带有颜色的区域，但是交叠部分被数了两次。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/posts/bayesian/venn-diagram-AB.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/bayesian/venn-diagram-AB.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;我们定义 $P(A,B) = P(A\cap B)$ （joint probability）。这样有两种比较有趣的特殊情况：&lt;/p&gt;
@@ -54,7 +54,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;bayes-&quot;&gt;Bayes 定理&lt;/h2&gt;
+&lt;h2 id=&quot;bayes-定理&quot;&gt;Bayes 定理&lt;/h2&gt;
 
 &lt;p&gt;为什么要考虑事件之间的逻辑关系呢？因为理解 Bayes 定理需要这些逻辑关系。&lt;/p&gt;
 
@@ -82,7 +82,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
 
 &lt;p&gt;下面用两个例子来解释 Bayes 定理。&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;罕见疾病测试&lt;/h2&gt;
+&lt;h2 id=&quot;罕见疾病测试&quot;&gt;罕见疾病测试&lt;/h2&gt;
 
 &lt;p&gt;设想有一种疾病：&lt;sup id=&quot;fnref:raredisease&quot;&gt;&lt;a href=&quot;#fn:raredisease&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -104,7 +104,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
 
 &lt;p&gt;如果这样还不够显然，我们可以换个角度：人群中一个人的检测结果为阳性，这个人是健康的概率却是 $P(H\vert +)=1-P(D\vert +)=0.835$。也就是说，一千个检测结果为阳性的人，其中大约 835 个人其实是健康的。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;箱子里的奖品&lt;/h2&gt;
+&lt;h2 id=&quot;箱子里的奖品&quot;&gt;箱子里的奖品&lt;/h2&gt;
 
 &lt;p&gt;很多人都听过这样一个题目：&lt;sup id=&quot;fnref:3box&quot;&gt;&lt;a href=&quot;#fn:3box&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -134,7 +134,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
 
 &lt;p&gt;所以显而易见了，当主持人问的时候，我们要选择切换。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;神经科学中的应用&lt;/h2&gt;
+&lt;h2 id=&quot;神经科学中的应用&quot;&gt;神经科学中的应用&lt;/h2&gt;
 
 &lt;p&gt;在神经科学中，实验经常获得一些多次重复实验的放电记录。&lt;sup id=&quot;fnref:neuronspikes&quot;&gt;&lt;a href=&quot;#fn:neuronspikes&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
@@ -142,7 +142,7 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
   &lt;figcaption&gt;
 神经科学中的一种 raster plot：横轴是时间，纵轴是第几次实验。例如纵轴是 1，我们按照横轴读过去，发现在某些时刻，这个神经元会放电，换到纵轴是 2，也就是第二次重复实验，发现跟第一次并不完全吻合。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/posts/bayesian/raster_baselineandstim.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/bayesian/raster_baselineandstim.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;由于这种内在的随机性，在理论上描述的时候，需要使用概率论。而我们又常常关心在给定刺激的时候放电的概率 $P(\mathrm{spike}\vert \mathrm{stimulus})$，或者在放电了存在刺激的概率 $P(\mathrm{stimulus}\vert \mathrm{spike})$。&lt;/p&gt;
@@ -150,58 +150,58 @@ Venn diagram：事件 A 或 B 是所有的带有颜色区域，而事件 A 加�
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:set&quot;&gt;
-      &lt;p&gt;比较严格的理解是把 A、B 理解成两组可能事件的集合，$P(A\cup B)$ 的意义就是发生事件即在 A 集合中，又在 B 集合中。这样对于理解 Venn diagram 有帮助。 &lt;a href=&quot;#fnref:set&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;比较严格的理解是把 A、B 理解成两组可能事件的集合，$P(A\cup B)$ 的意义就是发生事件即在 A 集合中，又在 B 集合中。这样对于理解 Venn diagram 有帮助。&amp;nbsp;&lt;a href=&quot;#fnref:set&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:condi2&quot;&gt;
-      &lt;p&gt;如果我们这里面的 $B$ 事件其实是 $C\cap D$ 呢？那么我们有$P(A\vert (C\cap D)) P(C\cap D) = P(A\cap C \cap D).$ &lt;a href=&quot;#fnref:condi2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;如果我们这里面的 $B$ 事件其实是 $C\cap D$ 呢？那么我们有$P(A\vert (C\cap D)) P(C\cap D) = P(A\cap C \cap D).$&amp;nbsp;&lt;a href=&quot;#fnref:condi2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:raredisease&quot;&gt;
-      &lt;p&gt;参考 Kevin Cahill 的 &lt;em&gt;Physical Mathematics&lt;/em&gt;，第 13 章. &lt;a href=&quot;#fnref:raredisease&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;参考 Kevin Cahill 的 &lt;em&gt;Physical Mathematics&lt;/em&gt;，第 13 章.&amp;nbsp;&lt;a href=&quot;#fnref:raredisease&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3box&quot;&gt;
-      &lt;p&gt;参考 Kevin Cahill 的 &lt;em&gt;Physical Mathematics&lt;/em&gt;，第 13 章. &lt;a href=&quot;#fnref:3box&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;参考 Kevin Cahill 的 &lt;em&gt;Physical Mathematics&lt;/em&gt;，第 13 章.&amp;nbsp;&lt;a href=&quot;#fnref:3box&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:neuronspikes&quot;&gt;
-      &lt;p&gt;https://praneethnamburi.wordpress.com/2015/02/05/simulating-neural-spike-trains/ &lt;a href=&quot;#fnref:neuronspikes&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;https://praneethnamburi.wordpress.com/2015/02/05/simulating-neural-spike-trains/&amp;nbsp;&lt;a href=&quot;#fnref:neuronspikes&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/sciencecn/bayesian/&quot;&gt;贝叶斯统计、罕见疾病和抽奖问题&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;&quot;&gt;NEURONSTAR&lt;/a&gt; on May 10, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/sciencecn/bayesian/&quot;&gt;贝叶斯统计、罕见疾病和抽奖问题&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;http://localhost:4000&quot;&gt;NEURONSTAR&lt;/a&gt; on May 10, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[回声定位]]></title>
-  <link rel="alternate" type="text/html" href="/sciencecn/echolocation/" />
-  <id>/sciencecn/echolocation</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/sciencecn/echolocation/" />
+  <id>http://localhost:4000/sciencecn/echolocation</id>
   <updated>2015-03-22 00:00:00 +0000T00:00:00-00:00</updated>
   <published>2015-03-22T00:00:00+00:00</published>
   
   <author>
     <name>neuronstar</name>
-    <uri></uri>
+    <uri>http://localhost:4000</uri>
     
   </author>
   <content type="html">
-    &lt;h2 id=&quot;section&quot;&gt;回声定位的原理&lt;/h2&gt;
+    &lt;h2 id=&quot;回声定位的原理&quot;&gt;回声定位的原理&lt;/h2&gt;
 
 &lt;p&gt;回声定位是一种特殊的听觉形式，即动物发出超声波，超声波碰到障碍物后反弹，动物通过分析反弹的超声波的频率、波幅，来判断障碍物的距离、速度、类型、大小。这一技能被动物用于导航、捕食、探索环境。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/echo/echo1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/echo/echo1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;EL=SL+TS-2TL&lt;/script&gt;
 
 &lt;p&gt;通常来说，人类能够听到的声音频率范围是 20Hz-20,000Hz，超过 20,000Hz 的声波即超声波，是人类听觉系统（耳蜗）不能感知的刺激。但是，很多动物能听到超声波。其中的典范就是齿鲸（包括喙鲸和海豚）和蝙蝠，它们能利用超声波进行定位，即回声定位。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/echo/echo2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/echo/echo2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/echo/echo3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/echo/echo3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;海豚与蝙蝠&lt;/h2&gt;
+&lt;h2 id=&quot;海豚与蝙蝠&quot;&gt;海豚与蝙蝠&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;海豚的发声器官和接受器官&lt;/h3&gt;
+&lt;h3 id=&quot;海豚的发声器官和接受器官&quot;&gt;海豚的发声器官和接受器官&lt;/h3&gt;
 &lt;p&gt;海豚通过挤压空气快速穿过鼻腔内的两对脂肪片而发出超声波（下图的绿色弧线），声音通过头部的脂肪传播。海豚通过下颌的脂肪接收返回的超声波（下图的红色弧线）。&lt;/p&gt;
 
 &lt;figure&gt;
@@ -211,29 +211,29 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;p&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/commons/8/82/Delfinekko.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;蝙蝠的发声器官和接受器官&lt;/h3&gt;
+&lt;h3 id=&quot;蝙蝠的发声器官和接受器官&quot;&gt;蝙蝠的发声器官和接受器官&lt;/h3&gt;
 
 &lt;p&gt;蝙蝠通过喉头、鼻腔发出超声波，也可以通过翅膀发出微弱的超声波。返回的超声波通过外耳廓进入蝙蝠的听觉系统。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-4&quot;&gt;海豚和蝙蝠的捕食过程&lt;/h2&gt;
+&lt;h2 id=&quot;海豚和蝙蝠的捕食过程&quot;&gt;海豚和蝙蝠的捕食过程&lt;/h2&gt;
 
 &lt;p&gt;海豚和蝙蝠的捕食过程可以分为三个阶段：搜索、趋近、捕食。在这三个阶段中，海豚和蝙蝠发出的声音频率不变，而信号间隔逐渐变短，是为了得到更精确的关于猎物的信息，最后阶段当他们非常接近猎物时，信号间隔降低为几毫秒，为“蜂鸣”信号（buzz）。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/echo/echo5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/echo/echo5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-5&quot;&gt;捕食者-猎物的互动和进化&lt;/h2&gt;
+&lt;h2 id=&quot;捕食者-猎物的互动和进化&quot;&gt;捕食者-猎物的互动和进化&lt;/h2&gt;
 
 &lt;p&gt;在齿鲸中，有一对有趣的捕食者-猎物的例子，那就是虎鲸和海豚，他们都能够接受超声波信号，因此，以哺乳动物为食的虎鲸为了避免被海豚“听”到，在接近海豚时会关闭回声定位系统；而海豚在捕食鱼类时，为了避免被虎鲸“听”到而暴露自己，进化出了高于虎鲸听力上限的超声波范围。这就是 predator 和 prey 斗智斗勇的生存游戏。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/posts/echo/echo6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/echo/echo6.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;section-6&quot;&gt;人类的回声定位&lt;/h2&gt;
+&lt;h2 id=&quot;人类的回声定位&quot;&gt;人类的回声定位&lt;/h2&gt;
 
 &lt;p&gt;有趣的是，最近的研究发现，回声定位不止存在于齿鲸和蝙蝠中，有的盲人也可以利用回声判断行进过程中的障碍物。&lt;/p&gt;
 
 &lt;iframe width=&quot;960&quot; height=&quot;720&quot; src=&quot;https://www.youtube.com/embed/r9mvRRwu5Gw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;h2 id=&quot;section-7&quot;&gt;回声定位的物理&lt;/h2&gt;
+&lt;h2 id=&quot;回声定位的物理&quot;&gt;回声定位的物理&lt;/h2&gt;
 
 &lt;p&gt;海豚捕食小鱼的时候，需要定位精度&lt;strong&gt;至少&lt;/strong&gt;达到鱼的大小，这也就意味着海豚发出的声波的波长要小于小鱼的大小，例如 10 厘米。而蝙蝠需要捕食很小的昆虫，如果定位精度只有 10 厘米，显然是没法捕捉到昆虫的，因为它只能知道在昆虫在一个 10 厘米的范围内，却不知道昆虫具体在什么位置，因此它的超声波的波长&lt;strong&gt;至少&lt;/strong&gt;要达到小昆虫的大小，例如 1 厘米的飞蛾。&lt;/p&gt;
 
@@ -249,24 +249,24 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;figcaption&gt;
 图中横轴是声波频率，左边的纵轴是探测猎物的大小。同样的频率下，蝙蝠可以探测更小。Madsen PT, Surlykke A. 2013 Vol. 28 no. 5, 276-283. &lt;a href=&quot;http://physiologyonline.physiology.org/content/28/5/276.long&quot; target=&quot;_blank&quot;&gt;Functional convergence in bat and toothed whale biosonars&lt;/a&gt;.
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/posts/echo/echo7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/echo/echo7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/sciencecn/echolocation/&quot;&gt;回声定位&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;&quot;&gt;NEURONSTAR&lt;/a&gt; on March 22, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/sciencecn/echolocation/&quot;&gt;回声定位&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;http://localhost:4000&quot;&gt;NEURONSTAR&lt;/a&gt; on March 22, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[人工神经网络方法解方程]]></title>
-  <link rel="alternate" type="text/html" href="/sciencecn/ann-ode/" />
-  <id>/sciencecn/ann-ode</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/sciencecn/ann-ode/" />
+  <id>http://localhost:4000/sciencecn/ann-ode</id>
   <updated>2015-08-31 00:00:00 +0000T00:00:00-00:00</updated>
   <published>2015-03-22T00:00:00+00:00</published>
   
   <author>
     <name>OctoMiao</name>
-    <uri></uri>
+    <uri>http://localhost:4000</uri>
     
   </author>
   <content type="html">
@@ -290,7 +290,7 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
 
 &lt;p&gt;倘若 $\text{cost} = 0$，我们推断上面定义的 $\text{waste}$ 函数在任意的 $t$ 都为零。&lt;/p&gt;
 
-&lt;h2 id=&quot;section&quot;&gt;人工神经网络参数化&lt;/h2&gt;
+&lt;h2 id=&quot;人工神经网络参数化&quot;&gt;人工神经网络参数化&lt;/h2&gt;
 
 &lt;p&gt;下面我们引入一种与人工神经网络相关的参数化方法，然后通过定义一个代价，最后最小化这个代价从而获得参数化中的各种参数，从而解出函数。&lt;/p&gt;
 
@@ -300,7 +300,7 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;figcaption&gt;
 阶梯函数图像，可以挑选出某些参数值。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/posts/annode/Dirac_distribution_CDF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/annode/Dirac_distribution_CDF.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;然而数值上来讲，这个函数有个非常大的缺点，就是导数不连续。尤其是对于我们想要解一个微分方程来说，用来参数化的函数里面包含导数不连续的部分，那是非常不方便的。&lt;/p&gt;
@@ -315,7 +315,7 @@ Image Credit: &lt;a href=&quot;http://commons.wikimedia.org/wiki/User:Malene&quo
   &lt;figcaption&gt;
 sigmoid 函数，也具有挑选出某些参数值的功能。
 &lt;/figcaption&gt;
-  &lt;p&gt;&lt;img src=&quot;/images/posts/annode/Logistic-curve.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/posts/annode/Logistic-curve.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;这个函数有个非常大的优势，就是如果我们把要求解的函数利用这个参数化，所有的导数全是可以解析求解的，对于数值计算是一个福音。&lt;/p&gt;
@@ -360,7 +360,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 
 &lt;p&gt;里面的每一个时间点的输入都是一次对神经网络的训练，如同人的学习一样，经过多次训练，我们就可以掌握方程的这种行为。而所学习到的信息，存在了神经网络的参数中（也就是网络的结构中）。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;代码举例&lt;/h2&gt;
+&lt;h2 id=&quot;代码举例&quot;&gt;代码举例&lt;/h2&gt;
 
 &lt;p&gt;以下是这个问题的 Python 代码，&lt;a href=&quot;http://nbviewer.ipython.org/github/NeuPhysics/sync-de-solver/blob/master/ipynb/neural-net.ipynb&quot;&gt;这里有一份带有全面说明的 IPython Notebook&lt;/a&gt;。&lt;/p&gt;
 
@@ -370,7 +370,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# Don&#39;t know why but np.asarray(v) doesn&#39;t work here.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;# Don't know why but np.asarray(v) doesn't work here.&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -394,7 +394,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 &lt;span class=&quot;n&quot;&gt;initGuess&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;minimize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;costTotalF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;initGuess&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;SLSQP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;为什么找这么多麻烦&lt;/h2&gt;
+&lt;h2 id=&quot;为什么找这么多麻烦&quot;&gt;为什么找这么多麻烦&lt;/h2&gt;
 
 &lt;p&gt;显然，上面的例子不仅可以用任何差分方法来解，而且有解析解。我们为什么要找这么多麻烦来做这样的参数化呢？&lt;/p&gt;
 
@@ -409,32 +409,32 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:cybenko1989&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://numsoltun.readthedocs.org/ann.html#universal-approximators&quot;&gt;Click here to find out the statement.&lt;/a&gt; &lt;a href=&quot;#fnref:cybenko1989&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;http://numsoltun.readthedocs.org/ann.html#universal-approximators&quot;&gt;Click here to find out the statement.&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:cybenko1989&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/sciencecn/ann-ode/&quot;&gt;人工神经网络方法解方程&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;&quot;&gt;NEURONSTAR&lt;/a&gt; on March 22, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/sciencecn/ann-ode/&quot;&gt;人工神经网络方法解方程&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;http://localhost:4000&quot;&gt;NEURONSTAR&lt;/a&gt; on March 22, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Today I Learned]]></title>
-  <link rel="alternate" type="text/html" href="/til/til/" />
-  <id>/til/til</id>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/til/til/" />
+  <id>http://localhost:4000/til/til</id>
   <updated>2015-03-21 00:00:00 +0000T00:00:00-00:00</updated>
   <published>2014-10-16T00:00:00+00:00</published>
   
   <author>
     <name>neuronstar</name>
-    <uri></uri>
+    <uri>http://localhost:4000</uri>
     
   </author>
   <content type="html">
     
 
-    &lt;p&gt;&lt;a href=&quot;/til/til/&quot;&gt;Today I Learned&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;&quot;&gt;NEURONSTAR&lt;/a&gt; on October 16, 2014.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;http://localhost:4000/til/til/&quot;&gt;Today I Learned&lt;/a&gt; was originally published by HLLM at &lt;a href=&quot;http://localhost:4000&quot;&gt;NEURONSTAR&lt;/a&gt; on October 16, 2014.&lt;/p&gt;
   </content>
 </entry>
 

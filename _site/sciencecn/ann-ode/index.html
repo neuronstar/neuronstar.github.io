@@ -21,7 +21,7 @@
 
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="/images/logo.png">
+<meta name="twitter:image" content="http://localhost:4000/images/logo.png">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
@@ -30,15 +30,15 @@
 <meta property="og:description" content="数值方法解方程大多要一个把方程或者函数参数化，例如改写成差分方程，变成步长等等的函数。例如我们要解这样一个方程：
 
 ">
-<meta property="og:url" content="/sciencecn/ann-ode/">
+<meta property="og:url" content="http://localhost:4000/sciencecn/ann-ode/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="/sciencecn/ann-ode/">
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
+<link rel="canonical" href="http://localhost:4000/sciencecn/ann-ode/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -46,8 +46,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/style.css">
 <!-- Webfonts -->
 <script src="https://use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9;source-code-pro:n4,n7;volkhov.js"></script>
 
@@ -55,12 +55,12 @@
 
 <!-- HTML5 Shiv and Media Query Support -->
 <!--[if lt IE 9]>
-  <script src="/assets/js/vendor/html5shiv.min.js"></script>
-  <script src="/assets/js/vendor/respond.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Modernizr -->
-<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 
 
 <script type="text/x-mathjax-config">
@@ -130,17 +130,28 @@ MathJax.Hub.Config({
 
 <!-- Icons -->
 <!-- 16x16 -->
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
 <!-- 32x32 -->
-<link rel="shortcut icon" href="/favicon.png">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
 <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
-<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
 <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
 <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+<!-- <script src="http://localhost:4000/assets/js/readmorejs/readmore.min.js"></script>
+
+<script type="text/javascript">
+$('div').readmore({
+      speed: 100,
+      collapsedHeight: 50,
+      moreLink: "<a href='#'>More</a>",
+      lessLink: "<a href='#'>Less</a>"
+    });
+</script> -->
 
 </head>
 
@@ -151,19 +162,19 @@ MathJax.Hub.Config({
 	    <ul>
       
 		    
-		    <li><a href="/" >Home</a></li>
+		    <li><a href="http://localhost:4000/" >Home</a></li>
 		  
 		    
-		    <li><a href="/about/" >About</a></li>
+		    <li><a href="http://localhost:4000/about/" >About</a></li>
 		  
 		    
-		    <li><a href="/club" >Reading Club</a></li>
+		    <li><a href="http://localhost:4000/club" >Reading Club</a></li>
 		  
 		    
-		    <li><a href="/articles" >Articles</a></li>
+		    <li><a href="http://localhost:4000/articles" >Articles</a></li>
 		  
 		    
-		    <li><a href="/resources" >Resources</a></li>
+		    <li><a href="http://localhost:4000/resources" >Resources</a></li>
 		  
 		    
 		    <li><a href="http://neuronstar.cc/comp-neurosci-map" target="_blank">Map of Neuroscience</a></li>
@@ -180,9 +191,9 @@ MathJax.Hub.Config({
 <header class="masthead">
 	<div class="wrap">
       
-  		<a href="/" class="site-logo" rel="home" title="NEURONSTAR"><img src="/images/logo.png" width="200" height="200" alt="NEURONSTAR logo" class="animated fadeInDown"></a>
+  		<a href="http://localhost:4000/" class="site-logo" rel="home" title="NEURONSTAR"><img src="http://localhost:4000/images/logo.png" width="200" height="200" alt="NEURONSTAR logo" class="animated fadeInDown"></a>
       
-      <h1 class="site-title animated fadeIn"><a href="/">NEURONSTAR</a></h1>
+      <h1 class="site-title animated fadeIn"><a href="http://localhost:4000/">NEURONSTAR</a></h1>
 		<h2 class="site-description animated fadeIn" itemprop="description">Neuroscience and Complex Systems</h2>
 	</div>
 </header><!-- /.masthead -->
@@ -205,7 +216,7 @@ MathJax.Hub.Config({
       <footer class="entry-meta">
         
         
-          <img src="/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
+          <img src="http://localhost:4000/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">By <span class="fn">OctoMiao</span></span>
         <span class="entry-date date published"><time datetime="2015-03-22T00:00:00+00:00"><i class="fa fa-calendar-o"></i> March 22, 2015</time></span>
@@ -235,7 +246,7 @@ MathJax.Hub.Config({
 
 <p>倘若 $\text{cost} = 0$，我们推断上面定义的 $\text{waste}$ 函数在任意的 $t$ 都为零。</p>
 
-<h2 id="section">人工神经网络参数化</h2>
+<h2 id="人工神经网络参数化">人工神经网络参数化</h2>
 
 <p>下面我们引入一种与人工神经网络相关的参数化方法，然后通过定义一个代价，最后最小化这个代价从而获得参数化中的各种参数，从而解出函数。</p>
 
@@ -245,7 +256,7 @@ MathJax.Hub.Config({
   <figcaption>
 阶梯函数图像，可以挑选出某些参数值。
 </figcaption>
-  <p><img src="/images/posts/annode/Dirac_distribution_CDF.png" alt="" /></p>
+  <p><img src="http://localhost:4000/images/posts/annode/Dirac_distribution_CDF.png" alt="" /></p>
 </figure>
 
 <p>然而数值上来讲，这个函数有个非常大的缺点，就是导数不连续。尤其是对于我们想要解一个微分方程来说，用来参数化的函数里面包含导数不连续的部分，那是非常不方便的。</p>
@@ -260,7 +271,7 @@ MathJax.Hub.Config({
   <figcaption>
 sigmoid 函数，也具有挑选出某些参数值的功能。
 </figcaption>
-  <p><img src="/images/posts/annode/Logistic-curve.png" alt="" /></p>
+  <p><img src="http://localhost:4000/images/posts/annode/Logistic-curve.png" alt="" /></p>
 </figure>
 
 <p>这个函数有个非常大的优势，就是如果我们把要求解的函数利用这个参数化，所有的导数全是可以解析求解的，对于数值计算是一个福音。</p>
@@ -305,7 +316,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 
 <p>里面的每一个时间点的输入都是一次对神经网络的训练，如同人的学习一样，经过多次训练，我们就可以掌握方程的这种行为。而所学习到的信息，存在了神经网络的参数中（也就是网络的结构中）。</p>
 
-<h2 id="section-1">代码举例</h2>
+<h2 id="代码举例">代码举例</h2>
 
 <p>以下是这个问题的 Python 代码，<a href="http://nbviewer.ipython.org/github/NeuPhysics/sync-de-solver/blob/master/ipynb/neural-net.ipynb">这里有一份带有全面说明的 IPython Notebook</a>。</p>
 
@@ -339,7 +350,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 <span class="n">initGuess</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">costTotalF</span><span class="p">,</span><span class="n">initGuess</span><span class="p">,</span><span class="n">method</span><span class="o">=</span><span class="s">"SLSQP"</span><span class="p">)</span></code></pre></figure>
 
-<h2 id="section-2">为什么找这么多麻烦</h2>
+<h2 id="为什么找这么多麻烦">为什么找这么多麻烦</h2>
 
 <p>显然，上面的例子不仅可以用任何差分方法来解，而且有解析解。我们为什么要找这么多麻烦来做这样的参数化呢？</p>
 
@@ -354,7 +365,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 <div class="footnotes">
   <ol>
     <li id="fn:cybenko1989">
-      <p><a href="http://numsoltun.readthedocs.org/ann.html#universal-approximators">Click here to find out the statement.</a> <a href="#fnref:cybenko1989" class="reversefootnote">&#8617;</a></p>
+      <p><a href="http://numsoltun.readthedocs.org/ann.html#universal-approximators">Click here to find out the statement.</a>&nbsp;<a href="#fnref:cybenko1989" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -389,10 +400,10 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="/til/til/" class="btn" title="Today I Learned">Previous</a>
+        <a href="http://localhost:4000/til/til/" class="btn" title="Today I Learned">Previous</a>
       
       
-        <a href="/sciencecn/echolocation/" class="btn" title="回声定位">Next</a>
+        <a href="http://localhost:4000/sciencecn/echolocation/" class="btn" title="回声定位">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
@@ -402,7 +413,7 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
   <footer role="contentinfo" class="entry-wrapper">
     
 
-<span>&copy; 2016 <a href="" style="text-decoration: underline;" target="_blank">HLLM</a>. Powered by <a href="http://jekyllrb.com" style="text-decoration: underline;" rel="nofollow">Jekyll</a>. Theme based on <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" style="text-decoration: underline;" rel="nofollow">So Simple</a>. <a href="//typography" style="text-decoration: underline;"><i class="fa fa-indent" aria-hidden="true"></i></a></span>
+<span>&copy; 2017 <a href="" style="text-decoration: underline;" target="_blank">HLLM</a>. Powered by <a href="http://jekyllrb.com" style="text-decoration: underline;" rel="nofollow">Jekyll</a>. Theme based on <a href="https://mademistakes.com/work/so-simple-jekyll-theme/" style="text-decoration: underline;" rel="nofollow">So Simple</a>. <a href="http://localhost:4000//typography" style="text-decoration: underline;"><i class="fa fa-indent" aria-hidden="true"></i></a></span>
 <div class="social-icons">
 	
 	
@@ -415,19 +426,19 @@ sigmoid 函数，也具有挑选出某些参数值的功能。
 	
   
 	
-  <a href="/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
+  <a href="http://localhost:4000/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss fa-2x"></i></a>
 </div><!-- /.social-icons -->
 
   </footer>
 </div><!-- /.footer-wrapper -->
 
 <script type="text/javascript">
-  var BASE_URL = '';
+  var BASE_URL = 'http://localhost:4000';
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="/assets/js/scripts.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
 
 
 <!-- Asynchronous Google Analytics snippet -->
