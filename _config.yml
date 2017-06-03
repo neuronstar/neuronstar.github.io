@@ -9,6 +9,10 @@ collections:
     title: Spiking Neuron Models
     output: true
     source_link: https://github.com/neuronstar/spiking-neuron-models
+  elements-of-statistical-learning:
+    title: Elements of Statistical Learning
+    output: true
+    source_link: https://github.com/neuronstar/elements-of-statistical-learning
   uploads:
     title: Uploads
     output: true
