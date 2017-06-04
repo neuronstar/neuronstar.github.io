@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>29. Hebbian Learning &#8211; NEURONSTAR</title>
+<title>30. Learning Equations &#8211; NEURONSTAR</title>
 <meta name="description" content="Outlines
 
 ">
@@ -13,7 +13,7 @@
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="29. Hebbian Learning">
+<meta name="twitter:title" content="30. Learning Equations">
 <meta name="twitter:description" content="Outlines
 
 ">
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="29. Hebbian Learning">
+<meta property="og:title" content="30. Learning Equations">
 <meta property="og:description" content="Outlines
 
 ">
-<meta property="og:url" content="http://localhost:4000/spiking-neuron-models/29.hebbian-learning/">
+<meta property="og:url" content="http://localhost:4000/spiking-neuron-models/30.learning-equations/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/spiking-neuron-models/29.hebbian-learning/">
+<link rel="canonical" href="http://localhost:4000/spiking-neuron-models/30.learning-equations/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -210,14 +210,14 @@ $('div').readmore({
           
         </ul>
         
-          <h1 class="entry-title">29. Hebbian Learning</h1>
+          <h1 class="entry-title">30. Learning Equations</h1>
         
       </header>
       <footer class="entry-meta">
         <hr>
         
         <span style=""><i class="fa fa-map-signs"></i> <a href="http://localhost:4000/spiking-neuron-models/00.Spiking_Neuron_Models_Club/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
-          <a style="padding-left:1.1em;"> Spiking Neuron Models, Chapter 10</a>
+          <a style="padding-left:1.1em;"> Spiking Neuron Models, Chapter 11</a>
         </span>
         
 
@@ -237,7 +237,7 @@ $('div').readmore({
           <img src="http://localhost:4000/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">By <span class="fn">OctoMiao</span></span>
-        <span class="entry-date date published"><time datetime="2017-05-06T00:00:00+00:00"><i class="fa fa-calendar-o"></i> May 06, 2017</time></span>
+        <span class="entry-date date published"><time datetime="2017-06-03T00:00:00+00:00"><i class="fa fa-calendar-o"></i> June 03, 2017</time></span>
         
         
         <span class="social-share-twitter">
@@ -246,7 +246,7 @@ $('div').readmore({
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/29.hebbian-learning.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/30.learning-equations.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -262,44 +262,45 @@ $('div').readmore({
 
       </footer>
       <div class="entry-content">
-        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Chapter 10</span></p></div> -->
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Chapter 11</span></p></div> -->
         <h2 id="outlines">Outlines</h2>
 
-<h3 id="general-ideas-about-hebbian-learning-rule">General ideas about Hebbian learning rule</h3>
+<h3 id="learning-in-rate-models">Learning in Rate Models</h3>
 
 <ol>
-  <li>Hebbian learning: correlation-based learning</li>
-  <li>Long-term potentiation: persistent increase in the efficacy.</li>
-  <li>Strong high-frequency pulses which evokes spikes will increase the efficacy.</li>
-  <li>The change in synaptic weight will persist many hours, thus long-term potentiation.</li>
-  <li>Joint activity of pre- and post-synaptic, i.e., correlated activity, could increase the synaptic weight.</li>
-  <li>Presynaptic has to precede the postsynaptic in order to increase the rate.</li>
-</ol>
-
-<h3 id="rate-based-hebbian-learning">Rate-based Hebbian learning</h3>
-
-<ol>
-  <li>
-    <p><strong>Locality</strong>: change of synaptic efficacy depends only local variables, pre- and post- firing rates, and efficacy.</p>
-
-    <script type="math/tex; mode=display">\frac{d}{dt}w_{ij} = F(w_{ij};\nu_i,\nu_j).</script>
+  <li>PCA
+    <ol>
+      <li>Correlation matrix $C_{ij} = \langle \xi^\mu_i \xi^\mu_j\rangle_\mu$, where $\xi^\mu_i$ is the $i$th component of a vector $\boldsymbol{\xi}^\mu$.</li>
+      <li>Covariance matrix $V_{ij} = \left\langle (\xi^\mu_i - \langle \xi^\mu_i\rangle)( \xi^\mu_j - \langle \xi^\mu_j\rangle ) \right\rangle_\mu$.</li>
+      <li>Principal components of the vectors are the eigenvectors of the covariance matrix $V$.</li>
+      <li>The first principal component is the direction where the variance is maximal.</li>
+    </ol>
   </li>
-  <li>
-    <p><strong>Cooperativity</strong>: timing of the pre- and post-synaptic activity. Naively we would simply implement a correlation function into $F$. But the book used Taylor expansion. However, I think we should expand over some kind of contant activity that we could have instead of 0’s that the book is using. They should give us the same results. In Taylor expansion, the second order is bilinear which contains the property we need. By keeping only the second order expansion, we have</p>
-
-    <script type="math/tex; mode=display">\frac{d}{dt} w_{ij} = c^{\text{corr}}(w_{ij}) \nu_i \nu_j.</script>
+  <li>Evolution of synaptic weights
+    <ol>
+      <li>A neuron takes $\mu$ inputs at each time step, which are either 0’s or 1’s.</li>
+      <li>At each time step, the input forms a $N$ dimensional vector ($N$ input neurons).</li>
+      <li>For a total time step of $p$, we have $p$ $N$ dimensional vectors.</li>
+      <li>At each time step, the weight change according to Hebbian learning rule $\Delta w = \gamma \nu^{\text{p}} \nu^{\text{pre}}_i$, where $\gamma$ is the learning rate.</li>
+      <li>Using linear model of post synaptic rate, $\nu^{\text{post}} = \sum_i w_i \nu_i^{\text{pre}}$.</li>
+      <li>The author derived the relation between weight and correlation matrix, as well as the eigenvalues and eigenvectors of it.</li>
+      <li>The growth of the <strong>expectation value of weight</strong> will be dominated by the first principal component.</li>
+    </ol>
   </li>
-  <li>We could choose $c^{\text{corr}}(w_{ij}) = \gamma (w_{ij}^{\text{max}} - w_{ij})$. As $w_{ij}$ approaches its max, the learning will saturate.</li>
-  <li>Weigth decays, so we need the first term of Taylor expansion, $c_0(w_{ij})$. We could choose $c_0(w_{ij}) = - \gamma_0 w_{ij}$.</li>
-  <li>Final form: Eqn. 10.6</li>
-  <li><strong>Competition</strong>: growth of synaptic weight is at the expense of weakening of other weights.</li>
-  <li>Other learning rules are possible. Eqn. 10.7</li>
-</ol>
-
-<h3 id="spike-time-dependent-plasticity">Spike-time-dependent Plasticity</h3>
-
-<ol>
-  <li>If spike trains are applied, we would expect the effect to be a summation of the single spike rules. Eqn. 10.13 and Eqn. 10 14</li>
+  <li>Exponential growth of weight mean blowing up in biological systems, which should not happen for a working brain. Thus modified Hebbian learning rule should be used and tested. Here we talk about normalization of weight.
+    <ol>
+      <li>Three key ideas:
+        <ol>
+          <li>Normalize sum of weights or quadratic norm of weights;</li>
+          <li>Multiplicative normalization or subtractive normalization (to make sure that $\sum_i w_i$ is a constant).</li>
+          <li>Might not be just local learning rules.</li>
+        </ol>
+      </li>
+      <li>Subtractive normalization: $\Delta w_i = \Delta \tilde w_i - \sum_j \Delta w_j /N$ so that $\sum_i \Delta w_i=0$.</li>
+      <li>Multiplicative normalization: Oja’s learning rule as an example. The natural choice of normalization is to divide the weight at each step by its norm.</li>
+    </ol>
+  </li>
+  <li>Neurons of visual system have their receptive fields.</li>
 </ol>
 
         
@@ -332,10 +333,8 @@ $('div').readmore({
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/spiking-neuron-models/28.oscillations-in-reverberating-loops/" class="btn" title="28. Oscillations in Reverberating Loops">Previous</a>
+        <a href="http://localhost:4000/spiking-neuron-models/29.hebbian-learning/" class="btn" title="29. Hebbian Learning">Previous</a>
       
-      
-        <a href="http://localhost:4000/spiking-neuron-models/30.learning-equations/" class="btn" title="30. Learning Equations">Next</a>
       
     </nav><!-- /.pagination -->
   </article>
