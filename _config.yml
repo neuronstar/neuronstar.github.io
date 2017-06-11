@@ -8,6 +8,7 @@ collections:
   spiking-neuron-models:
     title: Spiking Neuron Models
     output: true
+    references_link: /spiking-neuron-models/00.Spiking_Neuron_Models_Club/
     source_link: https://github.com/neuronstar/spiking-neuron-models
   elements-of-statistical-learning:
     title: Elements of Statistical Learning

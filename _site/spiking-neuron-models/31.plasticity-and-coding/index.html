@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>19.Population Activity &#8211; NEURONSTAR</title>
-<meta name="description" content="Review of Several Concepts
+<title>31. Plasticity and Coding &#8211; NEURONSTAR</title>
+<meta name="description" content="Outlines
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="19.Population Activity">
-<meta name="twitter:description" content="Review of Several Concepts
+<meta name="twitter:title" content="31. Plasticity and Coding">
+<meta name="twitter:description" content="Outlines
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="19.Population Activity">
-<meta property="og:description" content="Review of Several Concepts
+<meta property="og:title" content="31. Plasticity and Coding">
+<meta property="og:description" content="Outlines
 
 ">
-<meta property="og:url" content="http://localhost:4000/spiking-neuron-models/19.population-activity/">
+<meta property="og:url" content="http://localhost:4000/spiking-neuron-models/31.plasticity-and-coding/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/spiking-neuron-models/19.population-activity/">
+<link rel="canonical" href="http://localhost:4000/spiking-neuron-models/31.plasticity-and-coding/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -210,7 +210,7 @@ $('div').readmore({
           
         </ul>
         
-          <h1 class="entry-title">19.Population Activity</h1>
+          <h1 class="entry-title">31. Plasticity and Coding</h1>
         
       </header>
       <footer class="entry-meta">
@@ -220,7 +220,7 @@ $('div').readmore({
            <!-- <a href="http://localhost:4000">References [<i class="fa fa-link" aria-hidden="true"></i>]</a> -->
            References
            :<br>
-          <a style="padding-left:1.1em;"> Spiking Neuron Models, Section 6.3</a>
+          <a style="padding-left:1.1em;"> Spiking Neuron Models, Chapter 12</a>
         </span>
         
 
@@ -240,7 +240,7 @@ $('div').readmore({
           <img src="http://localhost:4000/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">By <span class="fn">OctoMiao</span></span>
-        <span class="entry-date date published"><time datetime="2016-09-30T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 30, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2017-06-10T00:00:00+00:00"><i class="fa fa-calendar-o"></i> June 10, 2017</time></span>
         
         
         <span class="social-share-twitter">
@@ -249,7 +249,7 @@ $('div').readmore({
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/19.population-activity.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="https://github.com/neuronstar/spiking-neuron-models/edit/master/31.plasticity-and-coding.md" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -265,112 +265,44 @@ $('div').readmore({
 
       </footer>
       <div class="entry-content">
-        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Section 6.3</span></p></div> -->
-        <h2 id="review-of-several-concepts">Review of Several Concepts</h2>
+        <!-- <div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>Spiking Neuron Models, Chapter 12</span></p></div> -->
+        <h2 id="outlines">Outlines</h2>
 
-<h3 id="population-activity-at">Population activity $A(t)$</h3>
+<h3 id="learning-to-be-fast">Learning to be fast</h3>
 
-<ol>
-  <li>
-    <p>From equations</p>
+<p>The fundamental idea behind this simple model is that predictions of actions before it happens strengthens the weight.</p>
 
-    <script type="math/tex; mode=display">\begin{equation}\partial_t p(u,t)= \cdots + A(t)\delta(u-u_r)\end{equation}</script>
+<p>The simple model in the book is a neuron that takes input from 20 neurons. The input from these neurons is arranges in time orders. The first neuron fires then the second then the third and so on. Due to the input the post neuron would first at some time. Interestingly, after many repetitions the firing time of the post neuron becomes earlier the the initial test.</p>
 
-    <p>We integrate over a range of potential</p>
+<p>Suppose the post neuron fires around the input of the 9th pre neuron initially. The learning strengthens the weight of neuron 7,8,9 for example. Thus the post neuron will fire early in the next run of the experiment. This requires an asymmetric learning window.</p>
 
-    <script type="math/tex; mode=display">\begin{equation} \partial_t \int_{u_1}^{u_2} p(u,t) = \cdots + A(t), \end{equation}</script>
+<p>This procedure is similar to human learning with experience.</p>
 
-    <p>provided that $u_r$ is within $[u_1,u_2]$.</p>
+<p>The learning window is usually as short as 100ms. However, monkeys can have conditioning that span seconds. This could be related to reverberating oscillations.</p>
 
-    <p>So it’s some kind of flux. It works as a source term of faction of neurons at $u=u_r$, which is identical to fraction of neurons that spiked per unit time.</p>
-  </li>
-  <li>
-    <p>In fact, we have</p>
-
-    <script type="math/tex; mode=display">\begin{equation}
-A(t)  = J(\theta,t)
-\end{equation}</script>
-  </li>
-</ol>
-
-<h3 id="spike-interval-distribution-p_itvert-hat-t">Spike interval distribution $P_I(t\vert \hat t)$</h3>
-
-<p>$P_I(t\vert \hat t)$ is the probability density of firing, i.e.,</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-\int_{t_1}^{t_2} P_I(t\vert \hat t) dt
-\end{equation}</script>
-
-<p>calculates the probability of finding spikes during time interval $[t_1,t_2]$.</p>
-
-<p>Meanwhile we have this survival probability</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-S_I(t\vert \hat t) = 1 - \int_{\hat t}^t P_I(s\vert \hat t) ds
-\end{equation}</script>
-
-<p>or identically</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-P_I(t\vert \hat t) = \partial_t S_I(t\vert \hat t)
-\end{equation}</script>
-
-<h2 id="motivation">Motivation</h2>
-
-<p>What we need for a complete description of network activities is to calculate $A(t+\Delta t)$ given $A(t)$ as well as the external input at $t$.</p>
-
-<p>Using whatever we have up to this point, the procedure should be</p>
+<h3 id="learning-to-be-precise">Learning to be precise</h3>
 
 <ol>
-  <li>
-    <p>Apply $A(t)$ and $I^{\mathrm{ext}}(t)$ to equation (6.8). Within a small time interval $\Delta t$, we obtain the PSP potential, i.e.,</p>
-
-    <script type="math/tex; mode=display">h_{\mathrm{PSP}}(t + \Delta t\vert \hat t) = J_0 \int_0^\infty \epsilon(t - \hat t, s) A(t - s) ds + \int_0^\infty \kappa(t-\hat t,s) I^{\mathrm{ext}}(t-s) ds</script>
-
-    <p><strong>My thought is, calculating next step is impossible, since we have an integral to infinity? I do not really get it.</strong></p>
-  </li>
-  <li>
-    <p>The ultimate reason is that we have insufficient equations compared to the unknown quantities.
-Unknown: $A(t)$, $h_{\mathrm{PSP}}$, but we have only one equation.</p>
-
-    <p>Question: What about other equation? Eqn (6.21), one equation, two variables. Same fate.</p>
-  </li>
+  <li>Nonlinear Poisson model, $\nu(u) = \nu_{\mathrm{max}} \Theta(u -\theta)$, where $\nu_{\mathrm{max}}$ is the reliability not the maximum rate. $\nu_{\mathrm{max}}\to\infty $ means the neuron will first immediately when the threshold is reached, thus noiseless. Here by noise we mean how well synchronized are the inputs. Noiseless indicates that the inputs are all synchronized in time.</li>
+  <li>Combined with a non-Hebbian learning rule. Eqn 12.5</li>
+  <li>Calculate joint probability of pre and post synaptic firings, by neglecting the correlation between post synaptic firing and a individual presynaptic firing if the postsynaptic neuron takes in a large number of inputs.</li>
+  <li>Fig 12.6: small noise respect the asymmetric learning window we used while large noise smears out the learning windows.</li>
 </ol>
 
-<p>So we need another equation. What we get is</p>
+<div class="notes--extra">
 
-<script type="math/tex; mode=display">A(t) = \int_{-\infty}^t P_I(t\vert \hat t) A(\hat t) d\hat t.</script>
+  <p>I have an idea of a possible phenomenon. In these models, we have soft bounds that drives the plasticity less efficient when the weight approaches the bounds.</p>
 
-<p>Oh wait, new function $P_I(t\vert \hat t)$ has been introduced to the function. How is that going to help? $P_I$ actually can be determined by $h$.</p>
+  <p>However, imagine the weight was changed to some value larger than the upper bound by some brute force. The network would become unstable. The treatment for such a network is to suppress the weights until everyone is within the reasonable bounds.</p>
 
-<p>Eq. 6.78, 6.79, 6.80</p>
+</div>
 
-<h3 id="with-absolute-refractoriness">With Absolute refractoriness</h3>
+<h3 id="sequence-learning">Sequence learning</h3>
 
-<p><strong>Wilson-Cowan</strong> integral form</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-A(t) = f[h(t)]\left( 1 - \int_{t-\Delta^{\mathrm{abs}}}^t A(t') dt' \right),
-\end{equation}</script>
-
-<p>where</p>
-
-<ul>
-  <li>$f[h(t)]$ rate of firing for a neuron that is not refractory,</li>
-  <li>given the togal input potential $h(t)$.</li>
-</ul>
-
-<p>Constant input potential $h(t)=h_0$,</p>
-
-<script type="math/tex; mode=display">\begin{equation}
-A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
-\end{equation}</script>
-
-<p>To solve the population activity for homogeneous, isotropic and stationary network, all we need is the property of single neuron.</p>
-
-<h3 id="time-coarse-graining">Time Coarse-Graining</h3>
-
-<p>Remove the integral.</p>
+<ol>
+  <li>Fig 12.9: a simulation shows that this indeed exist in this artificial network.</li>
+  <li>However, sequence memory requires a lot of neurons and connections. A limited network would break down if too many sequences are stored.</li>
+</ol>
 
         
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -402,10 +334,8 @@ A_0 = \frac{f(h_0)}{1-\Delta^{\mathrm{abs}} f(h_0)} \equiv g(h_0).
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
       
-        <a href="http://localhost:4000/spiking-neuron-models/18.population-srm-with-escape-noise/" class="btn" title="18.SRM with Escape Noise">Previous</a>
+        <a href="http://localhost:4000/spiking-neuron-models/30.learning-equations/" class="btn" title="30. Learning Equations">Previous</a>
       
-      
-        <a href="http://localhost:4000/spiking-neuron-models/20.basics-of-renewal-theory/" class="btn" title="20.Basics of Renewal Theory">Next</a>
       
     </nav><!-- /.pagination -->
   </article>

@@ -28,7 +28,10 @@
       <footer class="entry-meta">
         <hr>
         {% if page.references %}
-        <span style=""><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
+        <span style=""><i class="fa fa-map-signs"></i>
+           <!-- <a href="{{ site.url }}{{site.collections.spiking-neuron-models.references_link}}">References [<i class="fa fa-link" aria-hidden="true"></i>]</a> -->
+           References
+           :<br>
           <a style="padding-left:1.1em;"> {{ page.references }}</a>
         </span>
         {% else %}
