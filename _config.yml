@@ -8,15 +8,31 @@ collections:
   spiking-neuron-models:
     title: Spiking Neuron Models
     output: true
-    references_link: /spiking-neuron-models/00.Spiking_Neuron_Models_Club/
-    source_link: https://github.com/neuronstar/spiking-neuron-models
   elements-of-statistical-learning:
     title: Elements of Statistical Learning
     output: true
-    source_link: https://github.com/neuronstar/elements-of-statistical-learning
   uploads:
     title: Uploads
     output: true
+defaults:
+  -
+    scope:
+      path: ""
+      type: "spiking-neuron-models"
+    values:
+      layout: notes
+      source_link: https://github.com/neuronstar/spiking-neuron-models
+      ref_book: "Spiking Neuron Models"
+      ref_link: "/spiking-neuron-models/00.Spiking_Neuron_Models_Club/"
+  -
+    scope:
+      path: ""
+      type: "elements-of-statistical-learning" # previously `page` in Jekyll 2.2.
+    values:
+      layout: notes
+      source_link: https://github.com/neuronstar/elements-of-statistical-learning
+      ref_book: "The Elements of Statistical Learning"
+      ref_link: "/elements-of-statistical-learning/00.The-Elements-of-Statistical-Learning/"
 locale: en_US
 description: Neuroscience and Complex Systems
 logo: logo.png

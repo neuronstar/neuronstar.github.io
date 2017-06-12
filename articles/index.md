@@ -16,13 +16,7 @@ search_omit: true
 
 ## Spiking Neuron Models Reading Club
 
-<ul class="post-list">
-{% assign snm = site.spiking-neuron-models | sort: 'title' %}
-{% for post in snm %}
-  <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.author }}"> by &nbsp; {{ post.author }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt | remove: '\[ ... \]' | remove: '\( ... \)' | markdownify | strip_html | strip_newlines | escape_once }}</span>{% endif %}</a></article></li>
-{% endfor %}
-</ul>
-
+The reading club articles are hosted here: [Reading Club](/club).
 
 
 ## Articles about Neuroscience

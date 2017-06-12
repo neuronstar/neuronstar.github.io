@@ -29,15 +29,14 @@
         <hr>
         {% if page.references %}
         <span style=""><i class="fa fa-map-signs"></i>
-           <!-- <a href="{{ site.url }}{{site.collections.spiking-neuron-models.references_link}}">References [<i class="fa fa-link" aria-hidden="true"></i>]</a> -->
-           References
+           <a href="{{ site.url }}{{page.ref_link}}">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>
            :<br>
           <a style="padding-left:1.1em;"> {{ page.references }}</a>
         </span>
-        {% else %}
+        {% elsif page.ref_book %}
 
-        <span><i class="fa fa-map-signs"></i> <a href="{{ site.url }}/spiking-neuron-models/00.Spiking_Neuron_Models_Club/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
-          <a style="padding-left:1.1em;"> None </a>
+        <span><i class="fa fa-map-signs"></i> <a href="{{ site.url }}{{page.ref_link}}">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
+          <a style="padding-left:1.1em;"> {{page.ref_book}} </a>
         </span>
         {% endif %}
 
@@ -68,9 +67,9 @@
           <a href="{{ author.github }}" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
         </span>
         {% endif %}
-        {% if site.data.collectionsource.spiking-neuron-models_source_link %}
+        {% if page.source_link %}
         <span class="social-share-twitter">
-          <a href="{{ site.data.collectionsource.spiking-neuron-models_source_link }}/edit/master/{{page.relative_path |  replace:'_spiking-neuron-models/',''}}" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="{{ page.source_link}}" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         {% endif %}
         {% if site.owner.disqus-shortname and page.comments or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}

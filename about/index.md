@@ -4,13 +4,13 @@ layout: page
 excerpt: ''
 modified: 2016-03-24 00:00:00 Z
 image:
-  feature: 
-  credit: 
-  creditlink: 
+  feature:
+  credit:
+  creditlink:
 ---
 
 <div align="center">
-<p style="font-size:150%;">Neuronstar is a website about neurons and network.</p>
+<p style="font-size:150%;">We talk about neurons and networks.</p>
 </div>
 
 ## License & Source
