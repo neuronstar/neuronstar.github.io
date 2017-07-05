@@ -87,20 +87,23 @@
       <div class="entry-content">
         <!-- {% if page.references %}<div style="text-align:center;border: 1px solid black;padding:0.5em;"><span><span style="font-size:150%;">References: Spiking Neuron Models by Gerstner</span> <p>{{ page.references }}</span></p></div>{% else %}{% endif %} -->
         {{ content }}
+
+        <nav class="pagination" role="navigation">
+          {% if page.previous %}
+            <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
+          {% endif %}
+          {% if page.next %}
+            <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
+          {% endif %}
+        </nav><!-- /.pagination -->
+
         {% if site.owner.disqus-shortname and page.comments or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
           {% include disqus-comments.html %}
         {% endif %}
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
-    <nav class="pagination" role="navigation">
-      {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
-      {% endif %}
-    </nav><!-- /.pagination -->
+
   </article>
 </div><!-- /#main -->
 
