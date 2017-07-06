@@ -82,6 +82,14 @@ This is error text
 Please beware that with `markdown="1"` the content and div tags have to be on different lines.
 </div>
 
+Alternatively, we can use the set attributes syntax in kramdown.
 
+{% highlight md %}
+This is a paragraph with some class. The class is specified in the end of the paragraph.
+{: .notes--warning}
+{% endhighlight %}
 
+The results shows as a paragraph with the corresponding class. Notice that this only works for one paragraph.
 
+This is a paragraph with some class. The class is specified in the end of the paragraph.
+{: .notes--warning}

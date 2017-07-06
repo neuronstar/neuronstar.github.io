@@ -59,7 +59,7 @@ hr.paragraph:after {
     font-style:normal;
     font-weight:400;
     speak:none;
-    display:inline-block;
+    display:block;
     text-decoration:inherit;
     width:1em;
     margin-right:.2em;

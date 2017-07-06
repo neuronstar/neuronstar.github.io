@@ -119,7 +119,7 @@ MathJax.Hub.Config({
   });
   </script>
 <!-- MathJax -->
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 <!-- Icons -->
@@ -273,6 +273,14 @@ This is error text
   <p>Please beware that with <code class="highlighter-rouge">markdown="1"</code> the content and div tags have to be on different lines.</p>
 </div>
 
+<p>Alternatively, we can use the set attributes syntax in kramdown.</p>
+
+<figure class="highlight"><pre><code class="language-md" data-lang="md">This is a paragraph with some class. The class is specified in the end of the paragraph.
+{: .notes--warning}</code></pre></figure>
+
+<p>The results shows as a paragraph with the corresponding class. Notice that this only works for one paragraph.</p>
+
+<p class="notes--warning">This is a paragraph with some class. The class is specified in the end of the paragraph.</p>
 
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->

@@ -125,7 +125,7 @@ MathJax.Hub.Config({
   });
   </script>
 <!-- MathJax -->
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 <!-- Icons -->
@@ -266,6 +266,8 @@ $('div').readmore({
         <!--  -->
         <h2 id="review">Review</h2>
 
+<p><strong>Skeleton notes</strong></p>
+
 <h3 id="notations">Notations</h3>
 
 <ol>
@@ -274,13 +276,83 @@ $('div').readmore({
   <li>
     <p>Matrix is denoted by math bold font $\mathbf X$.</p>
   </li>
-  <li>$X$ for input;</li>
+  <li>$X$ for input variables;</li>
   <li>$Y$ for quantitative output;</li>
-  <li>$G$ for qualitative output.</li>
-  <li>$\hat {}$</li>
+  <li>$G$ for qualitative output;</li>
+  <li>$\hat {}$ for prediction.</li>
 </ol>
 
-<h2 id="more">More</h2>
+<h3 id="least-squares-and-nearest-neighbors">Least Squares and Nearest Neighbors</h3>
+
+<h4 id="least-squares">Least Squares</h4>
+
+<p>Least square model:</p>
+
+<script type="math/tex; mode=display">\hat Y = X^T \hat \beta.</script>
+
+<p>Residual sum of squares (RSS):</p>
+
+<script type="math/tex; mode=display">\mathrm{RSS}(\beta) = (\mathbf y - \mathbf X \beta)^{\mathrm T} (\mathbf y - \mathbf X \beta).</script>
+
+<p>The parameters we need is the set that minimizes RSS, which requires</p>
+
+<script type="math/tex; mode=display">\frac{d}{d\beta} \mathrm{RSS} = 0.</script>
+
+<p>So we can solve the parameters easily.</p>
+
+<h4 id="nearest-neighbor">Nearest-Neighbor</h4>
+
+<ol>
+  <li>For input data $x$, calculate the Euclidean distance between $x$ and other input data $x_j$.</li>
+  <li>Choose the $k$ nearest neighbors based on the distance.</li>
+  <li>Output prediction is determined by average of the corresponding outputs of the selected inputs.
+<script type="math/tex">\hat Y = \frac{1}{k} \sum_{N_k} y_i.</script></li>
+</ol>
+
+<h4 id="for-which-scenario">For Which Scenario</h4>
+
+<ol>
+  <li>Least squares: Gaussian-like data set;</li>
+  <li>Nearest-Neighbor: mixture of Gaussians.</li>
+</ol>
+
+<p class="notes--warning">Mixture of Gaussians can be described by generative model. I am not really sure what that is. It seems to me that the final data is basically generated from Gaussians of different parameters which are generated randomly.</p>
+
+<h2 id="statistical-decision-theory">Statistical Decision Theory</h2>
+
+<ol>
+  <li>Given input $X$ and output $Y$;</li>
+  <li>Following a joint distribution $\mathrm{Pr}(X,Y)$;</li>
+  <li>Based on input and output, we look for a function that predicts the behavior, i.e., $\hat Y = f(X)$;</li>
+  <li>How well the prediction is is defined by squared error loss $L(Y,\hat Y) = (Y-\hat Y)^2$.</li>
+  <li>With the distribution, we predict the expected prediction error (EPE) as
+<script type="math/tex">\mathrm{EPE}(f) = E[ ( Y- \hat Y )^2 ] = \int (y - f(x))^2 \mathrm{Pr}(dx, dy).</script></li>
+  <li>The book derived that the best prediction is $f(x) = E(Y\vert X=x)$.</li>
+</ol>
+
+<p class="notes--warning">Question: Can we simply solve the probability distribution and find out the function of prediction? The conclusion says the best prediction of $Y$ is the conditional mean. Is it effectively solving $Y$ from the probability distribution?</p>
+
+<h3 id="nearest-neighbor-1">Nearest-Neighbor</h3>
+
+<ol>
+  <li>The best prediction based on EPE is conditional mean, Eq. 2.13;</li>
+  <li>Both $k$ nearest neighbor and linear regression fits into this framework;</li>
+  <li>Additive models: basically turn the linear $x^T\beta$ into a function of $f_j(X_j)$. The summation still holds.</li>
+  <li>The best prediction based on expectation only is conditional median.</li>
+  <li>Categorical variable $G$ also follows the same paradigm but with different loss function.</li>
+  <li>A choice of loss function for categorical case is a matrix. It has to be a matrix because we have to specify penalties a given prediction class compared to the output class. The dimension of this matrix should be the number of categories. It is rank 2.</li>
+</ol>
+
+<div class="notes--info">
+  <p>Some comments on this section:</p>
+
+  <ol>
+    <li>0 neighbor indicates an exact classification for the sample data but without the implementation of expectation values at each point since there is only one value at that point in one set of sample data;</li>
+    <li>$k$ nearest neighbor assumed that expectation around a small patch of a point is identical to expectation at the exact point with the corresponding distribution.</li>
+    <li>In Monte Carlo method, calculation of volume in high dimension converges very slowly. The reason is that we need a very large number of sampling points since the dimension is high. The procedure is multiplicative. The same thing might happen here. $k$ nearest neighbor is basically some kind of averaging procedure of the volume density. It requires a large number of sample data points to perform an fairly accurate average.</li>
+    <li>The linear regression is basically a first order Taylor expansion of the approximator $f(x)$. $f(x) = x^T\beta$.</li>
+  </ol>
+</div>
 
 
         <nav class="pagination" role="navigation">

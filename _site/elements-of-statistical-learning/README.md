@@ -19,5 +19,6 @@ Code of conduct:
    ```
    The `---` is used to enclose the meta data. The four fields in the example is required.
 4. The contents of the notes should be written in markdown (kramdown).
+5. Inline math is enclosed by `$`, e.g. `$\beta$`; Display math is enclosed by `$$`, e.g. `$$\alpha + \beta = \gamma$$`.
 5. Figures can be included simply using the markdown syntax `![](../assets/yourfolder/your-image.png)`. We suggest creating a folder with the same name of your markdown file in the `assets` folder. Pay attention to the path of the image. Eventhough the `assets` folder is under the same path as the file, we have to add `../` to the path because jekyll will generate a folder out of this markdown file.
 6. For other syntax, refer to [typography of neuronstar](http://neuronstar.cc/typography/).
