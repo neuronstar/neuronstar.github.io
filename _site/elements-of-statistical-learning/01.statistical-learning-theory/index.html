@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>01.Introductions and Several Preliminary Statistical Methods &#8211; NEURONSTAR</title>
+<title>01.Introductions (Review) and Several Preliminary Statistical Methods &#8211; NEURONSTAR</title>
 <meta name="description" content="Review
 
 ">
@@ -13,7 +13,7 @@
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="01.Introductions and Several Preliminary Statistical Methods">
+<meta name="twitter:title" content="01.Introductions (Review) and Several Preliminary Statistical Methods">
 <meta name="twitter:description" content="Review
 
 ">
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="01.Introductions and Several Preliminary Statistical Methods">
+<meta property="og:title" content="01.Introductions (Review) and Several Preliminary Statistical Methods">
 <meta property="og:description" content="Review
 
 ">
-<meta property="og:url" content="http://localhost:4000/elements-of-statistical-learning/01.introductions/">
+<meta property="og:url" content="http://localhost:4000/elements-of-statistical-learning/01.statistical-learning-theory/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/elements-of-statistical-learning/01.introductions/">
+<link rel="canonical" href="http://localhost:4000/elements-of-statistical-learning/01.statistical-learning-theory/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -210,7 +210,7 @@ $('div').readmore({
           
         </ul>
         
-          <h1 class="entry-title">01.Introductions and Several Preliminary Statistical Methods</h1>
+          <h1 class="entry-title">01.Introductions (Review) and Several Preliminary Statistical Methods</h1>
         
       </header>
       <footer class="entry-meta">
@@ -268,14 +268,27 @@ $('div').readmore({
 
 <p><strong>Skeleton notes</strong></p>
 
+<h3 id="abbreviations">Abbreviations</h3>
+
+<ol>
+  <li>MSE: mean squared error</li>
+  <li>EPE: expected prediction error</li>
+  <li>RSS: sum of squares</li>
+</ol>
+
 <h3 id="notations">Notations</h3>
+
+<p>Fonts:</p>
 
 <ol>
   <li>Vectors or scalars are denoted by italic math font $X$.</li>
   <li>Components of vectors are denoted by subscripts $X_i$.</li>
-  <li>
-    <p>Matrix is denoted by math bold font $\mathbf X$.</p>
-  </li>
+  <li>Matrix is denoted by math bold font $\mathbf X$.</li>
+</ol>
+
+<p>Symbols</p>
+
+<ol>
   <li>$X$ for input variables;</li>
   <li>$Y$ for quantitative output;</li>
   <li>$G$ for qualitative output;</li>
@@ -309,6 +322,8 @@ $('div').readmore({
 <script type="math/tex">\hat Y = \frac{1}{k} \sum_{N_k} y_i.</script></li>
 </ol>
 
+<p class="notes--info">For the calculation of distance, metric must be implemented. The book used examples of Euclidean metric. Another metric that can be inspiring is the hyperbolic space. I talked about this in <a href="https://reading-club.github.io/5weekplus/week2.html">our reading club</a>.</p>
+
 <h4 id="for-which-scenario">For Which Scenario</h4>
 
 <ol>
@@ -328,6 +343,7 @@ $('div').readmore({
   <li>With the distribution, we predict the expected prediction error (EPE) as
 <script type="math/tex">\mathrm{EPE}(f) = E[ ( Y- \hat Y )^2 ] = \int (y - f(x))^2 \mathrm{Pr}(dx, dy).</script></li>
   <li>The book derived that the best prediction is $f(x) = E(Y\vert X=x)$.</li>
+  <li>Different loss functions lead to different EPE’s.</li>
 </ol>
 
 <p class="notes--warning">Question: Can we simply solve the probability distribution and find out the function of prediction? The conclusion says the best prediction of $Y$ is the conditional mean. Is it effectively solving $Y$ from the probability distribution?</p>
@@ -353,6 +369,50 @@ $('div').readmore({
     <li>The linear regression is basically a first order Taylor expansion of the approximator $f(x)$. $f(x) = x^T\beta$.</li>
   </ol>
 </div>
+
+<h2 id="local-methods-in-high-dimensions">Local Methods in High Dimensions</h2>
+
+<ol>
+  <li>Curse of high dimensions: edge length of a cube of volume $r$ is $e_p(r) = r^{1/p}$. An extreme example: $(10^{-10})^{1/10} =0.1$.</li>
+  <li>Small volume leads to high variance.</li>
+  <li>Homogeneous sampling doesn’t work in high dimensions. Since most points will fall near the edges.
+    <figure>
+      <p><img src="../assets/00.The-Elements-of-Statistical-Learning/10dsphere-volume-vs-radius.png" alt="" /></p>
+      <figcaption>
+        <p>Volume of 10D sphere as a function of radius.</p>
+      </figcaption>
+    </figure>
+  </li>
+  <li>Requires huge number of sample points in high dimensions.</li>
+</ol>
+
+<h2 id="statistical-models-supervised-learning-and-function-approximation">Statistical Models, Supervised Learning and Function Approximation</h2>
+
+<h3 id="joint-distribution">Joint Distribution</h3>
+
+<p class="notes--warning">I didn’t not get the point of this subsection. It seems that the authors are talking about whether it is proper to assume the relation between input and output is deterministic.</p>
+
+<h3 id="supervised-learning">Supervised Learning</h3>
+
+<ol>
+  <li>learn by example.</li>
+</ol>
+
+<h3 id="function-approximation">Function Approximation</h3>
+
+<ol>
+  <li>Linear model;</li>
+  <li>Function as basis (Eq. 2.30): $f_\theta(x) = \sum h_k(x)\theta_k$.</li>
+  <li>Examples of function bases are Fourier expansions, sigmoid, etc.</li>
+  <li>Learning through minimizing sum of squares (RSS), or maximum likelihood estimation, etc.</li>
+  <li>Maximum likelihood estimation:
+    <ol>
+      <li>Likelihood: $L(\theta) = \sum_{i=1}^N \log \mathrm{Pr}_\theta (y_i)$;</li>
+      <li>Maximized it (“probability of the observed sample is largest”)</li>
+      <li>Minimizing RSS is equivalent to maximum likelihood estimation. Eq. 2.35.</li>
+    </ol>
+  </li>
+</ol>
 
 
         <nav class="pagination" role="navigation">
