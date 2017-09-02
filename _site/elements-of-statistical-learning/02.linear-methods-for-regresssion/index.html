@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>09.Reduction of the Hodgkin-Huxley model type II &#8211; NEURONSTAR</title>
-<meta name="description" content="Reduction of the Hodgkin-Huxley model type II
+<title>02.Linear Methods for Regression &#8211; NEURONSTAR</title>
+<meta name="description" content="Some Interesting Points
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="09.Reduction of the Hodgkin-Huxley model type II">
-<meta name="twitter:description" content="Reduction of the Hodgkin-Huxley model type II
+<meta name="twitter:title" content="02.Linear Methods for Regression">
+<meta name="twitter:description" content="Some Interesting Points
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="09.Reduction of the Hodgkin-Huxley model type II">
-<meta property="og:description" content="Reduction of the Hodgkin-Huxley model type II
+<meta property="og:title" content="02.Linear Methods for Regression">
+<meta property="og:description" content="Some Interesting Points
 
 ">
-<meta property="og:url" content="http://localhost:4000/spiking-neuron-models/09.From_detailed_models_to_formal_spiking_neurons/">
+<meta property="og:url" content="http://localhost:4000/elements-of-statistical-learning/02.linear-methods-for-regresssion/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/spiking-neuron-models/09.From_detailed_models_to_formal_spiking_neurons/">
+<link rel="canonical" href="http://localhost:4000/elements-of-statistical-learning/02.linear-methods-for-regresssion/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -210,15 +210,15 @@ $('div').readmore({
           
         </ul>
         
-          <h1 class="entry-title">09.Reduction of the Hodgkin-Huxley model type II</h1>
+          <h1 class="entry-title">02.Linear Methods for Regression</h1>
         
       </header>
       <footer class="entry-meta">
         <hr>
         
 
-        <span><i class="fa fa-map-signs"></i> <a href="http://localhost:4000/spiking-neuron-models/00.Spiking_Neuron_Models_Club/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
-          <a style="padding-left:1.1em;"> Spiking Neuron Models </a>
+        <span><i class="fa fa-map-signs"></i> <a href="http://localhost:4000/elements-of-statistical-learning/00.The-Elements-of-Statistical-Learning/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
+          <a style="padding-left:1.1em;"> The Elements of Statistical Learning </a>
         </span>
         
 
@@ -235,19 +235,19 @@ $('div').readmore({
 
         
         
-          <img src="http://localhost:4000/images/authors/harryhare.jpg" class="bio-photo" alt="harryhare bio photo"></a>
+          <img src="http://localhost:4000/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
-        <span class="author vcard">By <span class="fn">harryhare</span></span>
-        <span class="entry-date date published"><time datetime="2016-06-25T00:00:00+00:00"><i class="fa fa-calendar-o"></i> June 25, 2016</time></span>
+        <span class="author vcard">By <span class="fn">OctoMiao</span></span>
+        <span class="entry-date date published"><time datetime="2016-08-18T00:00:00+00:00"><i class="fa fa-calendar-o"></i> August 18, 2016</time></span>
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/harryhare" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
+          <a href="https://github.com/emptymalei" title="Author's Github"><i class="fa fa-github"></i> Author's GitHub</a>
         </span>
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="https://github.com/neuronstar/elements-of-statistical-learning" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -264,174 +264,36 @@ $('div').readmore({
       </footer>
       <div class="entry-content">
         <!--  -->
-        <h1 id="reduction-of-the-hodgkin-huxley-model-type-ii">Reduction of the Hodgkin-Huxley model <code class="highlighter-rouge">type II</code></h1>
+        <h2 id="some-interesting-points">Some Interesting Points</h2>
 
-<p>Another way of approximation, compare to two phase analysis</p>
-
-<h2 id="reduction">Reduction</h2>
-
-<ul>
-  <li>Hodgkin and Huxley model:</li>
-</ul>
-
-<script type="math/tex; mode=display">C\frac{du}{dt}=-\Sigma I_{k}(t)+I(t)</script>
-
-<script type="math/tex; mode=display">\Sigma I_{k}=g_{Na}m^{3}h(u-E_{Na})+g_{K}n^{4}(u-E_{k})+g_{L}(u-E_{L})</script>
-
-<script type="math/tex; mode=display">\dot{m}=\alpha_{m}(u)(1-m)-\beta_{m}(u)m</script>
-
-<script type="math/tex; mode=display">\dot{n}=\alpha_{n}(u)(1-n)-\beta_{n}(u)n</script>
-
-<script type="math/tex; mode=display">\dot{h}=\alpha_{h}(u)(1-h)-\beta_{h}(u)h</script>
-
-<ul>
-  <li>SRM:
- $ u(t) = \eta(t-\hat t) + \int_0^{t-\hat{t}} \kappa(t-\hat t_i,s) I^{ext}(t-s) ds+u_{rest} $
- we need to define $\eta(t-\hat{t})$, $\kappa(t-\hat{t})$, $\vartheta$</li>
-  <li>
-    <p>$\eta(t-\hat{t})$
-action potential is stereotyped when triggered the spike
-In Hodgkin-Huxley model, let:
-<script type="math/tex">I(t)=c\frac{q_0}{\Delta}\Theta(t)\Theta(\Delta-t)</script>
-we can get $u(t)$,  then use $u(t)$ to get $\eta(t-\hat{t})$
-<script type="math/tex">\eta(t-\hat(t))=[u(t)-u_{rest}]\Theta(t-\hat{t})</script></p>
+<ol>
+  <li>Geometrically speaking, linear regression methods finds the closest path from the true data to a hypersuface spanned by the data vectors. By definition, each set of data is viewed as a basis vector. The so called closed path to the hypersuface is basically the path that is perpendicular to the surface. Thus we know the prediction we are looking for is a projection of true data onto the hypersuface.</li>
+  <li>The argument above also indicates that degenerate data set, which contains data of the same direction, could cause problems since we have a redundant basis.</li>
+  <li>Distribution of the parameters can be obtained for some categories of data. It might be a normal distribution.</li>
+  <li>t-distribution, aka <a href="https://en.wikipedia.org/wiki/Student%27s_t-distribution">student’s t-distribution</a>, is a category of distributions describing the deviation of estimated mean in a normal distribution from the true mean.</li>
+  <li>The tail of the estimated distribution approaches the actual tail distribution as the sample size increases.</li>
+  <li>Z score can be used to test the significance of the statistics.
+    <blockquote>
+      <p>“Roughly a Z score larger than two in absolute value is significantly nonzero at the p=0.05 level.”
+The author said in the caption of Table 3.2</p>
+    </blockquote>
   </li>
-  <li>
-    <p>$\kappa(t-\hat{t})$
- weak input current, slight perturbed
-Input: strong plus at $\hat{t}$, weak plus at $t$, $(t&gt;\hat{t})$
- <script type="math/tex">\kappa(t-\hat{t},t)=\frac{1}{c}[u(t)-\eta(t-\hat{t})-u_{rest}]</script></p>
-  </li>
-  <li>$\vartheta$
-threshold for spike
-fixed
-use different value in different cases</li>
-</ul>
+  <li><a href="https://en.wikipedia.org/wiki/F-statistic">F statistic</a></li>
+</ol>
 
-<h2 id="scenarios">Scenarios</h2>
+<p>Confusion:</p>
 
-<h3 id="time-dependent-input">time-dependent input</h3>
-
-<p>the metrics:
-<script type="math/tex">\Gamma=\frac{1}{C}\frac{N_{coinc}-{\langle}{N_{coinc}}{\rangle}}{\frac{1}{2}(N_{SRM}+N_{full})}</script>
-$\langle{N_{coinc}\rangle}=2\nu\Delta{N_{full}}$
-$C=1-2\nu\Delta$    <br />
-if Possison process:
-<script type="math/tex">\Gamma=0</script>
-if two model fit perfect:
-<script type="math/tex">\Gamma=1</script>
-if $\kappa$ does not depend  on last firing time, $\Gamma$ will be lower (lower accuracy)</p>
-
-<h3 id="constant-input">constant input</h3>
-
-<p>different $\vartheta$ make big differences</p>
-
-<h3 id="step-current-input">step current input</h3>
-
-<p>same three zones
-also show inhibitory rebound</p>
-
-<h3 id="spike-input">spike input</h3>
-
-<p>use $\epsilon $ to substitute external input:
-$u_i(t)=\eta(t-\hat{t_i})+\sum\limits_{j}w_{ij}\sum\limits_{f}\epsilon(t-\hat{t_i},t-t_{j}^{(f)})+u_{rest}$</p>
-
-<h1 id="reduction-of-a-cortical-neuron">Reduction of a cortical neuron</h1>
-
-<p><code class="highlighter-rouge"> type I</code>
-SRM can also be used as a quantitative model of cortical neurons.
-cortical neurons has continuous gain function</p>
-
-<h2 id="reduction-to-a-nonlinear-integrate-and-fire-model">Reduction to a nonlinear integrate-and-fire model</h2>
-
-<h3 id="reduction-1">Reduction</h3>
-
-<script type="math/tex; mode=display">C\frac{du}{dt}=-\sum{I_{k}(t)}+I(t)</script>
-
-<script type="math/tex; mode=display">\sum{I_{k}}=g_{Na}m^{3}h(u-E_{Na})+g_{K_{slow}}n^{4}_{slow}(u-E_{K})+g_{K_{fast}}n^2_{fast}(u-E_{K})</script>
-
-<h4 id="first-step">first step</h4>
-
-<p>define:</p>
-
-<ul>
-  <li>$\vartheta$</li>
-  <li>$\Delta_{abs}$</li>
-  <li>$u_{r}$</li>
-  <li>$m_{r}$</li>
-  <li>$h_{r}$</li>
-  <li>$n_{slow}$</li>
-  <li>$n_{fast}$</li>
-</ul>
-
-<p>we get multi integrate and fire model</p>
-
-<h4 id="second-step">second step</h4>
-
-<ul>
-  <li>fast variables:
-replace with steady state values (function of u)</li>
-  <li>slow variables:
-replace with constant
-$m \rightarrow m(u)$
-$n_{fast} \rightarrow n_{0,fast}$
-$n_{slow} \rightarrow n_{slow, average}$
-$h \rightarrow h_{average}$</li>
-</ul>
-
-<p>we get nonlinear integrate and fire model</p>
-
-<h3 id="scenarios-1">Scenarios</h3>
-
-<h4 id="constant-input-1">constant input</h4>
-
-<h4 id="fluctuating-input">fluctuating input</h4>
-
-<h2 id="reduction-to-srm">Reduction to SRM</h2>
-
-<h3 id="reduction-2">Reduction</h3>
-
-<p>aim:
-find $\eta$, $\kappa$, $\vartheta$</p>
-
-<h4 id="first-step-1">first step</h4>
-
-<p>reduce the model to and integrate-and-fire model with <strong><em>spike-time-dependent time constant</em></strong></p>
-
-<h4 id="second-step-1">second step</h4>
-
-<p>integrate the model, get $\eta$ and $\kappa$</p>
-
-<h4 id="third-step">third step</h4>
-
-<p>choose appropriate spike-time-dependent threshold $\vartheta$</p>
-
-<h3 id="scenarios-2">Scenarios</h3>
-
-<h4 id="constant-input-2">constant input</h4>
-
-<p>better with dynamic threshold</p>
-
-<h4 id="fluctuating-input-1">fluctuating input</h4>
-
-<p>the accuracy is more stable than nonlinear integrate-and-fire model</p>
-
-<h1 id="limitations">Limitations</h1>
-
-<ul>
-  <li>even $\Gamma$ of the multi-current integrate-and-fire model  is far below 1</li>
-  <li>time-dependent threshold of SRM is import to achieve generalize over a broad range of different inputs</li>
-  <li>time-dependent threshold seems to be more important for the random-input task than the nonlinearity of function $F(u)$</li>
-  <li>in the immediate neighborhood of the firing threshold, nonlinear integrate-and-fire model performs better than SRM</li>
-</ul>
+<ol>
+  <li>Eqn 3.14: plug in the definition of z and read again.</li>
+</ol>
 
 
         <nav class="pagination" role="navigation">
           
-            <a href="http://localhost:4000/spiking-neuron-models/08.Integrate-and-Fire-Models-1/" class="btn" title="08.Integrate and Fire Models Part 1">Previous</a>
+            <a href="http://localhost:4000/elements-of-statistical-learning/01.statistical-learning-theory/" class="btn" title="01.Introductions (Review) and Several Preliminary Statistical Methods">Previous</a>
           
           
-            <a href="http://localhost:4000/spiking-neuron-models/10.Noise_and_Renewal_Process/" class="btn" title="10.Information Coding">Next</a>
+            <a href="http://localhost:4000/elements-of-statistical-learning/03.gauss-markov-theorem/" class="btn" title="03.Guass-Markov Theorem and Multiple Regression">Next</a>
           
         </nav><!-- /.pagination -->
 
