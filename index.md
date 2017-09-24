@@ -15,6 +15,10 @@ search_omit: true
   <li style="list-style-type: none;"><a href="http://www.neuronstar.cc/comp-neurosci-map" class="btn"><i class="fa fa-map-signs"></i> &nbsp; Computational Neuroscience Map</a>
   <p>Map Computational Neuroscience Knowledge</p>
   </li>
+  <hr style="border-top: dotted 1px;width:80%;" />
+  <li style="list-style-type: none;"><a href="https://reading-club.github.io/" class="btn"><i class="fa fa-map-signs"></i> &nbsp; Reading Club</a>
+  <p>Reading Club | Neuroscience and Machine Intelligence</p>
+  </li>
 
 <hr style="border-top: dotted 1px;width:80%;" />
   <li style="list-style-type: none;"><a href="http://github.com/neuronstar" class="btn"><i class="fa fa-github"></i> &nbsp; More on GitHub</a></li>

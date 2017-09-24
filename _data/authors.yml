@@ -2,7 +2,7 @@
 
 OctoMiao:
     name: OctoMiao
-    display_name: OctoMiao
+    display_name: Lei Ma 
     gravatar:
     avatar: octomiao.jpg
     email:
@@ -17,11 +17,11 @@ OctoMiao:
 
 ErbB4:
     name: ErbB4
-    display_name: ErbB4
+    display_name: Han Lu
     gravatar:
     avatar: erbb4.jpg
     email: miab736621299@gmail.com
-    web:
+    web: http://hanlu.io
     weibo: http://www.weibo.com/u/1789618360
     bio: "正在学习神经科学的前心理学生"
     douban: http://www.douban.com/people/81194074/
