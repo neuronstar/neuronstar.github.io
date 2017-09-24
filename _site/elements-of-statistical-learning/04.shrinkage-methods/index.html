@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>06.Cable Equation and Its Solutions &#8211; NEURONSTAR</title>
-<meta name="description" content="Cable Equation and Its Solutions
+<title>04.Shrinkage Methods &#8211; NEURONSTAR</title>
+<meta name="description" content="Shrinkage methods
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="06.Cable Equation and Its Solutions">
-<meta name="twitter:description" content="Cable Equation and Its Solutions
+<meta name="twitter:title" content="04.Shrinkage Methods">
+<meta name="twitter:description" content="Shrinkage methods
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="06.Cable Equation and Its Solutions">
-<meta property="og:description" content="Cable Equation and Its Solutions
+<meta property="og:title" content="04.Shrinkage Methods">
+<meta property="og:description" content="Shrinkage methods
 
 ">
-<meta property="og:url" content="http://localhost:4000/spiking-neuron-models/06.Cable_Equation_and_Its_Solutions/">
+<meta property="og:url" content="http://localhost:4000/elements-of-statistical-learning/04.shrinkage-methods/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/spiking-neuron-models/06.Cable_Equation_and_Its_Solutions/">
+<link rel="canonical" href="http://localhost:4000/elements-of-statistical-learning/04.shrinkage-methods/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -210,15 +210,15 @@ $('div').readmore({
           
         </ul>
         
-          <h1 class="entry-title">06.Cable Equation and Its Solutions</h1>
+          <h1 class="entry-title">04.Shrinkage Methods</h1>
         
       </header>
       <footer class="entry-meta">
         <hr>
         
 
-        <span><i class="fa fa-map-signs"></i> <a href="http://localhost:4000/spiking-neuron-models/00.Spiking_Neuron_Models_Club/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
-          <a style="padding-left:1.1em;"> Spiking Neuron Models </a>
+        <span><i class="fa fa-map-signs"></i> <a href="http://localhost:4000/elements-of-statistical-learning/00.The-Elements-of-Statistical-Learning/">References [<i class="fa fa-link" aria-hidden="true"></i>]</a>:<br>
+          <a style="padding-left:1.1em;"> The Elements of Statistical Learning </a>
         </span>
         
 
@@ -238,7 +238,7 @@ $('div').readmore({
           <img src="http://localhost:4000/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">Written By <span class="fn" style="font-weight:bold;">Lei Ma</span></span>
-        <span class="entry-date date published"><time datetime="2016-04-02T00:00:00+00:00"><i class="fa fa-calendar-o"></i> April 02, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-09-23T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 23, 2016</time></span>
         
         
         <span class="social-share-twitter">
@@ -247,7 +247,7 @@ $('div').readmore({
         
         
         <span class="social-share-twitter">
-          <a href="https://github.com/neuronstar/spiking-neuron-models" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
+          <a href="https://github.com/neuronstar/elements-of-statistical-learning" title="Author's Github"><i class="fa fa-pencil"></i>  Edit on GitHub</a>
         </span>
         
         <span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>
@@ -264,72 +264,25 @@ $('div').readmore({
       </footer>
       <div class="entry-content">
         <!--  -->
-        <h1 id="cable-equation-and-its-solutions">Cable Equation and Its Solutions</h1>
+        <h2 id="shrinkage-methods">Shrinkage methods</h2>
 
-<p>Checkout the attachment: <a href="https://raw.githubusercontent.com/neuronstar/spiking-neuron-models/master/06.1.cable_equation_green_function.pdf">06.1.cable_equation_green_function.pdf</a></p>
+<ol>
+  <li>Why? Some variables might be redundant. Shrink the model.</li>
+</ol>
 
-<h2 id="stationary-equation">Stationary Equation</h2>
+<h3 id="ridge-regression">Ridge Regression</h3>
 
-<p>The stationary equation is
-\begin{equation}
-\left(\frac{d^2}{dx^2} -1\right) u(x) = - i_e(x).
-\end{equation}</p>
+<h3 id="lasso">Lasso</h3>
 
-<p>The form solution using Green’s function method is
-\begin{equation}
-u(x) = \int G(x,x’) (-i_e(t,x’) ) dx’,
-\end{equation}
-where
-\begin{equation<em>}
-    G(x,x’) = \begin{cases}
-    \frac{1}{2}e^{x-x’}, &amp; \qquad x&lt;x’;<br />
-    \frac{1}{2}e^{x’ - x}, &amp; \qquad x&gt;x’.
-    \end{cases}
-\end{equation</em>}</p>
+<h3 id="why-would-lasso-leads-to-exact-0-coefficients">Why would lasso leads to exact 0 coefficients?</h3>
 
-<p>So far we have been dealing with math. What is the actual meaning of GF? To dive into this question we need to review the equation for GF, in this case,
-\begin{equation<em>}
-   \left(\frac{d^2}{dx^2} -1\right) u(x) = \delta(x’-x).
-\end{equation</em>}</p>
-
-<p>In a stimulation-response system, one of the most important properties is the resonance width, or reaction width, which means the deviation required for the amplitude to drop to $1/e$ of the peak value. In this stationary solution, the distance is $1$ in renormalized unit. To transform back to to SI unit, recall that the characteristic length is this problem is $\lambda = \sqrt{\frac{r_T}{r_L}}$.</p>
-
-<p>Just to build a picture, this length is around\footnote{Since opening of ion channesl can significantly change the transverse conductivity, this estimation can change significantly in different situations.}</p>
-
-<p>\begin{equation<em>}
-    \lambda = \sqrt{ \frac{r_T}{r_L}} = \sqrt{ \frac{30\mathrm{k\Omega\cdot cm^2}/(2\pi \rho)}{ 100 \mathrm{k\Omega\cdot cm}/(2\pi \rho) } } = \sqrt{ \frac{5\times 10^{11} \mathrm{\Omega \cdot \mu m} }{ 3\times 10^{5} \mathrm{\Omega \cdot \mu m^{-1}}  } } = 1.2\mathrm{mm}
-\end{equation</em>}</p>
-
-<h2 id="time-dependent-source">Time-dependent Source</h2>
-
-<p>To include the time-dependent source we need a two dimensional Dirac delta distribution,
-\begin{equation}
-    \frac{\partial}{\partial t} G(t,t’;x,x’) - \frac{\partial^2}{\partial x^2}  G(t,t’;x,x’) +  G(t,t’;x,x’) = \delta(t’-t)\delta(x’-x).
-\end{equation}</p>
-
-<p>The Green’s function is solved out
-\begin{equation}
-G(t,0;x,0) = \frac{\Theta(t)}{\sqrt{4\pi t}} \exp\left(  -t - \frac{x^2}{4t} \right).
-\end{equation}</p>
-
-<h2 id="finite-cable">Finite Cable</h2>
-
-<p>The boundary condition is given by
-\begin{equation}
-i(t,x=0) = i(t,x=L) = 0.
-\end{equation}</p>
-
-<h2 id="non-linear-cable-equation">Non-linear Cable Equation</h2>
-
-<p>The current for the ion channels is not simply proportional to the membrane potential which we used for the previous cable equations. Introducing such a time dependent conductivity for the transverse current will significantly increase the complexity of the equations.</p>
+<p>Would spot the reason as long as you plot out the constraints and the RSS.</p>
 
 
         <nav class="pagination" role="navigation">
           
-            <a href="http://localhost:4000/spiking-neuron-models/05.Synapse_and_Receptors/" class="btn" title="05.Synapse and receptor">Previous</a>
+            <a href="http://localhost:4000/elements-of-statistical-learning/03.gauss-markov-theorem/" class="btn" title="03.Guass-Markov Theorem and Multiple Regression">Previous</a>
           
-          
-            <a href="http://localhost:4000/spiking-neuron-models/07.Reduction_to_two_dimensions_and_Phase_plane_analysis/" class="btn" title="07.Two dimensional neuron models">Next</a>
           
         </nav><!-- /.pagination -->
 
