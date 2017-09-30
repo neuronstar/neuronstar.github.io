@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>04.Shrinkage Methods &#8211; NEURONSTAR</title>
-<meta name="description" content="Shrinkage methods
+<title>05.Least Angle Regression &#8211; NEURONSTAR</title>
+<meta name="description" content="Least Angle Regression
 
 ">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="04.Shrinkage Methods">
-<meta name="twitter:description" content="Shrinkage methods
+<meta name="twitter:title" content="05.Least Angle Regression">
+<meta name="twitter:description" content="Least Angle Regression
 
 ">
 
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="04.Shrinkage Methods">
-<meta property="og:description" content="Shrinkage methods
+<meta property="og:title" content="05.Least Angle Regression">
+<meta property="og:description" content="Least Angle Regression
 
 ">
-<meta property="og:url" content="http://localhost:4000/elements-of-statistical-learning/04.shrinkage-methods/">
+<meta property="og:url" content="http://localhost:4000/elements-of-statistical-learning/05.least-angle-regression/">
 <meta property="og:site_name" content="NEURONSTAR">
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/elements-of-statistical-learning/04.shrinkage-methods/">
+<link rel="canonical" href="http://localhost:4000/elements-of-statistical-learning/05.least-angle-regression/">
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="NEURONSTAR Feed">
 
 <!-- https://t.co/dKP3o1e -->
@@ -210,7 +210,7 @@ $('div').readmore({
           
         </ul>
         
-          <h1 class="entry-title">04.Shrinkage Methods</h1>
+          <h1 class="entry-title">05.Least Angle Regression</h1>
         
       </header>
       <footer class="entry-meta">
@@ -238,7 +238,7 @@ $('div').readmore({
           <img src="http://localhost:4000/images/authors/octomiao.jpg" class="bio-photo" alt="OctoMiao bio photo"></a>
         
         <span class="author vcard">Written By <span class="fn" style="font-weight:bold;">Lei Ma</span></span>
-        <span class="entry-date date published"><time datetime="2016-09-23T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 23, 2016</time></span>
+        <span class="entry-date date published"><time datetime="2016-09-29T00:00:00+00:00"><i class="fa fa-calendar-o"></i> September 29, 2016</time></span>
         
         
         <span class="social-share-twitter">
@@ -264,65 +264,23 @@ $('div').readmore({
       </footer>
       <div class="entry-content">
         <!--  -->
-        <h2 id="shrinkage-methods">Shrinkage methods</h2>
+        <h2 id="least-angle-regression">Least Angle Regression</h2>
 
 <ol>
-  <li>Why? Some variables might be redundant. Shrink the model.</li>
+  <li>Algorithm 3.2</li>
+  <li>We want to change $\beta$ so that the prediction is closer to data $y$, i.e., we require the change of $\beta$ decreases $X\beta = y - r$. So the change should be $\propto X^T r $.</li>
+  <li>Why this works? It reduces the MSE.</li>
+  <li>LAR is similar to lasso.</li>
+  <li>Modified LAR Algorithm 3.2a leads to lasso result.</li>
+  <li>LAR(lasso) is efficient. It takes $\mathrm{min}(p,N-1)$ steps where lasso itself might take more than p steps.</li>
+  <li>LAR and lasso are almost identical if we use the geometric meaning of the algorithms. But when some coefficient crosses 0, the differences pop up.</li>
 </ol>
-
-<h3 id="ridge-regression">Ridge Regression</h3>
-
-<h3 id="lasso">Lasso</h3>
-
-<ol>
-  <li>Small constraint $t$ cause some of the coefficients reduce exactly to 0: this is <strong>variable selection</strong>, while producing <strong>sparse model</strong>.</li>
-  <li>Convex optimization.</li>
-</ol>
-
-<p><strong>Why would lasso leads to exact 0 coefficients?</strong></p>
-
-<p>Would spot the reason as long as you plot out the constraints and the RSS. Fig. 3.11.</p>
-
-<h3 id="compare-lasso-and-ridge">Compare Lasso and Ridge</h3>
-
-<p>For sparse models, lasso is better. Otherwise, lasso can make the fitting worse than ridge.</p>
-
-<p>No rule of thumb.</p>
-
-<h3 id="generalization">Generalization</h3>
-
-<p>Ridge and lasso can be generalized. Replace the distance calculation with other definitions, i.e., $\sum \lvert \beta_j \rvert^q$.</p>
-
-<ol>
-  <li>$q=0$: subset selection</li>
-  <li>$q=1$: lasso</li>
-  <li>$q=2$: ridge</li>
-</ol>
-
-<p>Smaller $q$ leads to tighter selection.</p>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">Plot[Evaluate@Table[(1 - x^(q))^(1/q), {q, 0.5, 4, 0.5}], {x, 0, 1},
- AspectRatio -&gt; 1, Frame -&gt; True,
- PlotLegends -&gt;
-  Placed[Table["q=" &lt;&gt; ToString@q, {q, 0.5, 4, 0.5}], {Left, Bottom}],
-  PlotLabel -&gt; "Shrinkage as function of L-q norm disance",
- FrameLabel -&gt; {"\!\(\*SubscriptBox[\(\[Beta]\), \(i\)]\)",
-   "\!\(\*SubscriptBox[\(\[Beta]\), \(j\)]\)"}]</code></pre></figure>
-
-<figure>
-  <p><img src="../assets/04.shrinkage-methods/shrinkage-lq-norm.png" alt="" /></p>
-  <figcaption>
-    <p>Shrinkage as a function of L-q norm distance.</p>
-  </figcaption>
-</figure>
 
 
         <nav class="pagination" role="navigation">
           
-            <a href="http://localhost:4000/elements-of-statistical-learning/03.gauss-markov-theorem/" class="btn" title="03.Guass-Markov Theorem and Multiple Regression">Previous</a>
+            <a href="http://localhost:4000/elements-of-statistical-learning/04.shrinkage-methods/" class="btn" title="04.Shrinkage Methods">Previous</a>
           
-          
-            <a href="http://localhost:4000/elements-of-statistical-learning/05.least-angle-regression/" class="btn" title="05.Least Angle Regression">Next</a>
           
         </nav><!-- /.pagination -->
 
