@@ -1,9 +1,3 @@
-[submodule "snm"]
-	path = content/snm
-	url = git@github.com/neuronstar/spiking-neuron-models
-[submodule "esl"]
-	path = content/esl
-	url = git@github.com/neuronstar/elements-of-statistical-learning.git
 [submodule "content/snm"]
 	path = content/snm
 	url = git@github.com:neuronstar/spiking-neuron-models.git
