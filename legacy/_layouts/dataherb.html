@@ -1,0 +1,283 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="{{ site.base_url }}/assets/data/terminal.css">
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="{{site.base_url}}/assets/data/dataherb.js"></script>
+<script src="{{site.base_url}}/assets/js/filesize.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+<article class="post">
+
+<header class="post-header">
+  <h1 class="has-text-centered is-size-1" itemprop="name headline"><a href="/flora">DataHerb: </a></h1>
+  <h2 class="post-title has-text-centered is-size-2" itemprop="name headline">{{ page.name }}</h2>
+  <p class="post-meta has-text-centered">
+    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {{ page.date | date: date_format }}
+    </time>
+    {% if page.category %}
+     • <span style="font-style: regular;">{</span>{% for cate in page.category %}
+     <span style="padding-right: 0.2em;padding-left: 0.2em;">
+       {% comment %}
+       <a href="{{ site.url }}{{ site.baseurl }}/flora/all/#{{ cate | slugify }}">⸢{{ cate }}⸥</a>
+       {% endcomment %}
+       <a href="{{ site.url }}{{ site.baseurl }}/flora/all/?keywords={{ cate | slugify }}">⸢{{ cate }}⸥</a>
+     </span>
+     {% endfor %}
+     }
+    {% endif %}
+    {% if page.tags %}
+     • <span style="font-style: regular;">[</span>{% for tag in page.tags %}
+     <span style="padding-right: 0.2em;padding-left: 0.2em;"><a href="{{ site.url }}{{ site.baseurl }}/flora/#{{ tag | slugify }}">#{{ tag }}</a></span>
+     {% endfor %}
+     ]
+    {% endif %}
+  </p>
+</header>
+
+<div class="is-divider" data-content="DATAHERB"></div>
+
+
+<article class="message is-info">
+  <div class="message-header">
+    <p>DataHerb Metadata</p>
+  </div>
+  <div class="message-body">
+    <ul class="metadata-list">
+    {% if page.herb_id %}
+      <li><span class="metadata-key">DataHerb ID:</span> <code>{{ page.herb_id }}</code></li>
+    {% endif %}
+    {% if page.name %}
+      <li><span class="metadata-key">DataHerb Name:</span> {{ page.name }}</li>
+    {% endif %}
+    {% if page.contributors %}
+      <li>
+        <span class="metadata-key">Contributors:</span>
+        {% for contributor in page.contributors %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ contributor.name }}</span></span>
+          {% endfor %}
+      </li>
+    {% endif %}
+    {% if page.description %}
+      <li><span class="metadata-key">Description:</span> {{ page.description }}</li>
+    {% endif %}
+    {% if page.repository %}
+      <li><span class="metadata-key">GitHub Repository:</span> <a href="https://github.com/{{ page.repository }}">{{ page.repository }}</a></li>
+    {% endif %}
+    {% if page.license %}
+      <li>
+        <span class="metadata-key">Licenses:</span>
+        <ol>
+          {% for license in page.license %}
+          <li>
+            <a href="{{ license.link }}">{{ license.name }}</a> </li>
+          {% endfor %}
+          </ol>
+      </li>
+    {% endif %}
+    </ul>
+  </div>
+</article>
+
+<article class="message is-success">
+  <div class="message-header">
+    <p>DataHerb Leaves: Files in Dataset</p>
+  </div>
+  <div class="message-body">
+    {% if page.data %}
+    <div class="tabs is-boxed">
+      <ul id="tabs-menu">
+        <li class="is-active" data-target="file-metadata"><a style="text-decoration: none;">Metadata</a></li>
+        <li data-target="file-retrieval"><a style="text-decoration: none;">Usage</a></li>
+      </ul>
+    </div>
+    {% for data in page.data %}
+      {% assign data_path_base_url = 'https://raw.githubusercontent.com/' %}
+      {% assign data_path_branch = '/master/' %}
+      {% assign data_path = data_path_base_url | append: page.repository | append: data_path_branch  | append: data.path %}
+      <div class="is-divider" data-content="{{ data.format }}" style="border-top:.15rem dashed #dbdbdb !important;">
+      </div>
+      <ul class="metadata-list">
+        {% if data.name %}<li><span class="metadata-key">Name:</span> {{ data.name }} </li>{% endif %}
+        <li>
+          <div class="field has-addons is-inline-flex" style="width: 100%; max-width: 100%;">
+            <span class="metadata-key">
+              File:
+            </span>
+            <div class="control" style="width: 100%; margin-left:0.5em;">
+              <input class="input" id="{{ data.path | slugify }}" style="height: 2em; width:100%;" value="{{data_path}}" readonly>
+            </div>
+            <div class="control">
+              <button class="button icon is-right" style="height:2em;" data-clipboard-target="#{{ data.path | slugify }}">
+                <i class="far fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li><span class="metadata-key">Format:</span> {{ data.format }}</li>
+        <li><span class="metadata-key">Size:</span> {{ data.size }}</li>
+      </ul>
+     <div class="tab-content metadata-list" id="file-metadata">
+          <article class="message is-warning">
+            <div class="message-header">
+              <p>Fields</p>
+            </div>
+            <div class="message-body">
+              <ol>
+                {% for field in data.fields %}
+                <li>
+                  <span class="metadata-key">{{ field.name }}:</span> {{ field.description }}</li>
+                {% endfor %}
+                </ol>
+            </div>
+          </article>
+          {% if data.format == "csv" %}
+          <article class="message is-warning">
+            <div class="message-header">
+              <p>Preview</p>
+            </div>
+            <div class="message-body data-preview" id="preview-{{ data.path | slugify }}">
+
+            </div>
+          </article>
+          <script>
+
+            get_filesize("{{data_path}}", function(size) {
+              console.log(
+                "{{data_path}} file transfer size: ", size
+                )
+              const loadSizeLimit = 1048576
+
+              if (size <= loadSizeLimit) {
+                console.log(
+                  "{{data_path}} file transfer size: ", size
+                )
+              // load file if file is small
+              loadCSVPreview("{{data_path}}", '#preview-{{ data.path | slugify }}', first=0, last=100)
+
+              } else if (size > loadSizeLimit) {
+              d3.select('#preview-{{ data.path | slugify }}')
+              .append("div")
+              .attr("class", "has-text-centered")
+              .append("a")
+              .attr("class", "button has")
+              .attr("id", "#preview-{{ data.path | slugify }}-button")
+              .attr(
+                "onclick",
+                'loadCSVPreview("{{data_path}}", "#preview-{{ data.path | slugify }}", first=0, last=100);document.getElementById("#preview-{{ data.path | slugify }}-button").style.display = "none"'
+              ).text(`Load File (Consumes ${filesize(size)})`);
+
+              // alert("The size of foo.exe is: " + size + " bytes.");
+            }
+
+            });
+
+          </script>
+          {% endif %}
+        </div>
+        <div class="tab-content" id="file-retrieval">
+          <div style="margin-bottom: 5em;">
+              <article class="message is-warning">
+                <div class="message-header">
+                  <p>Import Data</p>
+                </div>
+                <div class="message-body">
+                  {% if data.format == "csv" %}
+                  <div class="is-divider" data-content="Google Spreadsheet" style="border-top:.1rem dashed #ffdd57 !important;">
+                  </div>
+                  Copy the following code and paste into a Google Spreadsheet cell.
+                  <div class="highlight">
+                    <pre>=IMPORTDATA("{{data_path}}")</pre>
+                  </div>
+                  {% endif %}
+                  {% if data.format == "csv" %}
+                  <div class="is-divider" data-content="Pandas" style="border-top:.1rem dashed #ffdd57 !important;">
+                  </div>
+                  Load data into a <a href="https://pandas.pydata.org">Pandas</a> DataFrame:
+                  <div class="highlight">
+                    <pre>import pandas as pd
+url = "{{data_path}}"
+df = pd.read_csv(url)</pre>
+                  </div>
+                  {% endif %}
+                  {% if data.format == "json" %}
+                  <div class="is-divider" data-content="Pandas" style="border-top:.1rem dashed #ffdd57 !important;">
+                  </div>
+                  Load data into a <a href="https://pandas.pydata.org">Pandas</a> DataFrame:
+                  <div class="highlight">
+                    <pre>import pandas as pd
+url = "{{data_path}}"
+df = pd.read_json(url)</pre>
+                  </div>
+                  {% endif %}
+                </div>
+              </article>
+          </div>
+        </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</article>
+
+<div class="post-content e-content" itemprop="articleBody">
+  {{ content }}
+</div>
+
+<div class="is-divider" data-content="REFERENCES"></div>
+
+  {% if page.references %}
+      <article class="message is-link">
+        <div class="message-header">
+          <p>References:</p>
+        </div>
+        <div class="message-body">
+          <ul>
+          {% for ref in page.references %}
+            <li><a href="{{ ref.link }}" style="text-decoration:none;">{{ ref.name }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endif %}
+
+<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
+  {% include pagination.html %}
+
+</article>
+
+<script>
+  const tabSystem = {
+    init(){
+        document.querySelectorAll('#tabs-menu').forEach(tabMenu => {
+            Array.from(tabMenu.children).forEach((child, ind) => {
+                child.addEventListener('click', () => {
+                    tabSystem.toggle(child.dataset.target);
+                });
+                if(child.className.includes('is-active')){
+                    tabSystem.toggle(child.dataset.target);
+                }
+            });
+        });
+    },
+    toggle(targetId){
+        document.querySelectorAll('.tab-content').forEach(contentElement=>{
+            contentElement.style.display = contentElement.id === targetId ? 'block' : 'none';
+            document.querySelector(`[data-target="${contentElement.id}"]`).classList[contentElement.id === targetId ? 'add' : 'remove']('is-active');
+        })
+    },
+};
+// use it
+tabSystem.init()
+</script>
+
+
+{% include extras/clipboard.html %}
+{% include utterances-comments.html %}
+
+{% include dataset/terminal-button.html %}

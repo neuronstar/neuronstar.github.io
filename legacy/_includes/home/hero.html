@@ -1,0 +1,49 @@
+<!-- Hero content: will be in the middle -->
+</section>
+<div class="hero is-primary">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="columns is-vcentered">
+        <div class="column is-three-fifths">
+          <h1 class="title is-2 is-spaced" style="text-transform: none;">
+            {{ site.title }} is the free dataset platform with full transparency.
+          </h1>
+          <h2 class="subtitle is-4" style="text-transform: none;">
+            <div class="tags is-centered">
+              <span class="tag is-dark is-rounded">Metadata-Driven</span>
+              <span class="tag is-dark is-rounded">Community-Driven</span>
+              <span class="tag is-dark is-rounded">Python</span>
+              <span class="tag is-dark is-rounded">All-GitHub</span>
+            </div>
+          </h2>
+          <div>
+            <p class="is-small">
+              Dataset &#8651; Dataherb; Data File &#8651; Leaf; All Dataherbs &#8651; Flora
+            </p>
+          </div>
+          <div class="is-divider" style="border-top:.1rem dashed #dbdbdb57 !important;margin: 1rem 0 !important;"></div>
+
+          {% include home/tiles.html %}
+
+          {% include home/search.html %}
+        </div>
+        <div class="column">
+          <img src="{{site.base_url}}/assets/images/landing-header-image.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hero footer: will stick at the bottom -->
+<!-- <div class="hero-foot">
+  <nav class="tabs">
+    <div class="container">
+      <ul>
+        <li class="is-active"><a>Posts</a></li>
+        <li><a>Modifiers</a></li>
+      </ul>
+    </div>
+  </nav>
+</div> -->
+</section>
