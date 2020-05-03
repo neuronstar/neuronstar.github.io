@@ -12,8 +12,12 @@ SectionPagesMenu: "main" # Enable menu system for lazy bloggers
 
 menu:
   main:
-    - name: ESL
+    - name: About
       weight: 1
+      identifier: about
+      url: /about/
+    - name: ESL
+      weight: 2
       identifier: esl
       url: /esl/
     - name: SNM

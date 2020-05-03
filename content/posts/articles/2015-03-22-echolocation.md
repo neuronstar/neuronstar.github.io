@@ -2,7 +2,7 @@
 title: 回声定位
 date: 2015-03-22 00:00:00 Z
 categories:
-- sciencecn
+- 中文科普
 layout: article
 modified: 2015-03-22 00:00:00 Z
 author: neuronstar

@@ -1,7 +1,5 @@
 ---
 title: "Spiking Neuron Models"
-images: # Create a folder in /static/images/tools that has the same name as this current markdown file and place the images there. We only need the file name here. If this is not clear, please refer to existing tools as references.
-  - path: academicons-landing.png
 categories:
   - Neuroscience
 tags:
@@ -10,7 +8,7 @@ tags:
 links:
   - name:
     link:
-summary: Read the book
+summary: Reading club for the book Spiking Neuron Models
 fields:
 members: # the makers of the tool
   - name:
@@ -23,6 +21,9 @@ coordinators:
 date: 2020-04-27T13:22:46+02:00
 status: Done
 draft: false
+notes:
+  - name: Spiking Neuron Models
+    link: /snm
 ---
 
 ## What books are we reading?

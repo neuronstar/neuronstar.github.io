@@ -32,11 +32,13 @@
     {{ template "_internal/schema.html" . }}
     <section class="section">
         <div class="container">
-            <div class="columns is-mobile">
-                <div class="column">
+            <div class="columns">
+                <div class="column is-8">
+
+
+                    <div class="is-divider" data-content="ARTICLE"></div>
 
                     <div class="content blog-post section" itemprop="articleBody">
-                        {{ partial "toc" .}}
                         {{.Content}}
                     </div>
 
@@ -46,6 +48,61 @@
                     {{ partial "utterances-comments.html" . }}
 
 
+                </div>
+                <div class="column is-4">
+
+                    {{ if .Params.notes }}
+                    <div class="is-divider" data-content="NOTES"></div>
+
+
+                    <div class="box is-size-7">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    {{ range $note := .Params.notes }}
+
+                                    <p><i class="far fa-clipboard" style="margin-right: 0.5em;"></i> <a
+                                           href="{{ $note.link }}" class="tag is-warning is-light">{{ $note.name }}</a> </p>
+                                    {{end}}
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {{ end }}
+
+                    {{ if .Params.author }}
+                    <div class="is-divider" data-content="AUTHORS"></div>
+                    {{ $author := .Params.author }}
+                    <div class="box is-size-7">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <strong>{{ $author }}</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {{end}}
+
+                    {{ if .Params.references }}
+                    <div class="is-divider" data-content="REFERENCES"></div>
+                    <article class="message">
+                        <div class="message-header">
+                            <p>References:</p>
+                        </div>
+                        <div class="message-body">
+                            <ol>
+                                {{ range $ref := .Params.references }}
+                                <li><a href="{{ $ref.link }}" style="text-decoration:none;">{{ $ref.name }}</a></li>
+                                {{ end }}
+                            </ol>
+                        </div>
+                    </article>
+                    {{ end }}
+
+                    {{ partial "utterances-comments.html" . }}
                 </div>
 
             </div>

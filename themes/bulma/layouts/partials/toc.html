@@ -1,8 +1,9 @@
 {{ if and (isset .Params "toc") .Params.toc }}
+<div class="is-divider" data-content="ToC"></div>
 <details>
   <summary>Table of Contents</summary>
     <div class="card">
-      
+
         <div class="card-content">
             {{ .TableOfContents }}
         </div>
