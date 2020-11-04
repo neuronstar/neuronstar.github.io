@@ -2,7 +2,7 @@ baseurl: "/" # Controls base URL
 languageCode: "en-US" # Controls html lang attribute
 title: "NeuronStar" # Homepage title and page title suffix
 paginate: 12 # Number of posts to show before paginating
-theme: "bulma" # to use as default theme
+theme: "connectome" # to use as default theme
 
 enableRobotsTXT: true # Suggested, it generates a robots.txt
 googleAnalytics: "UA-61051776-1" # Optional, add tracking Id for analytics
@@ -10,24 +10,30 @@ disqusShortname: "" # Optional, add Disqus shortname for comments
 SectionPagesMenu: "main" # Enable menu system for lazy bloggers
 
 
-menu:
+enu:
   main:
     - name: About
       weight: 1
       identifier: about
       url: /about/
-    - name: ESL
-      weight: 2
-      identifier: esl
-      url: /esl/
-    - name: SNM
-      weight: 3
-      identifier: snm
-      url: /snm/
+  topright:
+
+
+taxonomies:
+    tag: "tags"
+    link: "links"
+
+
 
 params:
   theme_variant: "litera" # possible value for the theme_variant `cerulean,cosmo,cyborg,darkly,flatly,journal,litera,lumen,lux,materia,minty,pulse,sandstone,simplex,slate,solar,spacelab,superhero,united,yeti`
   description: "We explore neuroscience, machine learning, complex system and intelligence"
+  favicon: "/images/logos/logo.png" # Path to favicon
+  logo: "/images/logos/logo.png" # logo of the website
+  projects: # This is the menu item for the list of projects and the title of project list page
+    section: projects # The section where we list all the projects
+    indicator: "Groups"
+  splash: "/images/home/undraw_moonlight_5ksn.svg" # This is the splash image for
   powered_by: "love" # Optional, controls name display on footer
   hide_author: false # Optional, set true to hide author name on posts
   images: # Suggested, controls default OpenGraph images controls author name display on meta tag
@@ -35,6 +41,10 @@ params:
   twitter: "" # Optional, to display link to twitter account in menu bar
   author: "NeuronStar"
   editURL: "https://github.com/neurnstar/neuronstar.github.io/edit/master/content/"
+  utterances: # comment system: utterances (https://utteranc.es/) parameters
+    repo: "neuronstar/neuronstar.github.io"  # repo="[ENTER REPO HERE]", the comments will appear as issues in this repository on github.
+    term: pathname               # issue-term="pathname"
+    theme: github-light          # theme="github-light"
   algolia:
     vars:
       - "title"
@@ -66,9 +76,16 @@ outputFormats:
     isPlainText: true
     mediaType: "application/json"
     notAlternative: true
+  data:
+    baseName: "data"
+    isPlainText: true
+    mediaType: "application/json"
+    notAlternative: true
+
 
 outputs:
   home:
     - "HTML"
     - "RSS"
     - "Algolia"
+    - "data"

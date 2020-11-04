@@ -1,5 +1,7 @@
 ---
 title: "Conditional Probability Estimation"
+images:
+  - "/cover/projects/cpe.svg"
 categories:
   - Machine Learning
   - Statistics
@@ -9,7 +11,7 @@ tags:
 summary: "Understand models to estimate conditional probabilities"
 fields:
 members:
-  - name:
+  - name: LM
     link:
     description:
 coordinators:
@@ -18,9 +20,8 @@ coordinators:
     description:
 date: 2020-11-03
 status: Incubating
-notes:
-  - name: Conditional Probability Estimation
-    link: /conditional-probability-estimation
+sections:
+  - cpe
 draft: false
 references:
   - name: "Mendeley Library"

@@ -4,3 +4,6 @@
 [submodule "content/esl"]
 	path = content/esl
 	url = git@github.com:neuronstar/elements-of-statistical-learning.git
+[submodule "themes/connectome"]
+	path = themes/connectome
+	url = https://github.com/kausalflow/connectome

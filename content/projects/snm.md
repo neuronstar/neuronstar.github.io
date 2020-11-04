@@ -1,5 +1,7 @@
 ---
 title: "Spiking Neuron Models"
+images:
+  - "/cover/projects/snm.svg"
 categories:
   - Neuroscience
 tags:
@@ -9,7 +11,6 @@ links:
   - name:
     link:
 summary: Reading club for the book Spiking Neuron Models
-fields:
 members: # the makers of the tool
   - name:
     link:
@@ -21,9 +22,8 @@ coordinators:
 date: 2020-04-27T13:22:46+02:00
 status: Done
 draft: false
-notes:
-  - name: Spiking Neuron Models
-    link: /snm
+sections:
+  - snm
 ---
 
 ## What books are we reading?

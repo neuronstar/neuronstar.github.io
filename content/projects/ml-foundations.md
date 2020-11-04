@@ -1,5 +1,7 @@
 ---
 title: "Foundations of Machine Learning"
+images:
+  - "/cover/projects/ml-foundations.svg"
 categories:
   - Machine Learning
 tags:
@@ -11,7 +13,7 @@ links:
 summary: Dive deep into the foundations of machine learning.
 fields:
 members:
-  - name:
+  - name: LM
     link:
     description:
 coordinators:
@@ -20,9 +22,8 @@ coordinators:
     description:
 date: 2020-05-03
 status: In Progress
-notes:
-  - name: ML Foundations
-    link: /ml-foundations
+sections:
+  - ml-foundations
 draft: false
 references:
   - name: "Shalev-Shwartz, S., & Ben-David, S. (2013). Understanding Machine Learning: From Theory to Algorithms"
