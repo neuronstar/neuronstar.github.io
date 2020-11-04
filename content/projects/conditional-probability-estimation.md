@@ -32,6 +32,7 @@ references:
 Conditional probability estimation is one of the most fundamental problems in statistics.
 
 - Conditional probability estimation is frequently used in solving both real life and academic problems. One is likely to encounter this problem at some point of their life.
+- If you are inferring, you are probably using conditional probabilities. It is a perspective.
 - There are many models and methods to estimate the conditional probability. We can learn about and from these models and methods.
 - We need a universal model to solve this problem for productivity. A universal model for this task will save us a lot of time and energy.
 - Many machine learning methods are based on conditional probabilities.
