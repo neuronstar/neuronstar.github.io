@@ -1,7 +1,7 @@
 ---
 title: "Conditional Probability Estimation"
 images:
-  - "/cover/projects/cpe.svg"
+  - "/covers/projects/cpe.svg"
 categories:
   - Machine Learning
   - Statistics

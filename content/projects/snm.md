@@ -1,7 +1,7 @@
 ---
 title: "Spiking Neuron Models"
 images:
-  - "/cover/projects/snm.svg"
+  - "/covers/projects/snm.svg"
 categories:
   - Neuroscience
 tags:

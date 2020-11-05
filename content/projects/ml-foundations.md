@@ -1,7 +1,7 @@
 ---
 title: "Foundations of Machine Learning"
 images:
-  - "/cover/projects/ml-foundations.svg"
+  - "/covers/projects/ml-foundations.svg"
 categories:
   - Machine Learning
 tags:
