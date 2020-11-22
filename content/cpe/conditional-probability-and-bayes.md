@@ -13,6 +13,8 @@ references:
     link: https://datumorphism.leima.is/wiki/pattern-mining/association-rules/
   - name: "Bayes' theorem @ Wikipedia"
     link: https://en.wikipedia.org/wiki/Bayes%27_theorem#/media/File:Bayes%27_Theorem_2D.svg
+  - name: " Ross, S. M. (2014). Introduction to Probability and Statistics for Engineers and Scientists. Elsevier."
+    link: https://doi.org/10.1016/C2013-0-19397-X
 ---
 
 ## Topics
