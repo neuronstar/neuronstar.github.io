@@ -13,17 +13,25 @@ references:
     link: https://datumorphism.leima.is/wiki/pattern-mining/association-rules/
   - name: "Bayes' theorem @ Wikipedia"
     link: https://en.wikipedia.org/wiki/Bayes%27_theorem#/media/File:Bayes%27_Theorem_2D.svg
-  - name: " Ross, S. M. (2014). Introduction to Probability and Statistics for Engineers and Scientists. Elsevier."
+  - name: "Ross, S. M. (2014). Introduction to Probability and Statistics for Engineers and Scientists. Elsevier."
     link: https://doi.org/10.1016/C2013-0-19397-X
+  - name: "Naive Bayes"
+    link: "https://datumorphism.leima.is/wiki/machine-learning/bayesian/naive-bayesian/"
 ---
+
+> one of the most important concepts in all of probability theory — that of conditional probability.
+>
+> -- Sheldon M. Ross
 
 ## Topics
 
 - Association Rules
-- Conditional Probability Table
+- Conditional Probability
 - Naive Bayes
 
 ## Association Rules
+
+[Association Rules](https://datumorphism.leima.is/wiki/pattern-mining/association-rules/)
 
 $$
 \text{Milk} \Rightarrow \text{Croissant} [ \text{support} = 2/5, \text{confidence} = 2/3  ]
@@ -55,8 +63,8 @@ Frequentists:
 
 Bayesian:
 - Probability is objective (educated guess). It is a conceptual tool to describe our degree of certainty.
-- Probability is **not necessarily** a one to one map of occurrences of events.
-- Data (such as previous reoccurring event) is used to update our beliefs.
+- Probability is **not necessarily** a one-to-one map of occurrences of events.
+- Data (such as a previous reoccurring event) is used to update our beliefs.
 - Parameters of models are random.
 
 
@@ -151,3 +159,7 @@ P(D\vert +) = \frac{P(+\vert D) P(D)}{P(+)} = 0.99\times 0.001/0.006 = 0.165.
 P(H\vert +) = \frac{P(+\vert H) P(H)}{P(+)} = 0.005\times (1-0.001)/0.006 = 0.8325.
 {{</m>}}
 
+
+## Naive Bayes
+
+[Naive Bayes](https://datumorphism.leima.is/wiki/machine-learning/bayesian/naive-bayesian/)
