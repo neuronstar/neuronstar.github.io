@@ -162,4 +162,5 @@ P(H\vert +) = \frac{P(+\vert H) P(H)}{P(+)} = 0.005\times (1-0.001)/0.006 = 0.83
 
 ## Naive Bayes
 
-[Naive Bayes](https://datumorphism.leima.is/wiki/machine-learning/bayesian/naive-bayesian/)
+- Chapter 16 of Introduction to Probability and Statistics for Engineers and Scientists (6th ed.) by Sheldon Ross.
+- [Naive Bayes](https://datumorphism.leima.is/wiki/machine-learning/bayesian/naive-bayesian/)
