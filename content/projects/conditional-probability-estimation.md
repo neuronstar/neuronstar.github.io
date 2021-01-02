@@ -28,6 +28,14 @@ references:
     link: https://www.mendeley.com/community/neuronstar/documents/
 ---
 
+
+## Todo List
+
+### MADE
+
+- [ ] [Variational Inference with Normalizing Flows](https://arxiv.org/pdf/1505.05770.pdf)
+- [ ] [Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934)
+- [ ] [Masked Autoregressive Flow for Density Estimation](https://arxiv.org/abs/1705.07057)
 ## Why this Topic
 
 Conditional probability estimation is one of the most fundamental problems in statistics.
