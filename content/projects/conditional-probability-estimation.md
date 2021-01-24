@@ -10,32 +10,14 @@ tags:
   - Estimation Theory
 summary: "Understand models to estimate conditional probabilities"
 fields:
-members:
-  - name: LM
-    link:
-    description:
-coordinators:
-  - name: LM
-    link:
-    description:
 date: 2020-11-03
-status: Incubating
+status: In Progress
 sections:
   - cpe
 draft: false
-references:
-  - name: "Mendeley Library"
-    link: https://www.mendeley.com/community/neuronstar/documents/
 ---
 
 
-## Todo List
-
-### MADE
-
-- [ ] [Variational Inference with Normalizing Flows](https://arxiv.org/pdf/1505.05770.pdf)
-- [ ] [Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934)
-- [ ] [Masked Autoregressive Flow for Density Estimation](https://arxiv.org/abs/1705.07057)
 ## Why this Topic
 
 Conditional probability estimation is one of the most fundamental problems in statistics.
@@ -58,9 +40,9 @@ Conditional probability estimation is one of the most fundamental problems in st
 
 ### Reading List and References
 
-We will update this list on our way forward. Here is a list of papers on [Mendeley](https://www.mendeley.com/community/neuronstar/documents/).
+We will update this list on our way forward. [Here is a partial list of references](/cpe/00.references/).
 
-We have an outline of what should be covered.
+As a start this is an outline of what should be covered.
 
 - What is the conditional probability?
   - Sampling theory
@@ -74,26 +56,40 @@ We have an outline of what should be covered.
 - NN-based
   - NN as feature transformations
   - Application on the bike-sharing problem
+- EM Methods
+- Variational Methods
+- Normalizing Flow
 - To be added as we learn more about it
 
 
 ### Toy Problems
 
-We will use the following dataset.
+A dataset that can be used both for classification problems and regression problems.
 
-- Bike-sharing data
-  - Define a regression problem
+- [Bike-sharing data](https://1drv.ms/u/s!AtL-RuK9jxYZaxakx4KhPPbBR50?e=8EQxtg)
+
 
 ## When and How
 
-The discussion is online through Skype/Wechat. Please join [the skype group](https://join.skype.com/jPDK9FXEWjVK) for upcoming discussions.
+The discussion is online through Skype/Wechat/Lark.
 
-- This is a bi-weekly meetup. [Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html), [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics)
+Please join the community:
+
+- [the skype group](https://join.skype.com/jPDK9FXEWjVK): if you have any problems joining the group, please shoot an email to hi@leima.is
+
+
+This is a bi-weekly meetup
+
+- [Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html),
+- [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics)
+
+Rules:
+
 - Everyone will and shall get their chance to lead the discussion.
 - Interrupt and ask any questions to make sure we all understand the content well.
 - Do not be carried away by the time limit. The next host will pick up the topic on the next discussion.
 
 ## Tools
 
-[World Clock](https://www.worldtimebuddy.com/?qm=1&lid=12,5,1816670&h=12&date=2020-11-14&sln=14.5-16.5&hf=0)
+Timezone tool: [World Clock](https://www.worldtimebuddy.com/?qm=1&lid=12,5,1816670&h=12&date=2020-11-14&sln=14.5-16.5&hf=0)
 
