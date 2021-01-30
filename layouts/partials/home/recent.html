@@ -1,0 +1,43 @@
+<section class="section is-dark">
+    <div class="columns is-desktop is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
+        <div class="column">
+            <h2 class="title is-2 has-text-right has-text-dark" style="margin-right: 0.7em;margin-bottom: 2em;">Recent Events</h2>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical">
+                    {{ range (where .Site.AllPages.ByDate.Reverse ".Params.when"  "!=" nil) | first 4 }}
+                    <article class="tile is-child notification is-white has-text-right">
+                        <div class="content">
+                            <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            <p>
+                                <time>{{ .Params.when }}</time>
+                            </p>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column">
+            <h2 class="title is-2 has-text-right has-text-dark" style="margin-right: 0.7em;margin-bottom: 2em;">Some Projects</h2>
+
+            <div class="tile is-ancestor has-text-right">
+                <div class="tile is-vertical">
+                    {{ $section := "projects" }}
+                    {{ range (where .Site.RegularPages.ByTitle "Section" $section ) }}
+                    <article class="tile is-child notification is-white">
+                        <div class="content">
+                            <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            <p>
+                                {{ .Params.summary }}
+                            </p>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
