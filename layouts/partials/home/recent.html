@@ -10,7 +10,11 @@
                         <div class="content">
                             <p class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></p>
                             <p>
+                                {{ if isset .Params.when "start" }}
+                                <time>{{ .Params.when.start }}</time> - <time>{{ .Params.when.end }}</time> {{ .Params.when.timezone }}
+                                {{ else }}
                                 <time>{{ .Params.when }}</time>
+                                {{ end }}
                             </p>
                         </div>
                     </article>
