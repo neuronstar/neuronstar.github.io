@@ -17,9 +17,37 @@ sections:
 draft: false
 ---
 
-Upcoming Events:
+## When and How
+
+The discussion is online through Lark/Wechat.
+
+- [Lark](https://www.feishu.cn/) is our primary communication channel.
+- Wechat is mostly for our backup plans.
+
+If you would like to be part of the party, please create a post here on [GitHub discussions](https://github.com/neuronstar/neuronstar.github.io/discussions/categories/general).
+
+The discussions are mostly in Chinese.
+
+### When
+
+This is a bi-weekly meetup.
+
+- [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics): Add this ICS to your calendar app to follow upcoming events.
+
+
+Upcoming Events ([Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html)):
 
 {{< iframe url="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html" >}}
+
+
+
+
+### Rules
+
+- Everyone will and shall get their chance to lead the discussion.
+- The first principle is to understand the content. Interrupt and ask any questions to make sure we all understand the content well.
+
+
 
 ## Why this Topic
 
@@ -45,6 +73,8 @@ Conditional probability estimation is one of the most fundamental problems in st
 
 We will update this list on our way forward. [Here is a partial list of references](/cpe/00.references/).
 
+{{< message title="Initial Proposal (Outdated)" >}}
+
 As a start this is an outline of what should be covered.
 
 - What is the conditional probability?
@@ -64,35 +94,17 @@ As a start this is an outline of what should be covered.
 - Normalizing Flow
 - To be added as we learn more about it
 
+{{< /message >}}
 
 ### Toy Problems
 
-A dataset that can be used both for classification problems and regression problems.
+We have prepared dataset that can be used both for classification problems and regression problems.
 
 - [Bike-sharing data](https://1drv.ms/u/s!AtL-RuK9jxYZaxakx4KhPPbBR50?e=8EQxtg)
 
 
-## When and How
-
-The discussion is online through Skype/Wechat/Lark.
-
-Please join the community:
-
-- [the skype group](https://join.skype.com/jPDK9FXEWjVK): if you have any problems joining the group, please shoot an email to hi@leima.is
-
-
-This is a bi-weekly meetup
-
-- [Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html),
-- [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics)
-
-Rules:
-
-- Everyone will and shall get their chance to lead the discussion.
-- Interrupt and ask any questions to make sure we all understand the content well.
-- Do not be carried away by the time limit. The next host will pick up the topic on the next discussion.
 
 ## Tools
 
-Timezone tool: [World Clock](https://www.worldtimebuddy.com/?qm=1&lid=12,5,1816670&h=12&date=2020-11-14&sln=14.5-16.5&hf=0)
+- Timezone conversions: [World Clock](https://www.worldtimebuddy.com/?qm=1&lid=12,5,1816670&h=12&date=2020-11-14&sln=14.5-16.5&hf=0)
 

@@ -41,10 +41,13 @@ params:
   twitter: "" # Optional, to display link to twitter account in menu bar
   author: "NeuronStar"
   editURL: "https://github.com/neurnstar/neuronstar.github.io/edit/master/content/"
-  utterances: # comment system: utterances (https://utteranc.es/) parameters
-    repo: "neuronstar/neuronstar.github.io"  # repo="[ENTER REPO HERE]", the comments will appear as issues in this repository on github.
-    term: pathname               # issue-term="pathname"
-    theme: github-light          # theme="github-light"
+  comments:
+    use: "giscus"
+    giscus:
+      repo: "neuronstar/neuronstar.github.io"
+      repo_id: "MDEwOlJlcG9zaXRvcnkzMjY1MDkyMg=="
+      category: "Comments"
+      category_id: "DIC_kwDOAfI2qs4B-wVl"
   algolia:
     vars:
       - "title"
@@ -81,7 +84,8 @@ outputFormats:
     isPlainText: true
     mediaType: "application/json"
     notAlternative: true
-
+  Calendar:
+    protocol: "https://"
 
 outputs:
   home:

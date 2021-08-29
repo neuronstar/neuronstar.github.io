@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" href="/assets/add2calendar/css/add2calendar.css">
+<script src="/assets/add2calendar/js/add2calendar.js"></script>
+
+<script>
+var singleEventArgs = {
+    title       : '{{ .Title }}',
+    start       : '{{ .Params.when.start }}',
+    end         : '{{ if .Params.when.end }}{{ .Params.when.end }}{{ else }} {{.Params.when.start }} {{ end }}',
+    location    : '{{ .Params.where }}',
+    description : '{{ .Summary | markdownify }}',
+    timezone    : 'Canada/Yukon',
+    isAllDay    : false,
+    };
+    var singleEvent = new Add2Calendar(singleEventArgs);
+
+    // to get actual url
+    singleEvent.getGoogleUrl(); // https://www.google.com/calendar/render?action=TEMPLATE&text=...
+    singleEvent.getICalUrl(); // data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0A...
+    singleEvent.getOutlookUrl(); // data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0A...
+    // singleEvent.getYahooUrl(); // https://calendar.yahoo.com/?v=60&view=d&type=20&title=...
+
+    // render a widget
+    singleEvent.createWidget('#add2cal');
+    </script>

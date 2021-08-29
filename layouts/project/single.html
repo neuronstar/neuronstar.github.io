@@ -9,13 +9,12 @@
 
 {{ end }}
 
-{{ define "header"}} {{ partial "menu" .}}
 
+{{ define "header"}} {{ partial "menu" .}}
+{{ partial "extensions/plotlyjs.html" . }}
 {{ end }}
 
 {{ define "main" }}
-
-
 
 <div class="container" itemscope itemtype="http://schema.org/BlogPosting">
     {{ template "_internal/schema.html" . }}
@@ -41,7 +40,6 @@
 
                 <div class="columns">
                     <div class="column is-8">
-
                         {{ if .Params.notify }}
                         <div class="is-divider" data-content="NOTIFICATION"></div>
                         <div class="notification is-warning is-light">
@@ -79,15 +77,43 @@
                             {{ end }}
 
                           </nav>
-                        <!-- {{ partial "post/byauthor" . }} -->
-
-                        <!-- {{ partial "utterances-comments.html" . }} -->
 
 
                     </div>
                     <div class="column is-4">
-
-
+                        {{ if (or .Params.when .Params.where) }}
+                        <div class="is-divider" data-content="WHEN&WHERE"></div>
+                        <div class="box is-size-7">
+                            <article class="media">
+                                <div class="media-content">
+                                    <div class="content">
+                                            {{ if .Params.when.start }}
+                                                <span style="display: block;">
+                                                    <i class="fas fa-calendar-day"></i> : {{ .Params.when.start }} - {{ .Params.when.end }} ({{ .Params.when.timezone }})
+                                                </span>
+                                            {{ else }}
+                                            <span style="display: block;">
+                                                <i class="fas fa-calendar-day"></i> : {{ .Params.when }}
+                                            </span>
+                                            {{ end }}
+                                            {{ if .Params.where }}
+                                            <span style="display: block;"><i class="fas fa-comment-alt"></i> : {{ .Params.where }}
+                                            </span>
+                                            {{ end }}
+                                            {{ if .Params.project }}
+                                            <span style="display: block;"><i class="fas fa-project-diagram"></i> : More details on page {{ with .Site.GetPage (.Params.project) }}
+                                                <a href="{{ .Permalink }}" class="has-text-warning"> {{ .Title }} </a>
+                                                {{ end }}
+                                            {{ end }}
+                                            {{ if .Params.when.start }}
+                                            <div id="add2cal"></div>
+                                            {{ end }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        {{ end }}
 
                         {{ if .Params.authors }}
                         <div class="is-divider" data-content="AUTHORS"></div>
@@ -168,6 +194,7 @@
                             </article>
                         </div>
 
+                        {{ if .Params.links }}
                         {{ with .Params.links }}
                         <div class="box is-size-7">
                             <article class="media">
@@ -176,19 +203,20 @@
                                         <p>
 
                                         <strong>Links to: </strong>
-                                            <ul>
+                                            <div>
                                             {{ range . }}
                                             {{ with $.Site.GetPage . }}
                                                 {{ partial "network/linkcard" . }}
                                             {{ end }}
                                             {{ end }}
-                                            </ul>
+                                            </div>
 
                                         </p>
                                     </div>
                                 </div>
                             </article>
                         </div>
+                        {{ end }}
                         {{ end }}
 
                         {{ with .Site.Taxonomies.links }}
@@ -200,11 +228,11 @@
                                     <div class="content">
                                         <p>
                                             <strong>Links from: </strong>
-                                                <ul>
+                                                <div>
                                                 {{ range . }}
-                                                    <li class="has-text-weight-bold"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                                    {{ partial "network/linkcard" . }}
                                                 {{ end }}
-                                                </ul>
+                                                </div>
                                         </p>
                                     </div>
                                 </div>
@@ -213,9 +241,7 @@
                         {{ end }}
                         {{ end }}
 
-
-
-                        {{ partial "utterances-comments.html" . }}
+                        {{ partial "comments/giscus-comments.html" . }}
 
                     </div>
 
@@ -229,11 +255,13 @@
 
 {{ end }}
 
-
-
 {{ define "footer"}}
+{{ partial "extensions/plotly.html" . }}
 {{ partial "footer.html" .}}
 
+{{ if .Params.when.start }}
+    {{ partial "tools/add2cal" . }}
+{{ end }}
 
-<script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+
 {{ end }}
