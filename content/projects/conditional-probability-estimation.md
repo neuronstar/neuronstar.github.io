@@ -34,12 +34,15 @@ This is a bi-weekly meetup. To following all the upcoming events, please add thi
 
 - [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics): Add this ICS to your calendar app to follow the upcoming events.
 
+If you would like to add individual events by yourself, use the "**Add to Calendar**" button on each event page.
+
+
+
 Here is a calendar web page for the upcoming events ([Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html)):
 
 
 {{< iframe url="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html" >}}
 
-If you would like to add individual events by yourself, use the "**Add to Calendar**" button on each event page.
 
 
 ### Rules
