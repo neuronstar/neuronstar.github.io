@@ -35,7 +35,7 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>({{ with .Params.when.start }}<time>{{ . }}</time>{{end}} -
-      {{ with .Params.when.end }}<time>{{ . }}</time>{{end}})&lt;br/&gt;{{ .Summary | html }}</description>
+      {{ with .Params.when.end }}<time>{{ . }}</time>{{end}})&lt;br/&gt; {{ .Summary | html }}</description>
     </item>
     {{ end }}
   </channel>
