@@ -106,7 +106,7 @@
                                                 {{ end }}
                                             {{ end }}
                                             {{ if .Params.when.start }}
-                                            <div id="add2cal"></div>
+                                            <div id="add-to-calendar"></div>
                                             {{ end }}
                                         </p>
                                     </div>
@@ -260,7 +260,7 @@
 {{ partial "footer.html" .}}
 
 {{ if .Params.when.start }}
-    {{ partial "tools/add2cal" . }}
+    {{ partial "tools/add-to-calendar" . }}
 {{ end }}
 
 

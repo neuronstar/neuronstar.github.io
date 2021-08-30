@@ -1,0 +1,44 @@
+
+<link rel="stylesheet" href="/assets/add-to-calendar-buttons/add-to-calendar.css">
+<script src="/assets/add-to-calendar-buttons/add-to-calendar.min.js"></script>
+
+<script>
+var myCalendar = addToCalendar({
+    options: {
+      class: 'event-calendar-add-button',
+
+      // You can pass an ID. If you don't, one will be generated for you
+      id: 'event-calendar-add'
+    },
+    data: {
+      // Event title
+      title: '{{ .Title }}',
+
+      // Event start date
+      start: new Date('{{ .Params.when.start }}'),
+      end: new Date('{{ if .Params.when.end }}{{ .Params.when.end }}{{ else }} {{.Params.when.start }} {{ end }}'),
+
+      // Event timezone. Will convert the given time to that zone
+      timezone: '{{ .Params.when.timezone }}',
+
+      // Event duration (IN MINUTES)
+     //   duration: 120,
+
+      // You can also choose to set an end time
+      // If an end time is set, this will take precedence over duration
+      // end: new Date('June 15, 2013 23:00'),
+
+      // You can also choose to set 'all day'
+      // If this is set, this will override end time, duration and timezone
+      // allday:true,
+
+      // Event Address
+      address: '{{ .Params.where }}',
+
+      // Event Description
+      description: '{{ .Summary | markdownify }}'
+    }
+  });
+
+  document.querySelector('#add-to-calendar').appendChild(myCalendar);
+</script>

@@ -9,7 +9,7 @@ var singleEventArgs = {
     end         : '{{ if .Params.when.end }}{{ .Params.when.end }}{{ else }} {{.Params.when.start }} {{ end }}',
     location    : '{{ .Params.where }}',
     description : '{{ .Summary | markdownify }}',
-    timezone    : 'Canada/Yukon',
+    timezone    : '{{ .Params.when.timezone }}',
     isAllDay    : false,
     };
     var singleEvent = new Add2Calendar(singleEventArgs);
