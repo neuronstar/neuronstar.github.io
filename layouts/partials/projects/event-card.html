@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-content">
+        <a href="{{ .Permalink }}" itemprop="headline"><p class="title">
+            {{ .Title }}
+      </p></a>
+      <p class="subtitle" style="margin-top: 1em;">
+        {{ .Summary | markdownify | truncate 200 }}
+      </p>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <span>
+            {{ if .Params.when }}
+                {{ if .Params.when.start }}
+                    <span style="display: block;">
+                        <i class="fas fa-calendar-day"></i> : {{ .Params.when.start }} - {{ .Params.when.end }} ({{ .Params.when.timezone }})
+                    </span>
+                {{ else }}
+                <span style="display: block;">
+                    <i class="fas fa-calendar-day"></i> : {{ .Params.when }}
+                </span>
+                {{ end }}
+            {{ end }}
+        </span>
+      </p>
+      <p class="card-footer-item">
+            {{ if .Params.where }}
+                <span style="display: block;"><i class="fas fa-comment-alt"></i> : {{ .Params.where }}
+                </span>
+            {{ end }}
+      </p>
+    </footer>
+</div>

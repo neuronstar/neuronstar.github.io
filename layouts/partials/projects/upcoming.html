@@ -1,0 +1,67 @@
+{{ index .Params.sections 0 }}
+
+{{ $events := where .Site.RegularPages  "Section" "{{ index .Params.sections 0 }}" }}
+
+{{ range $event := $events }}
+{{ $event.Date }}
+{{ end }}
+
+{{ $events := $events | intersect (where $events "Date" "ge" now) | first 5 }}
+
+
+{{ range .Params.sections }}
+
+    {{ $sec := where $.Site.Pages "Section" . }}
+    {{ range $sec.GroupBy "Dir" }}
+
+        {{ range (.Pages.ByParam "when.start")}}
+            {{ if and (ne .Kind "section") }}
+                <div>
+                    <ul>
+                        <li>when.start raw: {{ .Params.when.start }}</li>
+                        <li>when.start: {{ time .Params.when.start }}</li>
+                        <li>now: {{ now }}</li>
+            </ul>
+            </div>
+                {{ if gt .Params.when.start now }}
+                    {{ partial "projects/event-card" . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
+    {{ end }}
+
+{{ end }}
+
+
+
+{{ range .Params.sections }}
+    <div class="box is-size-7">
+        <article class="media">
+            <div class="media-left is-vcentered" style="vertical-align: middle;">
+                <i class="fas fa-sitemap fa-2x has-text-primary" style="margin-right: 0.5em;"></i>
+            </div>
+            <div class="media-content">
+                <div class="content">
+                    {{ $sec := where $.Site.Pages "Section" . }}
+                    {{ range $sec.GroupBy "Dir" }}
+                            {{ range .Pages.ByParam "Parent" }}
+                                {{ if eq .Kind "section" }}
+                                    <a href="{{ .Permalink }}" itemprop="headline">{{ .Title }}</a>
+                                {{ end }}
+                            {{ end }}
+                            <ul>
+                                {{ range (.Pages.ByParam "when.start")}}
+                                    {{ if and (ne .Kind "section") (ge .Params.when.start now) }}
+                                    <li>
+                                        <a href="{{ .Permalink }}" itemprop="headline">{{ .Title }}</a>
+                                    </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                    {{ end }}
+                </div>
+            </div>
+        </article>
+    </div>
+{{ end }}
