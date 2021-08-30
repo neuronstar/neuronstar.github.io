@@ -34,8 +34,8 @@
       {{ with .Params.when.end }}<project:when_end>{{ . }}</project:when_end>{{end}}
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
-      <description><![CDATA[({{ with .Params.when.start }}<time>{{ . }}</time>{{end}} -
-      {{ with .Params.when.end }}<time>{{ . }}</time>{{end}})<br/>{{ .Summary | html }}]]</description>
+      <description>({{ with .Params.when.start }}<time>{{ . }}</time>{{end}} -
+      {{ with .Params.when.end }}<time>{{ . }}</time>{{end}})&lt;br/&gt;{{ .Summary | html }}</description>
     </item>
     {{ end }}
   </channel>
