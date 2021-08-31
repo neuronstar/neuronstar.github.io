@@ -109,5 +109,5 @@ We have prepared dataset that can be used both for classification problems and r
 
 ## Tools
 
-- Timezone conversions: [World Clock](https://www.worldtimebuddy.com/?qm=1&lid=12,5,1816670&h=12&date=2020-11-14&sln=14.5-16.5&hf=0)
+- Timezone conversions: [World Clock](https://www.worldtimebuddy.com/?qm=1&lid=1816670,12,5,8&h=12&date=2021-9-4&sln=14.5-16&hf=0)
 
