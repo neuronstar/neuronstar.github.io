@@ -20,6 +20,10 @@ menu:
       weight: 2
       identifier: cpe-docs
       url: https://neuronstar.github.io/cpe-docs
+    - name: Community
+      weight: 3
+      identifier: community
+      url: "https://community.kausalflow.com/c/ml-journal-club/"
 
 
 taxonomies:
