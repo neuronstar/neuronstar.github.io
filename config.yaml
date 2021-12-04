@@ -23,7 +23,7 @@ menu:
     - name: Community
       weight: 3
       identifier: community
-      url: "https://community.kausalflow.com/c/ml-journal-club/"
+      url: "https://github.com/kausalflow/community/discussions/categories/2-journal-club-machine-learning"
 
 
 taxonomies:
