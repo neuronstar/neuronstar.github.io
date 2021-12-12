@@ -325,3 +325,5 @@ $RECYCLE.BIN/
 public
 
 .vscode
+
+.hugo_build.lock
