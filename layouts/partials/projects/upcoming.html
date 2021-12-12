@@ -5,9 +5,11 @@
 
         {{ range (.Pages.ByParam "when.start")}}
             {{ if and (ne .Kind "section") }}
+                {{ if .Params.when.start }}
                 {{ $ws := time .Params.when.start }}
                 {{ if (gt $ws now) }}
                     {{ partial "projects/event-card" . }}
+                {{ end }}
                 {{ end }}
             {{ end }}
         {{ end }}

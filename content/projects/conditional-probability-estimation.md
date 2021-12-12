@@ -19,7 +19,7 @@ draft: false
 
 ## When and How
 
-The discussion is online through Lark/Wechat.
+The discussions are hosted online in Lark/Wechat.
 
 - [Lark](https://www.feishu.cn/) is our primary communication channel.
 - Wechat is mostly for our backup plans.
@@ -30,11 +30,11 @@ The discussions are mostly in Chinese.
 
 ### When
 
-This is a bi-weekly meetup. To following all the upcoming events, please add this ics to your calendar.
+This is a bi-weekly meetup. To following calendar shows all the upcoming events, please add this ics to your calendar.
 
 - [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics): Add this ICS to your calendar app to follow the upcoming events.
 
-If you would like to add individual events by yourself, use the "**Add to Calendar**" button on each event page.
+If you would like to add individual events by yourself, use the "**Add to Calendar**" button on the specific event page.
 
 
 
@@ -47,7 +47,7 @@ Here is a calendar web page for the upcoming events ([Calendar Page](https://out
 
 ### Rules
 
-- Everyone will and shall get their chance to lead the discussion.
+- Everyone shall get their chance to lead the discussion.
 - The first principle is to understand the content. Interrupt and ask any questions to make sure we all understand the content well.
 
 
