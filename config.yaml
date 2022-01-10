@@ -47,7 +47,7 @@ params:
   github: "neuronstar" # Optional, to display link to github account in menu bar
   twitter: "" # Optional, to display link to twitter account in menu bar
   author: "NeuronStar"
-  editURL: "https://github.com/neurnstar/neuronstar.github.io/edit/master/content/"
+  editURL: "https://github.com/neuronstar/neuronstar.github.io/edit/master/content/"
   comments:
     use: "giscus"
     giscus:
