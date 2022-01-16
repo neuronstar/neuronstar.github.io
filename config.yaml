@@ -20,8 +20,12 @@ menu:
       weight: 2
       identifier: cpe-docs
       url: https://neuronstar.github.io/cpe-docs
-    - name: Community
+    - name: "Propose New Papers"
       weight: 3
+      identifier: papers-please
+      url: "https://github.com/neuronstar/seminar-discussions/discussions/categories/papers-please"
+    - name: Community
+      weight: 4
       identifier: community
       url: "https://github.com/kausalflow/community/discussions/categories/2-journal-club-machine-learning"
 
