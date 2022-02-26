@@ -22,6 +22,31 @@ draft: false
 
 Our Current Topic is Deep Learning for Time Series.
 
+Here is a preliminary list of papers to be discussed.
+
+| Topics | Paper |
+|-----|-----|
+| Review | [Time Series Forecasting With Deep Learning: A Survey](https://arxiv.org/abs/2004.13408) |
+| Review | ["Gneiting T, Katzfuss M. Probabilistic Forecasting. Annu Rev Stat Appl. 2014;1: 125–151. doi:10.1146/annurev-statistics-062713-085831"](https://www.annualreviews.org/doi/abs/10.1146/annurev-statistics-062713-085831) |
+| Uncertainty | [Conformal Time-series Forecasting](https://proceedings.neurips.cc/paper/2021/hash/312f1ba2a72318edaaa995a67835fad5-Abstract.html) |
+| Uncertainty | [Probabilistic Forecasting: A Level Set Approach](https://www.amazon.science/publications/probabilistic-forecasting-a-level-set-approach) |
+| Probabilistic | [Autoregressive Dernoising Diffusion Models for Mutivariate Probablistic Forecasting](https://arxiv.org/abs/2101.12072) |
+| Probabilistic | [DeepAR: Probabilistic Forecasting with Autoregressive Recurrent Networks](https://arxiv.org/abs/1704.04110) |
+| Probabilistic | [Probabilistic Time Series Forecasting with Implicit Quantile Networks](https://arxiv.org/abs/2107.03743) |
+| Probabilistic | [Multivariate Probabilistic Time Series Forecasting via Conditioned Normalizing Flows](https://arxiv.org/abs/2002.06103) |
+| Probabilistic | [Probabilistic Time Series Forecasting with Structured Shape and Temporal Diversity](https://arxiv.org/abs/2010.07349) |
+| Probabilistic | [Deep Factors for Forecasting](https://arxiv.org/abs/1905.12417) |
+| Transformer | [(TFT) Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting](https://arxiv.org/abs/1912.09363) |
+| AE | [Recurrent Neural Filters: Learning Independent Bayesian Filtering Steps for Time Series Prediction](https://arxiv.org/abs/1901.08096) |
+| ? | [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](https://arxiv.org/abs/1905.10437) |
+| Causal Inference | [Causal Inference for Time series Analysis: Problems, Methods and Evaluation](https://arxiv.org/abs/2102.05829) |
+| Evaluation | [Random Noise vs State-of-the-Art Probabilistic Forecasting Methods : A Case Study on CRPS-Sum Discrimination Ability](https://arxiv.org/abs/2201.08671) |
+| Evaluation | [An introduction to multivariate probabilistic forecast evaluation](https://www.sciencedirect.com/science/article/pii/S2666546821000124) |
+| Evaluation | [Evaluating Probabilistic Forecasts with scoringRules](https://www.jstatsoft.org/article/view/v090i12) , [Scoring Rules for Continuous Probability Distributions](https://www.jstor.org/stable/2629907) |
+| Traditional Method | [Forecasting: Principles and Practice](https://otexts.com/fpp2/) |
+| Preprocessing | [Time Series Data Augmentation for Deep Learning: A Survey](https://arxiv.org/abs/2002.12478) |
+
+
 {{< /message >}}
 
 
