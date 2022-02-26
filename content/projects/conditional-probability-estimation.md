@@ -17,6 +17,14 @@ sections:
 draft: false
 ---
 
+
+{{< message class="danger" title="Current Topic" >}}
+
+Our Current Topic is Deep Learning for Time Series.
+
+{{< /message >}}
+
+
 ## When and How
 
 The discussions are hosted online in Lark/Wechat.
