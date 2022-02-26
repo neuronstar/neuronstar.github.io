@@ -38,15 +38,18 @@ The discussions are mostly in Chinese.
 
 ### When
 
-This is a bi-weekly meetup. To following calendar shows all the upcoming events, please add this ics to your calendar.
+This is a bi-weekly meetup.
 
-- [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics): Add this ICS to your calendar app to follow the upcoming events.
+There are two different ways to keep track of the upcoming events:
 
-If you would like to add individual events by yourself, use the "**Add to Calendar**" button on the specific event page.
+1. add this ics to your calendar.
+   - [Calendar ics url](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/calendar.ics): Add this ICS to your calendar app to follow the upcoming events.
+2. If you would like to add individual events by yourself, use the "**Add to Calendar**" button on the specific event page.
+   - Here is the button: {{< figure src="../assets/add-to-calendar-demo.png" >}}
 
 
 
-Here is a calendar web page for the upcoming events ([Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html)):
+As a preview of the events, here is a calendar web page for the upcoming events ([Calendar Page](https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html)):
 
 
 {{< iframe url="https://outlook.live.com/owa/calendar/00000000-0000-0000-0000-000000000000/8455418e-3cff-4bcd-aa40-34b06bce6053/cid-68E8EF2C5F954378/index.html" >}}
@@ -107,12 +110,14 @@ As a start this is an outline of what should be covered.
 
 {{< /card >}}
 
-### Toy Problems
+
+{{< card title="oy Problems (Outdated)" >}}
 
 We have prepared dataset that can be used both for classification problems and regression problems.
 
 - [Bike-sharing data](https://1drv.ms/u/s!AtL-RuK9jxYZaxakx4KhPPbBR50?e=8EQxtg)
 
+{{< /card >}}
 
 
 ## Tools
