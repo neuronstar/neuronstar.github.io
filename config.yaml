@@ -81,7 +81,7 @@ params:
       indexName: "kausalflow-research-tools"
       hitsPerPage: 12
       routing: true
-
+  command: false
 
 
 outputFormats:
@@ -97,10 +97,24 @@ outputFormats:
     notAlternative: true
   Calendar:
     protocol: "https://"
+  network:
+    baseName: "network"
+    isPlainText: true
+    mediaType: "application/json"
+    notAlternative: true
+  networkjq:
+    baseName: "networkjq"
+    isPlainText: true
+    mediaType: "application/json"
+    notAlternative: true
 
 outputs:
   home:
     - "HTML"
     - "RSS"
-    - "Algolia"
     - "data"
+    - "network"
+    - "networkjq"
+
+ignoreErrors:
+  - "error-remote-getjson"
