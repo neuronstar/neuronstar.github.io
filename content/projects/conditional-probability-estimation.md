@@ -57,7 +57,7 @@ The discussions are hosted online in Lark/Wechat.
 - [Lark](https://www.feishu.cn/) is our primary communication channel.
 - Wechat is mostly for our backup plans.
 
-If you would like to be part of the party, please create a post here on [GitHub discussions](https://github.com/neuronstar/neuronstar.github.io/discussions/categories/general).
+If you would like to be part of the party, please create a post here on [GitHub discussions](https://github.com/neuronstar/seminar-discussions/discussions/categories/papers-please).
 
 The discussions are mostly in Chinese.
 
