@@ -12,7 +12,7 @@ references:
   - name: "Brodersen KH, Gallusser F, Koehler J, Remy N, Scott SL. Inferring causal impact using Bayesian structural time-series models. aoas. 2015;9: 247–274. doi:10.1214/14-AOAS788"
     link: "https://arxiv.org/abs/1506.00356"
     key: "Cao2021"
-weight: "36"
+weight: "TBD"
 when:
   start: "2022-06-11T15:00:00"
   end: "2022-06-11T16:30:00"
