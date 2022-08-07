@@ -55,6 +55,7 @@ Here is a preliminary list of papers to be discussed.
 The discussions are hosted online in Lark/Wechat.
 
 - [Lark](https://www.feishu.cn/) is our primary communication channel.
+  - Join the group using ![](https://neuronstar.kausalflow.com/images/social/lark-group.png)
 - Wechat is mostly for our backup plans.
 
 If you would like to be part of the party, please create a post here on [GitHub discussions](https://github.com/neuronstar/seminar-discussions/discussions/categories/papers-please).
