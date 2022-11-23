@@ -48,6 +48,7 @@ References:
 https://www.sciencedirect.com/science/article/pii/S0169207021001679 Use the following timezone tool or click on the &amp;ldquo;Add to Calendar&amp;rdquo; button on the sidebar.
 Click here for an interactive widget.</description></item><item><title>Probabilistic Forecasting: A Level-Set Approach</title><link>https://neuronstar.github.io/cpe/45.level-set-forecaster/</link><pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate><guid>https://neuronstar.github.io/cpe/45.level-set-forecaster/</guid><description>Topic:
 Hasson H, Wang Y, Januschowski T, Gasthaus J. Probabilistic forecasting: A level-set approach. [cited 25 Jan 2022]. Available: https://assets.amazon.science/a7/2b/29e00a5e429b8f2e708091ecb53e/probabilistic-forecasting-a-level-set-approach.pdf
+Code: https://github.com/awslabs/gluonts/blob/fcc50e8be222bcf3b3da47ed1ed50b467e03f7e8/src/gluonts/ext/rotbaum/_model.py
 Use the following timezone tool or click on the &amp;ldquo;Add to Calendar&amp;rdquo; button on the sidebar.
 Click here for an interactive widget.</description></item><item><title>Inferring causal impact using Bayesian structural time-series models</title><link>https://neuronstar.github.io/cpe/tbd.causal-impact-bayesian-structural-ts-models/</link><pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate><guid>https://neuronstar.github.io/cpe/tbd.causal-impact-bayesian-structural-ts-models/</guid><description>Our topic for this session is Inferring causal impact using Bayesian structural time-series models (arXiv:1506.00356).
 Abstract
