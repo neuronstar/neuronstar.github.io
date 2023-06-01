@@ -103,6 +103,9 @@ dataloader construction Input pandas dataframe and output batched, transformed t
 Click here for an interactive widget.</description></item><item><title>Diffusion Models for Time Series: Dataloader Discussions and Next Steps</title><link>https://neuronstar.github.io/cpe/56.diffusion-models-dataloader-discussionis/</link><pubDate>Thu, 11 May 2023 00:00:00 +0000</pubDate><guid>https://neuronstar.github.io/cpe/56.diffusion-models-dataloader-discussionis/</guid><description>Topics:
 我们上周几个人写了一个 dataloader ，大概实现了 从 pandas dataframe -&amp;gt; pytorch dataloader apply transformations, e.g., moving slicing to produce fixed length input+output 这周我们来讨论一下这个写法，然后讨论一下接下来如何分工。
 Use the following timezone tool or click on the &amp;ldquo;Add to Calendar&amp;rdquo; button on the sidebar.
+Click here for an interactive widget.</description></item><item><title>Diffusion Models for Time Series: Review the Model</title><link>https://neuronstar.github.io/cpe/57.diffusion-models-model-discussions/</link><pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate><guid>https://neuronstar.github.io/cpe/57.diffusion-models-model-discussions/</guid><description>Topics:
+Review the model
+Use the following timezone tool or click on the &amp;ldquo;Add to Calendar&amp;rdquo; button on the sidebar.
 Click here for an interactive widget.</description></item><item><title>Inferring causal impact using Bayesian structural time-series models</title><link>https://neuronstar.github.io/cpe/tbd.causal-impact-bayesian-structural-ts-models/</link><pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate><guid>https://neuronstar.github.io/cpe/tbd.causal-impact-bayesian-structural-ts-models/</guid><description>Our topic for this session is Inferring causal impact using Bayesian structural time-series models (arXiv:1506.00356).
 Abstract
 Abstract of Inferring causal impact using Bayesian structural time-series models (arXiv:1506.00356):
