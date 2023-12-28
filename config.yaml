@@ -16,9 +16,9 @@ menu:
       weight: 1
       identifier: about
       url: /about/
-    - name: CPE Docs
+    - name: Forecasting with Deep Learning
       weight: 2
-      identifier: cpe-docs
+      identifier: dl-leima
       url: https://dl.leima.is/
     - name: "Propose New Papers"
       weight: 3
